@@ -1,5 +1,5 @@
 # Programs-MS-DOS
-Программы для MS-DOS (это был 1997 год и ранее...)
+Программы для MS-DOS и Windows 3.1 (это был 2000 год и ранее...)
 
 ![Screenshot](screenshot.jpg)
 

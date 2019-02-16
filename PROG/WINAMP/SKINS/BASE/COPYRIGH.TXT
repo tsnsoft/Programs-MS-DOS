@@ -1,0 +1,4 @@
+These images/files are Copr. 1998 Nullsoft, Inc.
+
+You may freely modify these files to create your
+own skin for Winamp. 

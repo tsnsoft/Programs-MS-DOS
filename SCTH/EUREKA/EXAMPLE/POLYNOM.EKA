@@ -1,0 +1,30 @@
+; This problem demonstrates Eureka's built-in Poly
+; function, which finds the roots of n-th order
+; polynomials of one variable.
+
+; For polynomials in one variable with complex roots,
+; you do not need to change the Complex setting to
+; yes - Eureka can automatically find complex roots
+; when using the Poly function.
+
+; all real roots
+; R(x) = (1*x^4 - 2*x^3 - 13*x^2 + 14*x +24)
+
+R(x) := poly(x,1,-2,-13,14,24)
+
+; all complex roots - Eureka solves for the real part
+; of the root being < or = 1
+
+S(x) := poly(x,1,-2,5)
+T(x) := poly(x,2,3,9)
+
+; complex and real roots
+
+U(x) := poly(x,2,-1,13,-3,45)
+V(x) := poly(x,2,-5,-3,-36)
+
+; some coefficients are zero - they still must be entered
+
+W(x) := poly(x,3,0,5,0,-7,24)
+P(x) := poly(x,1,0,0,0,0,1)
+

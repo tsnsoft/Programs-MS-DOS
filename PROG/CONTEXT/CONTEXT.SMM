@@ -1,0 +1,949 @@
+[ver]
+	4
+[sty]
+	
+[files]
+[charset]
+	82
+	ANSI (Windows, IBM CP 1252)
+[revisions]
+	0
+[prn]
+	Epson 9 pin
+[port]
+	
+[lang]
+	1
+[desc]
+	
+	
+	
+	
+	
+	756609142
+	171
+	661024420
+	582
+	2
+	0
+	0
+	0
+	0
+	
+	
+	
+	
+	
+	
+	0
+[fopts]
+	0
+	1
+	0
+	0
+[lnopts]
+	2
+	Body Text
+	1
+[docopts]
+	5
+	0
+[GramStyle]
+	
+[tag]
+	Body Text
+	2
+	[fnt]
+		System
+		220
+		0
+		16384
+	[algn]
+		1
+		1
+		0
+		0
+		0
+	[spc]
+		17
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		2
+		2
+		20
+		20
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		1
+		0
+		0
+	[nfmt]
+		280
+		1
+		3
+		.
+		,
+		$
+	Body Text
+	0
+	0
+[tag]
+	footer
+	3
+	[fnt]
+		Tms Rmn
+		200
+		0
+		49152
+	[algn]
+		1
+		1
+		0
+		0
+		0
+	[spc]
+		17
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		2
+		2
+		20
+		20
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		1
+		0
+		0
+	[nfmt]
+		280
+		1
+		3
+		.
+		,
+		$
+	footer
+	0
+	0
+[lay]
+	Standard
+	513
+	[rght]
+		15840
+		12240
+		1
+		1080
+		360
+		1
+		1080
+		720
+		4
+		1
+		0
+		1
+		8
+		4
+		1
+		1080
+		11520
+		14
+		1
+		359
+		1
+		721
+		1
+		1084
+		1
+		1446
+		1
+		1792
+		1
+		2155
+		1
+		2517
+		1
+		2880
+		1
+		3242
+		1
+		3605
+		1
+		3967
+		1
+		4323
+		1
+		4683
+		1
+		5043
+	[hrght]
+	[lyfrm]
+		1
+		11200
+		0
+		0
+		12240
+		1080
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		5
+		0
+		1
+	[frmlay]
+		1080
+		12240
+		1
+		360
+		0
+		1
+		0
+		0
+		2
+		1
+		0
+		1
+		1
+		0
+		1
+		360
+		12240
+		3
+		1
+		365
+		2
+		6120
+		3
+		11162
+	[txt]
+<+B>
+
+<+B>
+
+<+B>	<:da<*!><* >>		Date Created: 11/01/93
+
+<+B>	By Rudenko D.	Page - <:P11,1,>	Date Last revised:  <:da<*%><* >>
+
+<+B>	
+
+>
+	[frght]
+	[lyfrm]
+		1
+		13248
+		0
+		15480
+		12240
+		15840
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		5
+		0
+		2
+	[frmlay]
+		15840
+		12240
+		1
+		720
+		0
+		1
+		15480
+		720
+		2
+		1
+		0
+		1
+		1
+		0
+		1
+		720
+		11520
+		0
+	[txt]
+@footer@
+>
+[elay]
+[l1]
+	0
+[edoc]
+<:#160,10440>
+
+<:#160,10440>FUNCTION setContext()
+
+<:#160,10440>   ignorekeyboard(1)
+
+   macro = "context.smm"
+
+<:#160,10440>   mpath = GetProfileString$("CWSET", "PathToExe", "contwin.ini")
+
+   DeleteMenuItem(1,"Too&ls" ,"Conte&xt")
+
+   DeleteMenuItem(1,"&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" ,"<\J><\n><\m><\r>&<\e><\j><\q><\r>")
+
+   res = InsertMenuItem(1,"Too&ls",3,"Conte&xt" ,"{mpath}{macro}!callContext")
+
+<:#160,10440>   IF res = 0 THEN
+
+       InsertMenuItem(1,"&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" ,3,"<\J><\n><\m><\r>&<\e><\j><\q><\r>","{mpath}{macro}!callContext")
+
+<:#160,10440>   ENDIF  
+
+<:#160,10440>End FUNCTION
+
+<:#160,10440>
+
+<:#160,10440>FUNCTION callContext()
+
+<:#160,10440>DEFSTR StRow,  StCol, EndRow,  EndCol;
+
+<:#160,10440>
+
+<:#160,10440>  App = "CW20S"
+
+<:#160,10440>  Topic = "TRANSLATE"
+
+<:#160,10440>  Item = "STRING"
+
+<:#160,10440>  EndCurField = "^"   
+
+<:#160,10440>
+
+<:#160,10440>  onCancel endLabel
+
+<:#160,10440>  onError    endLabel
+
+<:#160,10440>  declare checkContext()
+
+<:#160,10440>  declare beginWord()
+
+<:#160,10440>
+
+<:#160,10440>  couSymbol = 0
+
+<:#160,10440>  text = CurShade$()
+
+<:#160,10440>  IF text = "" THEN GOTO getString ENDIF
+
+<:#160,10440>  newLen = LEN(text)
+
+<:#160,10440>  IF newLen <;> 2 THEN
+
+<:#160,10440>     GOTO sendString 
+
+<:#160,10440>  ENDIF
+
+<:#160,10440>getString:
+
+<:#160,10440>   cTab = TableGetRange( &StRow, &StCol, &EndRow,  &EndCol)
+
+<:#160,10440>   IF cTab = 1 THEN
+
+<:#160,10440>       text = curWord$()
+
+<:#160,10440>       Goto sendString
+
+<:#160,10440>   ENDIF
+
+<:#160,10440>   needWord = curWord$()
+
+<:#160,10440>   IF needWord = "" THEN
+
+<:#160,10440>       message("<\M><\e><\r> <\q><\k><\n><\b><\`> <\m><\`> <\j><\s><\p><\q><\n><\p><\e>") 
+
+<:#160,10440>       GOTO endLabel
+
+<:#160,10440>   ENDIF
+
+<:#160,10440>   IF LEN(needWord) = 1 THEN
+
+<:#160,10440>       IF ASC(needWord) << 65 THEN
+
+<:#160,10440>           message("<\M><\e><\r> <\q><\k><\n><\b><\`> <\m><\`> <\j><\s><\p><\q><\n><\p><\e>") 
+
+<:#160,10440>           GOTO endLabel
+
+<:#160,10440>       ENDIF 
+
+<:#160,10440>   ENDIF
+
+<:#160,10440>   pos = CALL beginWord()
+
+<:#160,10440>   IF pos = 1 THEN
+
+<:#160,10440>       ILeft = 0
+
+<:#160,10440>      GOTO  beginText
+
+<:#160,10440>   ENDIF
+
+<:#160,10440>
+
+   pos = 1 
+
+   oldLen = -1
+
+   FOR  iLeft = 0 TO 7
+
+            TYPE("<[>SHIFTLeft]")
+
+            i =  ASC(curShade$())
+
+            TYPE("<[>SHIFTRight]") 
+
+            IF i << 32  THEN
+
+                GOTO beginText
+
+            ENDIF
+
+            TYPE("<[>CTRLSHIFTLeft]")
+
+             text = curShade$()
+
+             newLen = LEN(text)
+
+             IF newLen = oldLen THEN 
+
+                 iLeft = iLeft + 1
+
+                 BREAK 
+
+              ENDIF
+
+             oldLen = newLen
+
+      NEXT 
+
+  TYPE("<[>Right]")
+
+  TYPE("<[>Left]")
+
+   pos = newLen   
+
+beginText:
+
+<:#256,10440>   st = iLeft + 8
+
+<:#256,10440>   oldLen = -1
+
+<:#256,10440>   FOR i = 0 TO st
+
+<:#256,10440>           TYPE("<[>CTRLSHIFTRight]")
+
+<:#256,10440>            text = curShade$()
+
+<:#256,10440>           newLen = LEN(text)
+
+<:#256,10440>           IF newLen = oldLen THEN  BREAK  ENDIF
+
+           IF newLen - oldLen = 1 THEN 
+
+               IF ASC(RIGHT$(text,1)) = 10 THEN 
+
+                    i = i + 1
+
+                   BREAK 
+
+              ENDIF
+
+<:#160,10440>           ENDIF
+
+<:#160,10440>            oldLen = newLen
+
+<:#160,10440>   NEXT 
+
+<:#160,10440>   IF i = st + 1 THEN
+
+<:#160,10440>       IF ASC(RIGHT$(text, 1)) = 10 THEN GOTO notRight ENDIF
+
+<:#160,10440>   ENDIF
+
+<:#160,10440>    TYPE("<[>Right]")
+
+<:#160,10440>notRight:
+
+<:#160,10440>    TYPE("<[>Left]")
+
+<:#160,10440>    iLeft = i - iLeft
+
+<:#160,10440>    FOR i = 1 TO iLeft
+
+<:#160,10440>            TYPE("<[>CTRLLeft]")
+
+<:#160,10440>   NEXT 
+
+<:#160,10440>   TYPE("<[>CTRLSHIFTRight]")
+
+<:#160,10440>    couSymbol = InStr(pos, text, needWord) - 1
+
+<:#160,10440>     IF couSymbol << 0 THEN
+
+<:#160,10440>         couSymbol = 0
+
+<:#160,10440>     ENDIF
+
+<:#160,10440>
+
+<:#160,10440>sendString:
+
+<:#160,10440> checkContext()
+
+<:#160,10440> ChanNum = DDEInitiate(App, Topic)
+
+<:#256,10440> DDEPoke(ChanNum, Item, "{couSymbol}{EndCurField}{text}")
+
+<:#256,10440> DDETerminate(ChanNum)
+
+<:#256,10440>
+
+<:#256,10440>endLabel:
+
+<:#256,10440>End FUNCTION
+
+<:#256,10440>
+
+<:#256,10440>FUNCTION checkContext()
+
+<:#256,10440>	FindWindow = DLLLocate("User", "FindWindow", "ICJ")
+
+<:#256,10440>	hWnd = DLLCall(FindWindow, "Cont-lulu", 0)
+
+<:#256,10440>	IF hWnd = 0
+
+<:#160,10440>	    path = GetProfileString$("CWSET", "PathToExe", "contwin.ini")
+
+<:#160,10440>               nameExe = "CONTEXT.EXE"
+
+<:#256,10440>               EXEC("{path}{nameExe}",0)
+
+<:#256,10440>	ENDIF
+
+<:#256,10440>End FUNCTION
+
+<:#256,10440>
+
+<:#160,10440>FUNCTION beginWord()
+
+<:#160,10440>        curWrd = curWord$()
+
+<:#160,10440>        TYPE("<[>CTRLRight]")   
+
+<:#160,10440>        TYPE("<[>CTRLLeft]")
+
+<:#160,10440>         IF ASC(curWrd) - ASC(curChar$()) = 0 THEN
+
+<:#160,10440>              GOTO firstWord
+
+<:#160,10440>        ENDIF
+
+<:#160,10440>        TYPE("<[>CTRLRight]")   
+
+<:#160,10440>        IF ASC(curWrd) - ASC(curChar$()) = 0 THEN
+
+<:#160,10440>              GOTO firstWord
+
+<:#160,10440>         ENDIF
+
+<:#160,10440>         WHILE    ASC(curWrd) - ASC(curChar$()) <<<;> 0 
+
+<:#160,10440>                       TYPE("<[>CTRLLeft]")
+
+<:#160,10440>         WEND
+
+<:#160,10440>firstWord:
+
+<:#160,10440>        TYPE("<[>SHIFTLeft]")
+
+<:#160,10440>         text = curShade$() 
+
+<:#160,10440>         IF text = ""
+
+<:#160,10440>             beginWord = 1
+
+<:#160,10440>         ELSE
+
+<:#160,10440>             beginWord = 0
+
+<:#160,10440>             TYPE("<[>Right]")
+
+<:#160,10440>         ENDIF
+
+<:#160,10440>END FUNCTION
+
+>
+
+[Embedded]
+00008089
+>
+[macsum] 4
+setContext 0 0 4 1
+callContext 435 0 20 13
+checkContext 2415 0 5 118
+beginWord 2640 0 3 128
+[macse]
+14 setContext
+0 32 1
+7 "context.smm"
+8 1
+0 286 "CWSET" "PathToExe" "contwin.ini"
+13
+8 2
+0 520 1 "Too&ls" "Conte&xt"
+0 520 1 "&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" "<\J><\n><\m><\r>&<\e><\j><\q><\r>"
+0 527 1 "Too&ls" 3 "Conte&xt" "{2}{1}!callContext"
+13
+8 3
+6 3
+5 0
+18 0
+11 00000423
+0 527 1 "&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" 3 "<\J><\n><\m><\r>&<\e><\j><\q><\r>" "{2}{1}!callContext"
+6 0
+15
+9
+14 callContext
+7 "CW20S"
+8 5
+7 "TRANSLATE"
+8 6
+7 "STRING"
+8 7
+7 "^"
+8 8
+19 00001968
+20 00001968
+5 0
+8 9
+0 24
+13
+8 10
+6 10
+7 ""
+18 0
+11 00000177
+10 00000243
+0 14 "{10}"
+13
+8 11
+6 11
+5 2
+18 3
+11 00000243
+10 00001880
+0 1301 &1 &2 &3 &4
+13
+8 12
+6 12
+5 1
+18 0
+11 00000332
+0 23
+13
+8 10
+10 00001880
+0 23
+13
+8 13
+6 13
+7 ""
+18 0
+11 00000471
+0 3 "<\M><\e><\r> <\q><\k><\n><\b><\`> <\m><\`> <\j><\s><\p><\q><\n><\p><\e>"
+10 00001968
+0 14 "{13}"
+13
+5 1
+18 0
+11 00000646
+0 40 "{13}"
+13
+5 65
+18 5
+11 00000646
+0 3 "<\M><\e><\r> <\q><\k><\n><\b><\`> <\m><\`> <\j><\s><\p><\q><\n><\p><\e>"
+10 00001968
+16 beginWord
+13
+8 14
+6 14
+5 1
+18 0
+11 00000724
+5 0
+8 15
+10 00001119
+5 1
+8 14
+5 -1
+8 16
+5 0
+8 15
+5 7
+6 15
+18 2
+12 00000836
+10 00001083
+5 1
+6 15
+3 0
+8 15
+10 00000758
+0 6 "[4133]"
+0 24
+13
+0 40 [X]
+13
+8 17
+0 6 "[4135]"
+6 17
+5 32
+18 5
+11 00000938
+10 00001119
+0 6 "[20517]"
+0 24
+13
+8 10
+0 14 "{10}"
+13
+8 11
+6 11
+6 16
+18 0
+11 00001058
+6 15
+5 1
+3 0
+8 15
+10 00001083
+6 11
+8 16
+10 00000801
+0 6 "[39]"
+0 6 "[37]"
+6 11
+8 14
+6 15
+5 8
+3 0
+8 18
+5 -1
+8 16
+5 0
+8 17
+6 18
+6 17
+18 2
+12 00001243
+10 00001501
+5 1
+6 17
+3 0
+8 17
+10 00001164
+0 6 "[20519]"
+0 24
+13
+8 10
+0 14 "{10}"
+13
+8 11
+6 11
+6 16
+18 0
+11 00001341
+10 00001501
+6 11
+6 16
+3 1
+5 1
+18 0
+11 00001476
+0 807 "{10}" 1
+13
+0 40 [X]
+13
+5 10
+18 0
+11 00001476
+6 17
+5 1
+3 0
+8 17
+10 00001501
+6 11
+8 16
+10 00001208
+6 17
+6 18
+5 1
+3 0
+18 0
+11 00001614
+0 807 "{10}" 1
+13
+0 40 [X]
+13
+5 10
+18 0
+11 00001614
+10 00001626
+0 6 "[39]"
+0 6 "[37]"
+6 17
+6 15
+3 1
+8 15
+5 1
+8 17
+6 15
+6 17
+18 2
+12 00001751
+10 00001779
+5 1
+6 17
+3 0
+8 17
+10 00001672
+0 6 "[16421]"
+10 00001716
+0 6 "[20519]"
+0 808 "{14}" "{10}" "{13}"
+13
+5 1
+3 1
+8 9
+6 9
+5 0
+18 5
+11 00001880
+5 0
+8 9
+16 checkContext
+0 8 "{5}" "{6}"
+13
+8 19
+0 35 "{19}" "{7}" "{9}{8}{10}"
+0 9 "{19}"
+6 0
+15
+9
+14 checkContext
+0 283 "User" "FindWindow" "ICJ"
+13
+8 1
+0 284 "{1}" "Cont-lulu" 0
+13
+8 2
+6 2
+5 0
+18 0
+11 00000213
+0 286 "CWSET" "PathToExe" "contwin.ini"
+13
+8 3
+7 "CONTEXT.EXE"
+8 4
+0 22 "{3}{4}" 0
+6 0
+15
+9
+14 beginWord
+0 23
+13
+8 1
+0 6 "[16423]"
+0 6 "[16421]"
+0 40 "{1}"
+13
+0 282
+13
+0 40 [X]
+13
+3 1
+5 0
+18 0
+11 00000142
+10 00000338
+0 6 "[16423]"
+0 40 "{1}"
+13
+0 282
+13
+0 40 [X]
+13
+3 1
+5 0
+18 0
+11 00000240
+10 00000338
+0 40 "{1}"
+13
+0 282
+13
+0 40 [X]
+13
+3 1
+5 0
+18 1
+11 00000338
+0 6 "[16421]"
+10 00000240
+0 6 "[4133]"
+0 24
+13
+8 2
+6 2
+7 ""
+18 0
+11 00000420
+5 1
+8 0
+10 00000442
+5 0
+8 0
+0 6 "[39]"
+6 0
+15
+9
+00008114

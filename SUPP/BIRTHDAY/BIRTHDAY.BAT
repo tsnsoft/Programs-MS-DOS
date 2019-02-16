@@ -1,0 +1,3 @@
+@cls
+@birthday.exe
+@pause

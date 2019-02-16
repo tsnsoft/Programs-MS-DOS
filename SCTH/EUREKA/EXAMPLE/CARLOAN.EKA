@@ -1,0 +1,14 @@
+; Sample financial equation to calculate a car loan
+
+$ finansmooth = yes
+
+IntM = .01125
+Prin = 8000.00
+ntot = 48
+n = (1+ IntM)^ntot
+
+PayM = Prin * IntM * ((1+IntM)^ntot) / ((1+IntM)^ntot - 1)
+FofP(n) := (Prin * (1*IntM)^n)
+FofA(n) := (PayM * ((1+IntM)^n - 1) / IntM)
+PayOff(n) := FofP(n) - FofA(n)
+

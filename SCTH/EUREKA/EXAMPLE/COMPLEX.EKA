@@ -1,0 +1,13 @@
+
+; This example demonstrates how Eureka
+; solves for complex variables.
+
+$ complex = yes
+
+x^2 = -1
+y^2 + 1 = 0
+
+exp(x*pi) = theta
+pi = 3.1415926
+
+

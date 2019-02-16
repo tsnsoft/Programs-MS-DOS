@@ -1,0 +1,578 @@
+Sea Graphics Viewer V1.1 (C) 1995
+                                     Programming:  H. De Laat & B.Wakkee.
+                                         Artwork:  R. Gortzen.
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+
+
+                     _/_/_/_/_/_/_/_/_/_/     _/_/
+                  _/                            _/
+                 _/_/_/_/    _/_/_/       _/    _/
+                      _/   _/           _/      _/
+             _/_/_/_/    _/_/_/_/_/_/ _/_/_/_/_/_/   Graphics & Animation
+                                                     Viewer.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+IN THIS DOCUMENT:
+
+    1. SHORT DESCRIPTION
+    2. FEATURES
+    3. SYSTEM REQUIREMENTS
+    4. LEGAL
+    5. USER MANUAL
+       5.1  QUICK START
+       5.2  KEYS & FUNCTIONS
+       5.3  CONVERSION MENU
+       5.4. OPTIONS MENU
+       5.5  CATALOG OPTION
+    6. PROBLEM SOLVING
+    7. NOTES
+    8. REGISTERING
+    9. FUTURE VERSIONS
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+The package SEA.ZIP should contain the following files.
+
+-SEA.EXE      [ Executable     ]
+-DOS4GW.EXE   [ Dos extender   ]
+-SEA.DAT      [ Datafile       ]
+-SEA.DOC      [ This Document  ]
+-REGISTER.FRM [ Reg. Form      ]
+-CHANGES.DOC  [ Revision notes ]
+-ADVERT.JPG   [ Example JPG    ]
+-SEA1.ICO     [ Icon file      ]
+-SEA2.ICO     [ Icon file      ]
+
+And possibly a SEA.INI belonging to someone else (delete it).
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+1. SHORT DESCRIPTION.
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ FASTEST VESA compatible mouse controlled viewer around.                   ³
+³ Views PNG, JPEG, TARGA, BMP & RLE, TIFF, PCX, GIF, PNM (PPM, PGM, PBM),   ³
+³ LBM (IFF) and Dp2e-LBM, BBM & PCC pictures.                               ³
+³ Plays FLI and FLC animations. Offers conversion between all listed        ³
+³ graphical formats. All combined in a Graphical User Interface.            ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+2. FEATURES.
+
+-Supports: JPG, TGA, BMP & RLE, TIFF, PCX, GIF, LBM (IFF),
+ Dp2e-LBM, BBM & PCC, PNM (PBM, PGM, PPM) and the new PNG format.
+-Faster displaying of these formats compared to ANY other viewer.
+-File conversion between all of these formats and all available colordepths.
+-Floyd Steinberg / Ordered / Error diffusion dithering (option).
+-User definable JPEG Quality [1 to 100%] for writing JPEG files.
+-FLI and FLC player in all resolutions.
+-FLI/FLC Preview in window.
+-A nice Graphical User Interface (Mouse/Keyboard). Resolution 800x600.
+-Full color preview in interface. (in 256 colors or hicolor mode)
+-Extremely fast color JPEG preview (option).
+-Detects all available VESA modes.
+-Resolution switching while viewing, no reloading.
+-Auto scale (option), Grayscale (option), Auto resolution (option).
+-Mouse panning through large pictures.
+-Slideshow option (with delay from 0 upto 30 seconds).
+-Catalog option to create index images.
+-Fully operational shareware version.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+3. SYSTEM REQUIREMENTS:
+
+Minimum System Requirements:
+A 386Sx, 2MB and a VESA compatible 512 Kb VGAcard.
+
+Realistic System Requirements:
+A 33 MHz 486 with 4MB, a mouse and a VESA compatible 1 MB VGAcard.
+
+VESA 2.0 is highly recommended for systems with a PCI graphics card.
+(because PCI owners can benefit from a dramatic speed increase by using
+ vesa 2.0)
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+4. LEGAL.
+
+THE SOFTWARE IN THE DISTRIBUTED FILE HAS NO GUARANTEE OF ANY TYPE WHATSOEVER.
+
+IN NO EVENT WILL THE AUTHORS OF THIS PROGRAM (H.de Laat, B.Wakkee, R.Gortzen)
+BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING BUT NOT LIMITED TO LOST PROFITS,
+LOST SAVINGS, OR OTHER INCIDENTIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR THE INABILITY TO USE SUCH PROGRAM, EVEN IF THE AUTHORS HAVE BEEN
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, OR FOR ANY CLAIM BY ANY OTHER
+PARTY.
+
+DO NOT USE VIDEO MODES THAT YOUR MONITOR CANNOT HANDLE. EXCLUDE THESE MODES
+FROM USE, EITHER BY SPECIFYING INPUT PARAMETERS WHEN USING VESA, OR BY
+USING THE MENU OPTION 'MAX SCREEN RES'.
+
+THIS PRODUCT MAY BE DISTRIBUTED FREELY IN UNMODIFIED FORM AS LONG AS NO
+FEES ARE CHARGED. DO NOT DISTRIBUTE THE FILE 'REGISTER.DAT'.
+
+IF YOU DO NOT AGREE WITH THESE TERMS, STOP USING THIS PROGRAM.
+
+ALL PRODUCT NAMES MENTIONED IN THIS SOFTWARE AND DOCUMENT ARE TRADEMARKS
+OR REGISTERED TRADEMARKS OF THEIR RESPECTIVE OWNERS.
+
+THE GRAPHICS INTERCHANGE FORMAT(c) IS THE COPYRIGHT PROPERTY OF COMPUSERVE
+INCORPORATED. GIF(sm) IS A SERVICE MARK PROPERTY OF COMPUSERVE INCORPORATED.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+5. USER MANUAL.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[ 5.1. QUICK START. ]ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+  Make sure you have
+       -enough free extended memory,
+       -a mouse driver loaded,
+       -a Vesa compatible VGAcard or vesa resident.
+  run the file SEA.EXE
+  Select a file with mouse or keyboard, <ENTER> or left mouse button to view.
+  Press <ESC> to return to the menu. Press F1 for online help within the
+  viewer.
+
+[ INITIALIZATION FILE. ]
+  An initialization file will be created the first time you run the viewer.
+  This file will contain all the default values at first. All modifications
+  of the options within the viewer will be stored in this file for future
+  reference. If the viewer doesn't work on your system, it may be the case
+  that you have received an initialization file belonging to someone else.
+  In that case you may delete the file 'SEA.INI'. A new 'SEA.INI' will be
+  created when you run the viewer. The original default values should work on
+  all systems.
+
+[ MOUSE. ]
+  Using the mouse in the interface is intuitive. For example, click on the
+  path to change to another drive, click on filenames to select them and
+  click on the 'buttons' in the status bar to select specific options.
+
+[ OPTIONS MENU. (F3) ]
+  Use this menu to configure the program to meet your own personal
+  requirements.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[ 5.2. KEYS & FUNCTIONS ]ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+ INTERFACE KEYS:                      ³ KEYS WHILE VIEWING AN IMAGE:
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ [ F1  ] Help screen.                 ³ [ENTER    ] Next image.
+ [ F2  ] Convert selected file(s).    ³ [BACKSPACE] Previous image.
+ [ F3  ] Options.                     ³ [ESCAPE   ] Return to interface.
+ [ F4  ] Create catalog.              ³ [ +/- ] Next/Previous resolution.
+ [ F5  ] Toggle scale.                ³ [ *   ] Select resolution.
+ [ F6  ] Toggle Grayscale.            ³ [ F5  ] Toggle scale.
+ [ F7  ] Toggle Autoresolution.       ³ [ r/R ] Increase/Decrease red.
+ [ F8  ] Toggle Preview.              ³ [ g/G ] Increase/Decrease green.
+ [ F9  ] Run slideshow.               ³ [ b/B ] Increase/Decrease blue.
+ [ F10 ] Quit.                        ³ [Alt-X] Quit.
+ [Alt-X] Quit.                        ³
+ [ENTER] View highlighted file.       ³ NOTE: Increase & decrease color
+ [ +/- ] Next/Previous resolution.    ³ components in 256 color modes only.
+ [ *   ] Select resolution.           ³
+ [Alt + A-Z ] Change drive.           ³
+ [BACKSPACE ] Parent directory.       ³
+ [DELETE    ] Delete selected file(s) ³
+ [INSERT    ] Copy selected file(s)   ³
+ [Alt-F10   ] About.                  ³
+ [SPACE     ] Tag/untag files.        ³
+ [Other keys] Speadsearch.            ³
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+[ RESOLUTION SWITCHING. ]
+  All available resolutions can be selected by pressing '*' from within the
+  menu, or while viewing a picture. It is also possible to cycle through
+  all resolutions by using the +/- Keys.
+
+[ PANNING. ]
+  Use the mouse or cursor keys to scroll through a large picture. The faster
+  your VGAcard, the better the result.
+
+[ SELECTING FILES. ]
+  This option is necessary to mark specific files in a large group of files
+  that need to be deleted, converted, catalogued, copied, or displayed in a
+  slideshow. Mark and unmark a file by using the right mouse button or by
+  pressing the SPACEBAR 'on' this file. Selected files will be highlighted,
+  while unselected files will remain dark.
+
+[ CHANGING COLOR PALETTE. ]
+  While viewing an image in 256 color modes it is possible to change the RGB
+  components of the display by pressing the r/R, g/G and b/B keys. Any
+  subsequent screen update restores the palette.
+
+[ SPEEDSEARCH. ]
+  By typing a filename, the cursor will automatically be positioned at this
+  filename. Use this option to find a specific filename in a large directory.
+
+[ NETWORK DRIVES. ]
+  On some LAN's the entry for the parent directory is not listed. In order to
+  change to the parent directory (if any) press the backspace key.
+
+[ DELETING FILES. ]
+  By pressing the <DELETE> key you will delete all the selected files.
+  If no files are selected, the current file (highlighted by the cursor)
+  will be marked for deletion. To confirm a delete operation press <enter>,
+  to cancel the operation press <esc>.
+
+[ COPYING FILES. ]
+  By pressing the <INSERT> key you can copy all the selected files.
+  If no files are selected, the current file (highlighted by the cursor)
+  will be copied. You are prompted for the destination path.
+  Press <enter> to copy, or esc to cancel. Existing files with the same name
+  will be overwritten without warning.
+
+[ FILE CONVERSION (F2). ]
+  First select a file (or more files) to be converted. Then press F2 to access
+  the conversion menu. If no files are selected, the current file (the file at
+  the cursor) will be marked for conversion.  Now select the format to wich
+  the file (or files) needs to be converted, together with the number of
+  colors and the dithering method. choose OK to start. There is an option to
+  select the target directory. If no directory is specified, the file(s) will
+  be written to the current directory. After conversion has been completed,
+  the conversion results will be shown.
+
+[ CHANGING DRIVES. ]
+  To change to another drive press ALT-Drivename (ie: ALT-B or ALT-C)
+
+[ QUIT. ]
+  To exit the viewer, press ALT-X, F10, or click the closebutton in the top
+  left corner of the screen.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[ 5.3. CONVERSION MENU (F2). ]ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+The following options can be specified:
+
+[ DESTINATION TYPE.      ]  BMP                  BMP RLE Compressed
+                            LBM                  LBM compressed
+                            TIFF                 TIFF huffman (RLE)
+                            TIFF Packbits
+                            TARGA                TARGA Compresed
+                            JPG                  PCX
+                            PNG
+                            PNM                  PNM Ascii
+
+[ OUTPUT COLORS.         ]  2, 4, 16, 256,
+                            32K/64K, 16M 24-bits, 16M 32-bits,
+                            Grayscale
+
+[ DITHER METHOD.         ]  None, Floyd/Steinberg, Ordered.
+
+[ PNG COMPRESSION LEVEL. ]  Valid compression levels are between 1 and 100.
+                            Choose 1 for the fastest possible compression that
+                            will create somewhat larger PNG files. Choose 100
+                            to obtain the smallest possible PNG files at the
+                            cost of some speed. (The default value is 80)
+
+[ DESTINATION PATH.      ]  Specify target directory for converted files.
+                            The default directory is the current directory.
+
+[ JPEG QUALITY.          ]  In case of conversion to JPEG format, specify the
+                            quality between 1 and 100 (default 75). Quality 100
+                            is the best available quality. Lower qualities
+                            will cause JPEG files to become smaller in size.
+
+NOTES ON CONVERSION:
+
+  A converted file may overwrite an existing file with the same name
+  without warning.
+
+  Only valid combinations are possible, ie. you can not create 256
+  color JPG files.
+
+  Floyd/Steinberg dithering is recommended to achieve best quality when
+  converting to 256 colors.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[ 5.4. OPTIONS MENU (F3). ]ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+[ INTERFACE COLORS. ]
+  The default interface uses 256 colors for compatibility reasons. If
+  however you own a VGAcard that supports hicolor modes (15 or 16 bit modes),
+  you may select the option '32k/64k Colors' in the options menu. In 32k/64k
+  color mode, the preview of a picture will look a lot better.
+
+[ ALT-X QUITS OPTION. ]
+  select this if you want to be able to quit the program with Alt-X. However
+  in some cases it is necessary to access a drive X:\ (ie a network drive) by
+  using the Alt-X combination. In that case turn this option off.
+
+[ DIRECTORY OPTION. ]
+  select 'All files' to see all the files in a directory, select 'Files with
+  supported extension' if you would only like to see picture files and
+  FLI/FLC files.
+
+[ SCAN FILE INFO OPTION. ]
+  All relevant files will be scanned for type and resolution.
+  The process of file-scanning takes place in the background. This means that
+  you can continue your work during this process. you can turn it off when
+  using large directories on slow media like cd-roms, etc. However, when the
+  file scan option is selected, you may always choose to interrupt the
+  scanning of files by pressing the <ESC> key.
+
+[ MAX SCREEN RES. ]
+  Here you may select the highest possible resolution your monitor can handle.
+  By doing so you can prevent the use of these modes that may damage your
+  monitor. (It is often the case that a VGAcard can handle some modes that
+  your monitor cannot.) It is very important to configure this option before
+  you start using the viewer on a regular bases.
+  Note: The automatic resolution always respects the maximum screen resolution
+        as selected in the menu, in other words: such excluded
+        resolutions will never be used.
+
+[ READY BEEP AND ERROR BEEP. ]
+  Select these to indicate whether or not you want a beep after loading a
+  picture, or loading a faulty picture.
+
+[ DITHER METHOD. ]
+  There are 3 options:  -Ordered
+                        -Error Diffusion
+                        -Floyd Steinberg
+
+  The dither method determines the patterns that make truecolor images look
+  better on anything less than a 24bit display mode.
+  Use 'Ordered' for cartoon-style pictures (single coloured fills).
+  Use 'Error Diffusion' for photorealistic pictures.
+  Use 'Floyd Steinberg' to achieve the best quality. (A bit slower.)
+  When using the Floyd Steinberg method, the picture remains dithered in
+  memory. This means that the image will remain dithered, even when switching
+  to a truecolor mode, or when returning to the interface. The picture will
+  remain in the 256 color dithered format until it is reloaded from disk.
+
+[ SCALE, GRAYSCALE, AUTORES AND PREVIEW. ]
+  are some of the most frequently used options and can also be controlled
+  directly using function keys F5 to F8 or with the mouse in the main program
+  screen.
+
+[ JPEG PREVIEW OPTIONS.]
+ -Fullsize color      : Loads entire picture into buffer: BEST FOR QUALITY.
+ -Thumbnail color     : >Very< fast jpeg preview : RECOMMENDED.
+ -Fullsize Grayscale  : Faster than color, but only gray.
+ -Thumbnail Grayscale : low quality, but FASTEST.
+
+[ FLI/FLC OPTIONS. ]
+  Options:
+  -Entire Animation : Plays FLI/FLC in the preview window.
+  -First Frames     : Displays mosaic of 4 frames of the FLI/FLC as preview.
+  -Default Image    : Standard Picture indicating that it's a FLI/FLC file.
+  FLI and FLC files can be viewed fullscreen by selecting them. The resolution
+  of the screen will automatically be such that no parts of the FLI will be
+  lost. You may override this by selecting an even higher resolution.
+  So if, for example, you would like to see a 640x480 fli file in a higher
+  resolution, just select this resolution with the +/- keys or the '*' key
+  before playing it.
+
+[ SLIDE SHOW OPTION. ]
+  Activate the slideshow option by pressing F9. If no files are marked, the
+  slideshow will start with the file the cursor is at. The slideshow will
+  stop at the end of the directory, unless the option 'Cyclic slideshow' is
+  selected from within the options menu. The delay between the pictures
+  can be from 0 to 30 seconds, as selected in the options menu.
+
+[ OK, CANCEL, DEFAULTS. ]
+  Choose OK to save the selected options, CANCEL to abort. Press the
+  DEFAULTS button to restore all options to their 'factory settings'.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[ 5.5. CATALOG OPTION (F4). ]ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Use this option to create screens containing small preview pictures.
+First, select the desired files by using the spacebar. Then select the
+catalog option (F4). You will be prompted to select one of the following
+resolutions:
+
+640  x 480    [4x3 pictures].
+800  x 600    [5x4 pictures].
+1024 x 768    [6x5 pictures].
+1280 x 1024   [8x7 pictures].
+
+[ GRAY CATALOG BACKGROUND OPTION. ]
+  This option is turned on by default, so the background colour of index files
+  will be gray. Turn this option off to get a black coloured background for
+  your index files.
+
+After this you may specify the type, number of colors, dithering method
+and destination path of the catalog file(s). The catalog file(s) will now
+be created. Catalog files will be named: CAT0000 and onwards.
+
+Notes: Make sure you have enough free memory before creating large index files.
+       Catalog screens are always handled internally as truecolor pictures.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+6. PROBLEM SOLVING.
+
+Q: I get the message 'DOS/16M error: [40] not enough extended memory (xmin)'.
+A: This may occur on 2MB machines and some configurations with 4MB.
+   On 2 MB machines you should remove any memory managers or disk caches.
+   On 4 MB machines reducing the amount of extended memory used by ie. disk
+   cache programs should work.
+
+Q: I get the message 'ERROR: No VESA driver found'.
+A: The viewer needs a VESA compatible VGA card to work.
+   You need to load the vesa driver that came with your particular VGA card
+   or, even better, load univesa which works on all modern VGA cards.
+   (most modern VGA cards have the VESA interface allready built into them).
+
+Q: Whenever I scroll or change resolutions I loose part of the picture.
+A: There obviously isn't enough extended memory to store the current picture
+   in it's entirety. Therefore, whenever you 'scroll' or change the resolution,
+   only that part of the picture that fits into memory can be updated.
+   Try to view the picture in the highest resolution avialable or use scaling
+   to avoid the need for panning.
+
+Q: What are those 'patterns' I see, when viewing truecolor pictures in
+   256 color modes and 256 color pictures in hicolor modes. They are not
+   part of the original picture.
+A: Those are the Dithering patterns nessecary to make 24 BIT pictures look good
+   on anything less than a 24 BIT displaying system. For example while viewing
+   a JPEG file in a 256 color mode or while viewing a 256 color PNG file in a
+   hicolor mode. Dithering patterns can be avoided by viewing files in their
+   corresponding graphics mode ie, view a GIF file in 256 color mode and view
+   JPEG files in truecolor modes.
+
+Q: My monitor display makes funny noises and the picture looks tweaked and/or
+   is moving.
+A: You have selected a display mode that your VGA card is capable of,
+   but your monitor cannot handle properly. ie: 1024x768, 1280x1024.
+   Try not to view files in any modes that your monitor cannot handle.
+   Use the menu option 'maximum screen x-res' to prevent the use of any
+   such modes.
+
+Q: Why do I keep loosing part of the picture ? I have 4 MB memory.
+A: Remember that TRUECOLOR 24 bit pictures need three times the amount of
+   memory compared to 256 color 8 bit images using the same resolution.
+   It is therefore possible that some truecolor pictures might not fit
+   into memory.
+
+Q: Scrolling through true-color images in 256 color modes is slow.
+A: This is caused by the real-time dithering in 256 color modes. If however,
+   you select Floyd/Steinberg dithering, the image is only dithered once
+   (during loading). This results in faster scrolling.
+
+Q: I get the message 'SEA.EXE failed CRC-Check'
+A: You have obtained an illegally modified version of the program.
+   You can find the latest version on our www-page:
+   http://www.stack.urc.tue.nl/~ralphg/
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+7. NOTES.
+
+-Do not use the dos4gw virtual memory option because the viewer might crash.
+
+-For users with ONLY a 256 color VGAcard: Convert the supplied Jpeg files to
+ PNG files using 256 COLORS and FLOYD-STEINBERG DITHERING. The resulting
+ PNG files will really look a lot better in 256 color modes than the original
+ Jpeg files. (This is because the convert option uses an adaptive palette.)
+ Compare the resulting PNG file with the original Jpeg file in 256 color modes.
+
+-If you have a PCI-graphics card, we recommend that you use a vesa 2.0 driver.
+ This may increase performance, ie. when panning through large images in
+ high resolution modes.
+
+-If you have a lot of GIF files, you might want to convert them to the PNG
+ format. PNG files take up less disk space.
+
+-On some VGA cards, the internal vesa bios lists some video modes that are
+ not supported by the card itself. We experienced this on an old ET4000 card.
+ (The bios reported 16 Bit modes, the card only supported upto 15 bit modes.)
+ In cases like this, use univesa to specify the type of DAC that is really
+ present. If however a modeswitch is made to a non supported mode, the viewer
+ will automatically try to recognize this and switch to the closest
+ available mode. In some cases this will not work. Try to avoid using these
+ particular modes.
+
+-Command line options.
+ Type 'SEA /?' to list the startup options.
+ Starting the viewer with 'SEA /8' forces the viewer into 256 color interface
+ mode. Typing SEA [FILENAME] will display this picture or animation
+ immediately. Typing SEA @[LISTFILE] will perform a slideshow on all the
+ pictures listed in the file LISTFILE. A list file might look like this:
+
+ file1.jpg
+ file2.lbm
+ c:\graphics\file2.gif
+ ..\file3.png
+
+ The command line slideshow will use the parameters from the sea.ini file.
+
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+8. REGISTERING.
+
+ The zip file you received contains the fully operational shareware version
+ of the SEA viewer. Registering your copy will enable us to develop the
+ program further and to add more features.
+ By registering the viewer, you will recieve unlimited Email support and a
+ personal registration file which will suppress the <Press space to continue>
+ messages. The registration file will be sent (by airmail) on 3.5" disk.
+ This file will work with future versions as well. Registering one copy will
+ cost a total of 24$. This includes shipping and handling.
+
+ To order do the following:
+
+ 1) Print out the order form, fill out the details and send it
+    by mail to the following address:
+                 SEA VIEWER
+                 Chrysantenstraat 34
+                 5462 AW Veghel
+                 The Netherlands.
+
+    Do not send your registration form by E-mail.
+
+ 2) Pay the registration fee (see below).
+
+  HOW TO PAY:
+
+ -Cash, in US$ only. Please don't send coins, they're useless to us.
+  People registering from within Europe may send Hfl 35,- instead.
+  No other currencies are accepted. Make sure the money is not visible
+  through the envelope.
+
+ -Eurocheque, only possible inside Europe. The amount on the cheque must be
+  Hfl 35,- (Dutch guilders). Make cheques payable to H.J.M. de Laat.
+  Don't forget to fill out all the necessary details.
+
+ -Foreign cheque. To put it simple: Go to the bank and ask the bank clerk for
+  a foreign checque. This cheque will cost you about 10 US$ It is very
+  important to ask whether or not the receiving party (us) needs to pay an
+  extra amount, to cash in this cheque. If so, add this amount to the cheque.
+  If you are not sure about this, you can always send your registration fee
+  cash in the envelope together with the registration form.
+
+ -We do not accept credit cards (VISA, AmEx, Mastercard, etc).
+
+ NOTE: Contact us for special group registration discounts.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+9. FUTURE VERSIONS.
+
+Depending on the number of registrations, we plan to extend our product
+with the following features:
+
+-Support of MPEG, VOC and WAV files.
+-Viewing of ASCII files.
+-Image manipulation e.g. resize/resample/smoothen/rotate.
+-Gamma correction.
+-Many many more.
+
+Please let us know what features YOU want.
+
+        Bart Wakkee,    ccbw@win.tue.nl  or bartw@stack.urc.tue.nl
+        Ralph Gortzen,  ralphg@stack.urc.tue.nl
+        Harold de Laat, cchl@win.tue.nl
+
+        We can also be reached on Fido-net at the following address:
+        2:284/116.14  (append  @fidonet.org  for internet)
+
+        You can visit our www-page for the latest product info.
+        http://www.stack.urc.tue.nl/~ralphg/
+

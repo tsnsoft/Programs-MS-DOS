@@ -1,0 +1,20 @@
+; This example, a problem in linear programming, demonstrates
+; Eureka's ability to solve simultaneous linear equations
+; in multiple variables, and to maximize the objective
+; function in order to reach an optimum solution.
+
+; Profit function (the objective function)
+
+    Profit = (4*x) + (6*y)
+
+$ max (Profit)
+
+    x > 0 ; wooden widgets
+    y > 0 ; plastic widgets
+
+    x := 90
+    y :=80
+
+2*x + y < 180 ; total time on machine A can't exceed 180
+x + 2*y < 160 ; total time on machine B can't exceed 160
+x + y < 100 ; total time on machine C can't exceed 100

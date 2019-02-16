@@ -1,0 +1,11 @@
+
+; This demonstrates solving
+; a single equation iteratively.
+
+ f(x):= x^2 + x/(x + 1) - 6
+ f(x)=0
+
+
+{ Exact solution is x = 2.30278
+  or -1.39713 or -2. }
+

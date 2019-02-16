@@ -1,0 +1,963 @@
+*******************************************************************************
+* Please don't fool with this file, or you will spoil the whole wretched mess.*
+* An extra carriage return will make the entire program unusable.             *
+*******************************************************************************
+* YOU CANNOT EDIT THIS FILE WITH AN EDITOR THAT REMOVES TRAILING BLANKS!      *
+*******************************************************************************
+* This is the main messages file
+* Blank lines are significant
+* Spaces are significant
+* Comments can begin with an asterisk or double-ampersand
+* A double-ampersand comment implies that trailing spaces don't matter
+* Messages are grouped into sections
+* @1 means "ProgramName" (e.g., SNAP! or FoxDoc)
+* @2 is the name corresponding to dBASE II/FoxBASE
+* @3 is the name corresponding to dBASE III/FoxBASE+
+* @4 is the name corresponding to dBASE IV/FoxPro
+* 
+* The file is organized into sections:
+*   Each section must begin with a string in the format:
+*      <section title>
+*   Both beginning and ending angle brackets are required.
+*   Run MSGDOC to produce a listing showing the section numbers and offsets
+*     within each section.
+*
+*   Key codes match the physical layout of the keyboard:
+*      Q  144     I  151       F  161     X  173
+*      W  145     O  152       G  162     C  174
+*      E  146     P  153       H  163     V  175
+*      R  147     A  158       J  164     B  176
+*      T  148     S  159       K  165     N  177
+*      Y  149     D  160       L  166     M  178
+*      U  150                  Z  172
+*
+********************************************************************************
+<Section 1>
+********************************************************************************
+*
+Y   && character for "Yes"
+N   && character for "No"
+Help
+*
+* This section is for general help--press F1 at greeting screen
+*
+@1 generates technical documentation for @3 and @4
+systems.  At your option, it can produce any combination of:
+
+     Program headings showing the programs which call a particular
+        program, those which the program calls, and databases
+        indexes, format files, report forms and memory files used by
+        the program.
+     Tree diagram of all programs in the system and the
+        programs and databases used by each.
+     Summary reports showing database structures, index parameters,
+        formats and report forms used, plus a token cross reference.
+     Indented program code with keywords capitalized.
+     Action diagrams to illustrate program structure
+     Batch files for backing up programs and data
+     LNK and MAKE files for Clipper
+
+
+
+Press space bar to see command line arguments
+*
+* Command line argument help
+*
+Help--Command Line Arguments
+@1 allows command line arguments to begin with either
+a hyphen (-) or a slash (/).
+
+  -A          Extra indent before a CASE statement.
+  -BW         Black & white.  Disable color.
+  -D          Debug mode.  Display source code.
+  -Ffilename  Get configuration data from "filename".
+  -Lfilename  Get standard link data from "filename".
+  -Mfilename  Get macro substitution strings from "filename".
+  -N          Do not check for video "snow"
+  -O          Omit all macro substitutions.
+  -Pdest      Printer port/file (e.g., -Plpt2:)
+  -Rnnnn      Reserve nnnn bytes of memory.
+  -S          Show reports on screen as they are created.
+  -T*:        Use '*:' as Tag for @1 directives.
+  -U          Turn off the mouse
+  -V          Direct video off.  Slower but more compatible.
+  -Wnnn       Hyphens for reports.
+  -X          Run @1 without waiting for input.
+  -?          Display some help.
+Press space bar to continue or F1 for program limits
+Maximum program files:
+Maximum of each other file type:
+Maximum tokens:
+Maximum length of a token:
+Maximum number of key words:
+Maximum length of key word:
+Maximum levels of program nesting:
+Maximum number of database fields:
+Maximum length of filename:
+Maximum number of macro definitions:
+Maximum number of fields:
+Maximum program/data directories:
+
+
+
+Press space bar to continue
+Limits
+*
+* Command line error messages start here
+*
+switch used, but the file could not be found.
+-r switch used but no reserved memory specified.
+Invalid reserved memory specified.
+Syntax is:   @1 -r5000      (to reserve 5000 bytes).
+-w switch used but no report width specified.
+Syntax is:   @1 -w79   (for width of 79 characters).
+Invalid report width specified.
+Syntax is:   @1 -w79  (for width of 79 characters).
+*
+* Key codes for Begin and Quit on main menu
+176
+144
+*
+Scanning Project File
+*
+********************************************************************************
+<Section 2 -- System Screen>
+********************************************************************************
+*
+System Screen
+159
+System
+Choose system options
+F1-Help    F5-Save Defaults    F6-Read Defaults   F10-Main menu
+Application name:
+Author:
+Copyright holder:
+Copyright date:
+Main program/project filename:
+Path for program source code:
+Path for data files:
+Path for output files:
+Path for @1 files:
+Main program
+not found.;Press Ctrl-C to exit, or any other key to enter a correct filename.
+Program file path not found:
+Error
+Output path is not valid:
+The drive is probably invalid.
+The main program must be a source code or project file.
+*
+********************************************************************************
+<Section 3 -- Reports Screen>
+********************************************************************************
+*
+Report Screen
+147
+Reports
+Choose documentation reports and filenames
+F1-Help    F5-Save Defaults    F6-Read Defaults   F10-Main menu
+Write program tree structure?
+Write list of files used in system?
+Write index file summary?
+Write database summary?
+Write format file summary?
+Write report form summary?
+Write procedures summary?
+Write label form summary?
+Write screen file summary?
+Write menu file summary?
+Write binary file summary?
+Write memory file summary?
+Write system statistics?
+Write variable cross-reference?
+Write other file summary?
+Write PLINK86 LNK file?
+Write Borland Turbo Link file?
+Write Microsoft LINK file?
+Write NDMAKE MAKE file?
+Prepare batch files for backups?
+Filename
+*
+********************************************************************************
+<Section 4 -- Format Screen>
+********************************************************************************
+*
+Format and Action Diagrams Options Screen
+161
+Format
+Choose source code formatting options
+F1-Help    F5-Save Defaults    F6-Read Defaults   F10-Main menu
+  Create formatted source code files?
+     Preserve original date and time?
+Write headings for source code files?
+Echo all headings to a separate file?
+     Filename:
+      Token capitalization (U/L/F/N)?    (Up/Low/First/None)
+    Keyword capitalization (U/L/F/N)?
+Key word filename:
+Tabs, spaces or no indenting (T/S/N)?
+No. of spaces:
+                      Align comments?
+       Column:
+     Indent procedures and functions?
+   Eliminate blank lines from output?
+      Eliminate comments from output?
+           Keyword expansion (E/C/N)?    (Expand/Compress/None)
+Comment control structures (Y/N/R/D)?    (Yes/No/Replace/Delete)
+              Create action diagrams?
+  File extension for action diagrams?
+ Add line numbers to action diagrams?
+ Graphics, ASCII or other characters?    (G, A or O)
+         Symbols for action diagrams?
+You cannot align comments if you use tabs for indenting
+* The following string is hotkeys for action diagram choices, 
+GAO
+* The following string is hotkeys for token capitalization
+LUFN
+* The following string is hotkeys for key word capitalization
+ULFN
+* The following string is hotkeys for key word expansion
+NEC456789
+* The following string is hotkeys for control structure commenting
+NYRD
+* The following string is hotkeys for tab options
+NTS
+*
+* Do not localize the next 5 lines!
+GAO
+LUFN
+ULFN
+NEC456789
+NYRD
+NTS
+*
+********************************************************************************
+<Section 5 -- Xref Screen>
+********************************************************************************
+*
+Xref (Cross-Reference) Options Screen
+173
+Xref
+Choose cross-reference options
+F1-Help    F5-Save Defaults    F6-Read Defaults   F10-Main menu
+Cross reference public variables?
+Cross-reference other variables and tokens?
+Cross-reference @3 key words?
+Cross-reference numeric constants?
+Cross-reference @2 key words?
+Force paging to disk?
+Retain sorted page file?
+Path for temporary page files
+Cross-reference @4 key words?
+Local cross-references only?
+*
+********************************************************************************
+<Section 6 -- Headings options screen>
+********************************************************************************
+*
+ Headings Options Screen
+163
+Headings
+Choose options for source file headings
+F1-Help     F5-Save Defaults      F6-Read Defaults      F10-Main menu
+Include copyright data?
+Include procedures and functions?
+Include called programs?
+Include calling programs?
+Include databases?
+Include indexes?
+Include format files?
+Include report forms?
+Include label forms?
+Include memory files?
+Include binary files?
+Include other files?
+Write procedure headings?
+Heading insert file name?
+*
+********************************************************************************
+<Section 7 -- Tree Screen>
+********************************************************************************
+*
+Tree Diagram Screen
+148
+Tree
+Choose tree diagram options
+F1-Help    F5-Save Defaults    F6-Read Defaults   F10-Main menu
+Create tree diagram?
+Include procedures?
+Include functions?
+Include format files?
+Include databases?
+Include indexes?
+Include report forms?
+Include label forms?
+Include memory files?
+    Characters for tree (G/A/N)?      (Graphics, ASCII, None)
+Filename
+No tree line characters are allowed when you do not;
+include procedures, functions or format files in the tree.
+*
+********************************************************************************
+<Section 8 -- Print Screen>
+********************************************************************************
+*
+Printing Options Screen
+153
+Print
+Choose source code printing options
+F1-Help   F2-List   F5-Save Dflts   F6-Read Dflts   F9-Print now  F10-Main menu
+  Print source code files:
+Print action diagrams:
+               Line width:
+          Page length:
+               Top margin:
+        Bottom margin:
+              Left margin:
+         Right margin:
+            Tab expansion:
+   Print line numbers:
+Form feed before printing:
+ Form feed after printing:
+     Printer setup string:
+     Printer reset string:
+Error in line width
+Error in page length
+Error in top margin
+Error in bottom margin
+Error in left margin
+Error in right margin
+Error in tab spaces
+*
+********************************************************************************
+<Section 9 -- Other Options Screen, and strings from general menu procedures>
+********************************************************************************
+*
+ Other Options Screen
+152
+Other
+Choose other options
+F1-Help     F5-Save Defaults      F6-Read Defaults      F10-Main menu
+            Ignore drive designations?
+                    Search tree (Y/N)?
+Associate DBFs with other files (Y/N)?
+Xbase version number:
+    Default extension for index files?
+   Default extension for report forms?
+    Default extension for label forms?
+*
+* Strings for handling the TPMENU procedures start here
+*
+Begin
+Begin documentation
+Quit
+Return to operating system
+*
+* BigBrother strings begin here
+*
+You cannot eliminate blank lines if the program path;
+You cannot eliminate comments if the program path;
+You cannot expand key words if the program path;
+You cannot compress key words if the program path;
+       and the output path are the same.
+*
+********************************************************************************
+<Section 10 -- SnapMain strings>
+********************************************************************************
+*
+Loading keywords
+ฤฤLoaded OK
+ฤฤฤฤฤฤฤฤฤฤ Starting Pass 2 ฤฤฤฤฤฤฤฤฤ
+Press space bar to continue
+Writing
+Batch Files
+System Statistics
+Press escape to exit, or any other key to begin printing source code
+- Normal shutdown.
+*
+********************************************************************************
+<Section 11 -- StackOps strings>
+********************************************************************************
+*
+Too many variables referenced--
+Too many programs/procedures:
+  Limit is
+Database name missing
+Invalid index reference--
+Invalid MDX reference--
+Invalid RPT form reference--
+Invalid LBL form reference--
+Could not find on Summ:
+Too many files.
+over limit.
+--Limit is
+Too many files
+in SummAddFiles procedure.
+Error recording
+in SummAddDBFFiles procedure.
+in SummAddNdxFiles procedure.
+*
+********************************************************************************
+<Section 12 -- Strings from SnapGlo>
+********************************************************************************
+*
+* This section is for DOS error messages
+*
+File not found
+Path not found
+Too many open files
+File access denied--read only?
+Invalid file handle
+Not enough memory
+Invalid environment
+Invalid format
+Invalid file access code--read only?
+Invalid drive number
+Cannot remove current directory
+Cannot rename across drives
+No more files
+Disk read error
+Disk write error--disk full?
+File not assigned
+File not open
+File not open for input
+File not open for output
+Invalid numeric format
+Disk is write-protected
+Unknown unit
+Drive or printer not ready
+Unknown command
+CRC error in data
+Bad drive request structure length
+Disk seek error
+Unknown media type
+Sector not found
+Printer out of paper
+Device write fault
+Device read fault
+Hardware failure
+Division by zero
+Range check error
+Stack overflow error--out of memory
+Heap overflow error--out of memory
+Invalid pointer operation
+Floating point overflow
+Floating point underflow
+Invalid floating point operation
+Unknown error--I dunno
+*
+* Formatted error message
+*
+Error               && line 43
+;at                 && semicolon forces a line break in the error message
+version
+;Press Ctrl-C to exit, or any other key to continue
+*
+* Line 47 begins here -- Status Screen strings
+*
+Documenting
+Filename                Lines  Pass
+Status Window
+    Available memory:
+ Total program lines:
+ Total program files:
+    Total procedures:
+     Total databases:
+   Total index files:
+  Total format files:
+  Total report forms:
+  Total memory files:
+     Total variables:
+Error Window               && line 60 -- caption for error window
+ีออออออออออออออออออออออออออออออออออออออออออออออธ
+ณ            Out of Memory.                    ณ
+ณ Try cross-referencing only public variables. ณ
+ิออออออออออออออออออออออออออออออออออออออออออออออพ
+ีออออออออออออออออออออออออออออออออออออออธ
+ณ            Out of Memory.            ณ
+ณ Try it without the cross-references. ณ
+ิออออออออออออออออออออออออออออออออออออออพ
+
+*
+********************************************************************************
+<Section 13 -- DocMod/Pass1/Pass2 strings>
+********************************************************************************
+*
+Line too long for @1 :
+Undefined macro as prg name:
+Program file not found:
+* Pass2 strings start here.  There are no Pass1 strings.
+Too many tokens.
+Maximum is
+cannot be opened.  It may be read-only.;Ignoring this file.  && ; is important--line break
+Error closing output file.
+Error resetting file date for
+Skipping binary file:
+ฤฤfunction
+ฤฤprocedure
+*
+********************************************************************************
+<Section 14 -- DocUtil strings>
+********************************************************************************
+*
+Function:
+Procedure:
+Procedure file:
+Program:
+System:
+Author:
+      Copyright (c)
+Last modified:
+Procs & Fncts:
+Called by:
+Set by:
+(function  in    && string 12
+(procedure in
+Calls:
+Uses:
+Indexes:
+Formats:
+Report Forms:
+Label Forms:
+Memory Files:
+Binary Files:
+Documented
+version
+* strings for reporting error message location--start at line 24
+in
+at line
+* n/a for number of tokens when xref not selected--line 26
+    n/a
+* LoadKeyWords strings--line 27
+File not found--
+Too many keywords.
+The limit is:
+* RecordProcNames strings--line 30
+ProcFile not found:
+* ActionDiagram strings--line 31
+LOOP error.  No DO WHILE, FOR or SCAN to loop to.
+LOOP error in line
+of
+EXIT error.  No DO WHILE, FOR or SCAN to exit from.
+EXIT error in line
+BREAK error.  No BEGIN SEQUENCE to exit from.
+BREAK error in line
+ROLLBACK error.  No BEGIN TRANSACTION to loop to.
+ROLLBACK error in line
+* Balance strings--line 40
+Control structures nested too deeply.
+Maximum depth is
+Control structures unbalanced
+Too many
+Expected
+Found
+in line
+File
+ Other Files:
+MDX files:
+CDX files:
+    (Total of
+words)
+at
+*
+********************************************************************************
+<Section 15 -- DBF report strings>
+********************************************************************************
+*
+Database Structure Summary
+database in the system
+databases in the system
+No such files in this system
+is a macro unknown to @1
+is not a @4 file                    && not a dBASE III file
+It appears to be a @2 file
+is not a @2 file                    && not a dBASE II file
+It appears to be a @4 file
+Structure for database :
+Number of data records :
+          Last updated :
+Field  Field name  Type        Width    Dec    Start      End
+Character
+Numeric
+Date
+Logical
+Memo
+Other
+Too many fields in the system.
+   The maximum number of fields is
+   Press any key to continue
+Total **
+This database is associated with the memo file:
+The memo file:
+could not be found
+This database appears to be associated with index file/tag(s):
+  (index key not found)
+@1 did not find any associated index files
+This database appears to be associated with multiple index file(s):
+@1 did not find any associated multiple indexes
+This database appears to be associated with report form(s):
+@1 did not find any associated report forms
+This database appears to be associated with label form(s):
+@1 did not find any associated label forms
+Database Field Summary
+Field Name         Type    Len   Dec     Database
+Float
+*
+********************************************************************************
+<Section 16 -- NDX report strings>
+********************************************************************************
+*
+Index Parameter Summary
+multiple index files
+index files
+ is a macro unknown to @1
+ -- Indexed on:
+ -- Filter:
+This index is unique.
+Last updated:
+This index file appears to be associated with database(s):
+@1 could not find an associated database
+ is a zero-byte file.  It may be damaged.
+Multiple Index File Parameter Summary
+This multiple index file appears to be associated with database(s):
+ is an index tag
+This index is in descending order.
+*
+********************************************************************************
+<Section 17 -- Frm report strings>
+********************************************************************************
+*
+Report Form File Summary
+report forms
+ is a macro unknown to @1
+     Last updated:
+   Grouped on:
+   Group title:
+   SubGrouped on:
+   SubGroup title:
+   Summary report?
+No
+Yes
+                     Page eject after summary?
+   Eject page before printing?
+         Eject page after printing?
+   Double space report?
+                 Plain page?
+   Left margin:
+                        Right Margin:
+                                 Report Contents
+   No.   Field                               Length    Decimals     Totaled?
+                                   Report Layout
+Page No.     1
+-- File not found
+               Database and Program References
+   This report form appears to be associated with database(s):
+@1 could not find an associated database
+--This appears to be a dBASE IV report form file.
+There must be an FRG file for @1 to document this report form.
+   No.   Field                               Length      Row        Column
+*
+********************************************************************************
+<Section 18 -- Tree strings>
+********************************************************************************
+*
+Too many levels in the tree
+Internal error preparing tree diagram
+Stack is corrupted in TREE procedure
+Cannot find file
+Tree Diagram
+function in
+procedure in
+ (database)
+ (index file)
+ (report form)
+ (label form)
+ (memory file)
+Truncating tree for recursive call to
+*
+********************************************************************************
+<Section 19 -- Xref strings>
+********************************************************************************
+*
+* the following line has a single space
+This is a blank line
+=  &&   {Assignment}
+R  &&   {Replace}
+x  &&   {Release}
+G  &&   {Get/Menu/Accept/Input}
+P  &&   {Public}
+V  &&   {Private}
+&  &&   {Macro}
+A  &&   {Array declaration}
+U  &&   {Database used}
+@  &&   {Passed as var parameter}
+!  &&   {Procedure/function name}
+?  &&   {Unknown}
+Token Cross-Reference Report
+tokens are included in this report.
+Sorting.  Please wait.
+Legend for context symbols:
+   (blank) reference does not change the variable or field value.
+   = variable or field is changed in an assignment statement.
+   ! PROCEDURE or FUNCTION statement.
+   x token is released.
+   A array is declared.
+   G GET or MENU statement changes variable or field.
+   P variable is declared PUBLIC.
+   R field is replaced.
+   U database is USEd
+   V variable is declared PRIVATE.
+   & variable is referenced in a macro--takes precedence over all others.
+   @ variable passed as a var parameter
+   ? reference is of unknown type.
+Public Variable Summary
+These variables were declared PUBLIC somewhere in the system.
+Some may also be used as private variables in some parts of the code.
+Macro Summary
+   There were no macros defined to @1
+   Macros Defined to @1
+   Variable       Expansion
+   -------------- ---------------------------------
+   Macros Not Defined to @1
+Array Summary
+@1 found no arrays in this system
+   (procedure file)
+   (format file)
+   (program file)
+   (database)
+   (index file)
+   (report form)
+   (memory file)
+   (label form)
+   (binary file)
+   (screen file)
+   (menu file)
+   (other file)
+File types appear next to tokens that are used as file names.  Some of these
+tokens may also be used in other ways.
+This report shows tokens from
+This report shows macros from
+Macros in Module
+Not Defined to @1
+This report shows arrays from
+@1 found no arrays in
+These variables were declared PUBLIC somewhere in
+Local cross reference report for
+*
+********************************************************************************
+<Section 20 -- Batch, make and link report strings>
+********************************************************************************
+*
+Syntax is 
+where d: is a drive designation followed by a colon
+*
+********************************************************************************
+<Section 21 -- Strings for these reports: Binary, Memory, Format, Label, ProcSumm, Other >
+********************************************************************************
+*
+* Format report strings  (4 strings)
+Format File Summary
+format files
+is a macro unknown to @1
+         Last updated:
+* Labels report strings (13 strings -- cumulative = 17)
+Label Form File Summary
+label forms
+   Label:
+   Label height:
+                Label width:
+   Left margin:
+                 Labels across page:
+   Lines between labels:
+        Spaces between labels:
+   Line
+--File not found.
+This label form appears to be associated with database(s):
+@1 could not find an associated database
+* Binary report strings (3 strings -- ending cumulative = 20)
+Binary File Summary
+Note: some binary "files" may actually reside in libraries
+binary files
+* Memory report strings (2 strings -- ending cumulative = 22)
+Memory File Summary
+memory files
+* Procedure report string (9 strings -- ending cumulative = 31)
+Procedure and Function Summary
+files containing procedures
+ -- Last updated:
+   Contains:
+      Called by:
+   (function in
+   (procedure in
+          Calls:
+      No calls to this procedure
+* strings for SNAP! 4.0 update--starts at 32
+--@1 could not recognize this label file.
+--This appears to be a dBASE IV label file.
+There must be an LBG file for @1 to document this label.
+* Memory report strings (2 strings -- ending cumulative = 36)
+Other File Summary
+other files
+*
+********************************************************************************
+<Section 22 -- Strings for these reports: Stats, FileList, ScxSumm>
+********************************************************************************
+*
+System Summary
+This system has:
+lines of code
+program files
+procedure files
+procedures and functions
+databases
+multiple index files
+structural index files
+index files
+report forms
+format files
+label forms
+binary files
+memory variable files
+menu files
+screen files
+other files
+cross-referenced tokens
+See the tree diagram for programs, procedures, functions and format files
+                   Index          Report         Label          Memory
+  Databases        Files          Forms          Forms          Files
+-------------- -------------- -------------- -------------- --------------
+@1 created the following documentation files:
+         Action diagram files
+         UPDATE.BAT   to update program source files in
+         BACKDBF.BAT  to backup databases, indexes and memory files
+         BACKPRG.BAT  to backup program files, report forms and format files
+         PRINTDOC.BAT to print documentation files
+Macro substitution was omitted
+* File list strings start here
+File List
+Programs and procedures:
+   (function  in
+   (procedure in
+Procedure files:
+Databases:
+Index files:
+Multiple index files:
+Format files:
+Report forms:
+Label forms:
+Binary files:
+Memory files:
+Menu files:
+Screen files:
+Other files:
+Action diagram files:
+*
+********************************************************************************
+<Section 23 -- Strings for ReptUtil>
+********************************************************************************
+*
+in the system
+No such files in this system.
+System:
+Author:
+   (function  in
+   (procedure in
+Used by
+at
+*
+********************************************************************************
+<Section 24 -- Strings for Screen unit>
+********************************************************************************
+*
+not found or error opening file
+Press any key to continue
+Help Window
+No help available here
+Press any key to continue
+Trying to display nonexistent field
+Too many fields in screen
+*
+********************************************************************************
+<Section 25 -- Strings for File Printing>
+********************************************************************************
+*
+Error in printer setup or reset string--char
+Something is wrong with the printer.  Please fix it.
+Press Ctrl-C to return to menu or any other key to continue.
+Press Ctrl-C to exit or any other key to continue.
+Page
+Copyright, 
+File with filenames to print
+          Path for filenames
+That is not a valid filename
+That file cannot be found
+System:                 && must be same as first line in FILELIST.DOC
+Please put the printer on-line and to top-of-page.
+looks like it might be a binary file.;
+Print it anyway (Y/N)?
+Printing
+Press any key to interrupt
+          Printing interrupted
+1.  Stop printing and exit 
+1.  Stop printing and return to print options screen
+2.  Stop printing this program and start printing next program
+3.  Continue printing this program
+Please enter your choice----->
+Error opening
+; or file could not be found.;
+Press the space bar to continue
+File not found:
+Table of Contents
+Source Code Printout
+for
+*
+********************************************************************************
+<Section 26 -- Strings for Rept6 programs>
+********************************************************************************
+*
+Menu File Summary
+menu files
+@1 could not locate this menu file
+
+
+
+
+
+Screen File Summary
+screen files
+@1 could not locate this screen file
+Screen
+Text
+Box
+Field
+Text region
+Push button
+Radio button
+Check box
+Popup
+List
+   Window name:
+   Coordinates: FROM 
+ TO 
+Window options: 
+Name
+Type
+Picture
+Error closing screen database file
+Error closing screen memo file
+Submenu 
+(Procedure)
+The screen memo file 
+could not be found
+Not enough memory to document screens
+*
+********************************************************************************
+<Section 27 -- Config file error messages>
+********************************************************************************
+*
+* The following six error messages are for reading/writing config files
+Error opening configuration file
+Configuration file is from wrong version of @1
+
+Error opening          && error opening configuration file
+Filename not valid     && config filename not valid
+File does not exist    && specified config file does not exist

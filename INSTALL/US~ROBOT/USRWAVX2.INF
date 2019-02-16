@@ -1,0 +1,61 @@
+; U.S. Robotics, Inc. - .INF support for x2/Sportster Voice TAPI features
+; Updated 3/17/97
+
+[Version]
+Signature="$CHICAGO$"
+Class=MEDIA
+provider=%MSFT%
+LayoutFile=layout.inf
+
+[ClassInstall]
+Addreg=Class.AddReg
+
+[Class.AddReg]
+HKR,,,,%MediaClassName%
+HKR,,Icon,,"-1"
+HKR,,Installer,,mmci.dll
+
+[Manufacturer]
+%MfgName%=USR
+
+[USR]
+ 
+%USR.DeviceDesc%=USRVOICE, MODEMWAVE\Sportster_56000_Voice_EXT
+%USR.DeviceDesc%=USRVOICE, MODEMWAVE\Sportster_56000_Voice_Internal
+
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+[DestinationDirs]
+MSSERWAVE.CopyList = 11 ; LDID_SYS
+
+[USRVOICE]
+AddReg=MSSERWAVE.AddReg, USRVOICE.AddReg
+
+[MSSERWAVE.CopyList]
+serwave.vxd,,
+serwvdrv.drv,,
+vmodctl.dll,,
+
+[USRVOICE.AddReg]
+HKR,Drivers\wave\serwvdrv.drv,Description,,%USR.DeviceDesc%
+HKR,Config,XformModule,  , "umdmxfrm.dll"
+HKR,Config,XformID,     1, 04, 00, 00, 00
+HKR,Config,WaveDevices,  1, 02, 00
+
+[MSSERWAVE.AddReg]
+HKR,,DevLoader,,mmdevldr.vxd
+HKR,Drivers,MIGRATED,,0
+HKR,Drivers\wave,,,
+HKR,,Driver,,serwave.vxd
+HKR,Drivers\wave\serwvdrv.drv,Driver,,serwvdrv.drv
+HKR,Drivers,SubClasses,,"wave"
+
+[Strings]
+MSFT="U.S. Robotics Access Corp."   
+MfgName="USR"
+USR.DeviceDesc="U.S. Robotics Sportster Voice Serial Wave Device"
+WaveWrap.DeviceDesc="Voice Modem Wave Wrapper Device"
+MediaClassName="Sound, video and game controllers"
+ 

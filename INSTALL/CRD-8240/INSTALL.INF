@@ -1,0 +1,40 @@
+;
+; LG Electronics Inc. 
+; CD-ROM Installation Information
+;
+;---------------------------------------------------------
+; Configuration of system
+;---------------------------------------------------------
+[CONFIG]
+SYS_NAME="GSCDROM.SYS"
+DEVICE_NAME="MSCD000"
+MSCDEX_LOC=BOTTOM
+
+;---------------------------------------------------------
+; MAIN -> Installed directory
+; SUB  -> Installed sub-directory
+; FORMAT <DIRECTORY_NAME>="Title","DIR_NAME",DIR_INDEX
+;---------------------------------------------------------
+[DIRECTORY]
+MAIN="Installed Directory","C:\CDROM",0,0
+
+;---------------------------------------------------------
+; DISK_NUM="DISK_NAME","KEY_FILE"
+;---------------------------------------------------------
+[DISKS]
+1="Disk 1","install.inf"
+
+;---------------------------------------------------------
+; FILE INFORMATION
+; FORMAT <DISK_NUM>=<DIR_ID>,<Group_ID>,<DEST_FILENAME>,
+;        <SRC_FILENAME>,<ORG_FILESIZE>
+;---------------------------------------------------------
+[FILES]
+1=0,0,GSCDROM.SYS,GSCDROM.SY_,30132
+1=0,0,MSCDEX.EXE,MSCDEX.EX_,25361
+1=0,0,CLOSE.EXE,CLOSE.EX_,33420
+1=0,0,EJECT.EXE,EJECT.EX_,33628
+1=0,0,UNLOCK.EXE,UNLOCK.EX_,1231
+1=0,0,LOCK.EXE,LOCK.EX_,1227
+;
+[END]

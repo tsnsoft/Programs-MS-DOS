@@ -1,0 +1,35 @@
+;This is an example of balancing a chemical equation,
+;and then finding the amount of reactant, FeS, needed to
+;yield 100.00 grams of Fe203 product
+
+;the unbalanced chemical equation:
+; FeS + 02 --> Fe203 + SO2
+
+;algebraic expression for the balanced equation:
+; a*FeS +b+02 --> c*Fe203 + d*SO2
+
+a = 2*c
+d = a
+b*2 = 3*c + 2*d
+
+c = 2.000
+
+;mole weight (grams/mole)
+
+mFe = 55.847
+mS = 28.086
+mO = 15.9994
+
+mFeS = mFe + mS
+mFe203 = mFe*2 + mO*3
+mO2 = mO*2
+mSO2 = mS + mO*2
+
+;amount of product required is 100 grams
+
+hFe203 = 100.00
+;ratio of moles of FeS to moles of Fe203 is a:c
+
+c*(hFeS/mFeS) = a*(hFe203/mFe203)
+
+;correct answer is a = d = 4, b = 7, c = 2

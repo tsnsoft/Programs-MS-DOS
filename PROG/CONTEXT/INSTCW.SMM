@@ -1,0 +1,410 @@
+[ver]
+	4
+[sty]
+	
+[files]
+[charset]
+	82
+	ANSI (Windows, IBM CP 1252)
+[revisions]
+	0
+[prn]
+	Epson 9 pin
+[port]
+	
+[lang]
+	1
+[desc]
+	
+	
+	
+	
+	
+	756615681
+	143
+	661024420
+	319
+	1
+	0
+	0
+	0
+	0
+	
+	
+	
+	
+	
+	
+	0
+[fopts]
+	0
+	1
+	0
+	0
+[lnopts]
+	2
+	Body Text
+	1
+[docopts]
+	5
+	0
+[GramStyle]
+	
+[tag]
+	Body Text
+	2
+	[fnt]
+		System
+		220
+		0
+		16384
+	[algn]
+		1
+		1
+		0
+		0
+		0
+	[spc]
+		17
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		2
+		2
+		20
+		20
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		1
+		0
+		0
+	[nfmt]
+		280
+		1
+		3
+		.
+		,
+		$
+	Body Text
+	0
+	0
+[tag]
+	footer
+	3
+	[fnt]
+		Tms Rmn
+		200
+		0
+		49152
+	[algn]
+		1
+		1
+		0
+		0
+		0
+	[spc]
+		17
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		2
+		2
+		20
+		20
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		1
+		0
+		0
+	[nfmt]
+		280
+		1
+		3
+		.
+		,
+		$
+	footer
+	0
+	0
+[lay]
+	Standard
+	513
+	[rght]
+		15840
+		12240
+		1
+		1080
+		360
+		1
+		1080
+		720
+		4
+		1
+		0
+		1
+		8
+		4
+		1
+		1080
+		11520
+		14
+		1
+		359
+		1
+		721
+		1
+		1084
+		1
+		1446
+		1
+		1792
+		1
+		2155
+		1
+		2517
+		1
+		2880
+		1
+		3242
+		1
+		3605
+		1
+		3967
+		1
+		4323
+		1
+		4683
+		1
+		5043
+	[hrght]
+	[lyfrm]
+		1
+		11200
+		0
+		0
+		12240
+		1080
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		5
+		0
+		1
+	[frmlay]
+		1080
+		12240
+		1
+		360
+		0
+		1
+		0
+		0
+		2
+		1
+		0
+		1
+		1
+		0
+		1
+		360
+		12240
+		3
+		1
+		365
+		2
+		6120
+		3
+		11162
+	[txt]
+<+B>
+
+<+B>
+
+<+B>	<:da<*!><* >>		Date Created: 11/01/93
+
+<+B>	By Rudenko D.	Page - <:P11,1,>	Date Last revised:  <:da<*%><* >>
+
+<+B>	
+
+>
+	[frght]
+	[lyfrm]
+		1
+		13248
+		0
+		15480
+		12240
+		15840
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		5
+		0
+		2
+	[frmlay]
+		15840
+		12240
+		1
+		720
+		0
+		1
+		15480
+		720
+		2
+		1
+		0
+		1
+		1
+		0
+		1
+		720
+		11520
+		0
+	[txt]
+@footer@
+>
+[elay]
+[l1]
+	0
+[edoc]
+<:#160,10440>
+
+<:#160,10440>FUNCTION instContext()
+
+<:#160,10440>DECLARE _autorun.smm!ckauto(name)  ALIAS checkAuto
+
+<:#160,10440>   macName = "context.smm"
+
+<:#160,10440>   ignorekeyboard(2)
+
+<:#160,10440>   hourglass(1)   
+
+<:#160,10440>   path = GetProfileString$("CWSET",  "PathToExe", "contwin.ini")
+
+<:#160,10440>   fullName  = strcat$(path, macName)
+
+<:#160,10440>   call _autorun.smm!zmkauto(fullName)
+
+   call _autorun.smm!zproglod()
+
+   call  setContext()
+
+<:#160,10440>   ignorekeyboard(2)
+
+<:#160,10440>   hourglass(1)
+
+<:#160,10440>End FUNCTION
+
+<:#160,10440>
+
+<:#160,10440>FUNCTION setContext()
+
+<:#160,10440>   ignorekeyboard(1)
+
+<:#160,10440>   macro = "context.smm"
+
+<:#160,10440>   mpath = GetProfileString$("CWSET", "PathToExe", "contwin.ini")
+
+<:#160,10440>   DeleteMenuItem(1,"Too&ls" ,"Conte&xt")
+
+<:#160,10440>   DeleteMenuItem(1,"&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" ,"<\J><\n><\m><\r>&<\e><\j><\q><\r>")
+
+<:#160,10440>   res = InsertMenuItem(1,"Too&ls",3,"Conte&xt" ,"{mpath}{macro}!callContext")
+
+<:#160,10440>   IF res = 0 THEN
+
+<:#160,10440>       InsertMenuItem(1,"&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" ,3,"<\J><\n><\m><\r>&<\e><\j><\q><\r>","{mpath}{macro}!callContext")
+
+<:#160,10440>   ENDIF  
+
+<:#160,10440>End FUNCTION
+
+<:#160,10440>
+
+>
+
+[Embedded]
+00003374
+>
+[macsum] 2
+instContext 0 0 4 1
+setContext 233 0 4 15
+[macse]
+14 instContext
+7 "context.smm"
+8 1
+0 32 2
+0 296 1
+0 286 "CWSET" "PathToExe" "contwin.ini"
+13
+8 2
+0 16 "{2}" "{1}"
+13
+8 3
+16 _autorun.smm!zmkauto "{3}"
+16 _autorun.smm!zproglod
+16 setContext
+0 32 2
+0 296 1
+6 0
+15
+9
+14 setContext
+0 32 1
+7 "context.smm"
+8 1
+0 286 "CWSET" "PathToExe" "contwin.ini"
+13
+8 2
+0 520 1 "Too&ls" "Conte&xt"
+0 520 1 "&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" "<\J><\n><\m><\r>&<\e><\j><\q><\r>"
+0 527 1 "Too&ls" 3 "Conte&xt" "{2}{1}!callContext"
+13
+8 3
+6 3
+5 0
+18 0
+11 00000423
+0 527 1 "&<\H><\m><\q><\r><\p><\s><\l><\e><\m><\r><\{>" 3 "<\J><\n><\m><\r>&<\e><\j><\q><\r>" "{2}{1}!callContext"
+6 0
+15
+9
+00003399

@@ -1,0 +1,10 @@
+
+; This demonstrates solving
+; a system of linear equations.
+
+   2*X + Y + Z = 7
+   X - Y + Z = 2
+   X + Y - Z = 0
+
+{ Exact solution is X = 1, Y = 2, Z = 3.}
+

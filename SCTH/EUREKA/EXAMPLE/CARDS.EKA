@@ -1,0 +1,33 @@
+; This example demonstrates how to use Eureka's built-in
+; FACT function (FACT(x) = x factorial).  The problem is:
+; In a bridge game, one player controls 7 trump cards.
+; We must determine the probability that the remaining
+; 6 trump cards are evenly distributed (3 and 3) among
+; the other two players.  We calculate both the
+; approximate and the exact probability in this example.
+
+A(x) := FACT(x)
+C6 = A(6)
+C3 = A(3)
+C10 = A(10)
+C20 = A(20)
+C26 = A(26)
+C13 = A(13)
+
+; The combinatorial coefficients for total available
+; cards and cards per remaining hand:
+
+  Cof6and3 = A(6) / (A(3) * A(6-3))
+  Cof20and10 = A(20) / (A(10) * A(20-10))
+  Cof26and13 = A(26) / (A(13) * A(26-13))
+
+; approximate probability of 3-3 split
+  ProbApprox = Cof6and3 / 2^6
+
+; exact probability of 3-3 split
+  ProbExact = Cof6and3 * Cof20and10 / Cof26and13
+
+; The correct answers are
+;	ProbApprox = .3124
+;	ProbExact = .355279503
+

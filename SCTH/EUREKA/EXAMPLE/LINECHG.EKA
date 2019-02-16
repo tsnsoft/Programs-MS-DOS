@@ -1,0 +1,12 @@
+; This example demonstrates Eureka's ability to solve
+; a system of non-linear equations.  These equations
+; represent the net force of each line charge in a
+; system of 4 parallel, coplanar line charges aligned
+; in an electric field.
+
+1/(a-b) + 1/(a-c) + 1/a = 1
+
+1/(b-a) + 1/(b-c) + 1/b = 1
+
+1/(c-a) + 1/(c-b) + 1/c = 1
+

@@ -1,0 +1,10 @@
+; This problem demonstrates how to solve a user-defined
+; transcendental function of time.
+; The problem is to calculate MassUnknown, the mass of
+; 100 kg uranium 238 after one million years.
+
+Mass(Years) := InitialMass * 2^(-Years/HalfLife)
+InitialMass = 100
+HalfLife = 10* 1e6
+MassUnknown = Mass(1e6)
+

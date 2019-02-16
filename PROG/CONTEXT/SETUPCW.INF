@@ -1,0 +1,6 @@
+[Context for Windows Installation]
+Version = 2.0
+[Files]
+...
+[Size]
+All = 840000

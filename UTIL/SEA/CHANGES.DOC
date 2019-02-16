@@ -1,0 +1,17 @@
+version 1.0 (07-09-1995). First official release.
+
+
+version 1.1  (02-10-1995)
+
+- SEA now works correctly in a Windows or OS/2 dos-box.
+- 25% faster JPG decoding.
+- Added 32K color PNM support.
+- Added a command line option to run slideshows.
+- New logo for "about window".
+- Fixed bug in tiff reader.
+  SEA can now read TIFF files written by WP-presentations.
+- Fixed scrolling bug, when no mousedriver loaded.
+- Included advert.png instead of zebra.jpg.
+- Improved FLI/FLC playing routines.
+- Added read support for BGA, ART and HRZ files.
+

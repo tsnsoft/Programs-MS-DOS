@@ -1,0 +1,393 @@
+ABOUT CHANGING SOUND FX
+
+þ Duke may have up to 348 different sounds, currently there
+  are aprox. 254 slots used.
+
+The sound fx section follows this explanation.  
+
+1. The program expects to find any sound file that is in a
+   .VOC or .WAV file format.
+2. You can either change the VOC name listed below to match your new
+   sound, or you can rename your file to match the name here.
+3. New sound files should be added to the game directory.  Though
+   all sound files shipped with the game are included inside the 
+   .GRP file, the program will know if there are sound files outside
+   the .GRP file, and will use them instead.
+4. The numbers that are to the right of the sound file name are technical
+   parameters which will not be explained here, except as follows...
+   - The first 2 numbers define a random pitch variation range.  They
+     can be positive or negative numbers.
+   - The 3rd number is a priority flag.
+   - The 4th number is a bit parsed set of technical variables that identify
+     the type of sound it is in the game.
+   - The 5th number is volume adjustment.
+
+--------------------------------------------------------------------------------
+*/
+
+// *****************************************
+//      ACTOR SOUNDS
+// *****************************************
+
+// Predator Trooper
+definesound PRED_ROAM     roam06.voc          0   0   3  0   0
+definesound PRED_ROAM2    roam58.voc          0   0   3  0   0
+definesound PRED_RECOG    predrg.voc          0   0   3  0   0
+definesound PRED_ATTACK   gblasr01.voc      256  256  3  0   7680
+definesound PRED_PAIN     predpn.voc          200 500 3  0   0
+definesound PRED_DYING    preddy.voc          0   400 3  0   0
+definesound LIZARD_BEG    chokn12.voc         0   0   3  0   0
+                                             
+// Lizard Captain                                                                       
+definesound CAPT_ROAM     predrm.voc          0  200  3   0   0
+definesound CAPT_RECOG    predrg.voc        -400  0   3   0   0
+definesound CAPT_ATTACK   chaingun.voc      0     0    3   0   -200
+definesound CAPT_PAIN     predpn.voc        -200  100 3   0   0
+definesound CAPT_DYING    preddy.voc        -200  100 3   0   0
+definesound LIZARD_SPIT   lizspit.voc         0   0   0   0   0
+
+// Pig Cop
+definesound PIG_ROAM      roam29.voc           -200 400   3   0   0
+definesound PIG_ROAM2     roam67.voc           -200 400   3   0   0
+definesound PIG_ROAM3     pigrm.voc            -200 400   3   0   0
+definesound PIG_RECOG     pigrg.voc           -200 400   3   0   0
+definesound PIG_ATTACK    shotgun7.voc        -256  256  4   0   0
+definesound PIG_PAIN      pigpn.voc            100 800   3   0   0
+definesound PIG_DYING     pigdy.voc           -800 100   3   0   0
+definesound PIG_CAPTURE_DUKE !pig.voc           0   0   255 8   0
+
+// Recon car
+definesound RECO_ROAM     jetpaki.voc            0   0   3   0   0
+definesound RECO_RECOG    pigrg.voc              0   0   3   0   0
+definesound RECO_ATTACK   gblasr01.voc         256  256  3  0   7680
+definesound RECO_PAIN     pigpn.voc              0   0   3   0   0
+definesound RECO_DYING    pigdy.voc              0   0   3   0   0
+
+// Drone drone
+definesound DRON_ROAM     snakrm.voc             0   0   3   0   0
+definesound DRON_RECOG    snakrg.voc             0   0   3   0   0
+definesound DRON_ATTACK1  snakatA.voc            0   0   3   0   0
+definesound DRON_ATTACK2  snakatB.voc            0   0   3   0   0
+definesound DRON_PAIN     snakpn.voc             0   0   3   0   0
+definesound DRON_DYING    snakdy.voc             0   0   3   0   0
+definesound DRON_JETSND   ENGHUM.VOC             1300 1300 0   0   0
+
+
+// Fat Commander
+definesound COMM_ROAM     commrm.voc             0   0   3   0   0
+definesound COMM_RECOG    commrg.voc             0   0   3   0   0
+definesound COMM_ATTACK   commat.voc             0   0   3   0   0
+definesound COMM_PAIN     commpn.voc             0   0   3   0   0
+definesound COMM_DYING    commdy.voc             0   0   3   0   0
+definesound COMM_SPIN     commsp.voc             0   0   3   0   0
+
+// Octabrain
+definesound OCTA_ROAM     octarm.voc          -200   0    3   0   0
+definesound OCTA_RECOG    octarg.voc             0   0    3   0   0
+definesound OCTA_ATTACK1  octaat1.voc            0   0    3   0   0
+definesound OCTA_ATTACK2  octaat2.voc            0   600  3   0   0
+definesound OCTA_PAIN     octapn.voc          -400   0    3   0   0
+definesound OCTA_DYING    octady.voc          -400   -100 3   0   0
+definesound WIERDSHOT_FLY octaat1.voc            0   0    3   0   0
+
+// Organic turret
+definesound TURR_ROAM     turrrm.voc             0   0   3   0   0
+definesound TURR_RECOG    turrrg.voc             0   0   3   0   0
+definesound TURR_ATTACK   turrat.voc             0   0   3   0   0
+definesound TURR_PAIN     turrpn.voc             0   0   3   0   0
+definesound TURR_DYING    turrdy.voc             0   0   3   0   0
+
+// Green slimer
+definesound SLIM_HATCH    slhtch01.voc             0   0   3   0   0
+definesound SLIM_ROAM     sliroa02.voc             0   0   3   0   0
+definesound SLIM_RECOG    slirec06.voc             0   0   3   0   0
+definesound SLIM_ATTACK   slimat.voc             0   0   3   0   0
+// definesound SLIM_PAIN     slimpn.voc             0   0   3   0   0
+definesound SLIM_DYING    slidie03.voc             0   0   3   0   0
+
+// BOSS2
+definesound BOS2_ROAM     b2atk01.voc             0   0   3   0   0
+definesound BOS2_RECOG    b2rec03.voc             0   0   3   0   0
+definesound BOS2_ATTACK   b2atk02.voc             0   0   3   0   0
+definesound BOS2_PAIN     b2pain03.voc             0   0   3   0   0
+definesound BOS2_DYING    b2die03.voc             0   0   3   0   0
+
+// BOSS3                                                                                
+definesound BOS3_ROAM     b3roam01.voc             0   0   3   0   0
+definesound BOS3_RECOG    b3pain04.voc             0   0   3   0   0
+definesound BOS3_ATTACK1  b3atk01.voc             0   0   3   0   0
+definesound BOS3_ATTACK2  b3atk01.voc             0   0   3   0   0
+definesound BOS3_PAIN     b3rec03g.voc             0   0   3   0   0
+definesound BOS3_DYING    b3die03g.voc             0   0   3   0   0
+
+
+// BOSS1                                                                                
+definesound BOS1_ROAM     bos1rm.voc             0   0   3   0   0
+definesound BOS1_RECOG    bos1rg.voc             0   0   5   0   0
+definesound BOS1_ATTACK1  chaingun.voc           0   0   3   0   0
+definesound BOS1_ATTACK2  rpgfire.voc            0   0   3   0   0
+definesound BOS1_PAIN     bos1pn.voc             0   0   3   0   0
+definesound BOS1_DYING    bos1dy.voc             0   0   3   0   0
+definesound BOS1_WALK     thud.voc               0   0   3   0   0
+
+
+// *************
+// WEAPON SOUNDS                                                                        
+// *************
+definesound KICK_HIT            kickhit.voc       0     0     4   0   0
+definesound PISTOL_RICOCHET     ricochet.voc      0     0     0   0 4096
+definesound PISTOL_BODYHIT      bulithit.voc      0     0     0   0   0
+definesound PISTOL_FIRE         pistol.voc      -64     0   254   0   0
+definesound EJECT_CLIP          clipout.voc       0     0     3   0   0
+definesound INSERT_CLIP         clipin.voc        512   512   3   0   0
+definesound CHAINGUN_FIRE       chaingun.voc     -204 -204  254   0   512
+definesound SHOTGUN_FIRE        shotgun7.voc      0    512    254 0   0
+definesound SHOTGUN_COCK        shotgnck.voc      96    192   3   0   0
+definesound RPG_SHOOT           rpgfire.voc       -32   0     4   0   0
+definesound FLY_BY              flyby.voc         -256  256   3   0   0
+definesound RPG_EXPLODE         bombexpl.voc      -1024 1024  254 0   0
+definesound CAT_FIRE            catfire.voc       512   768   4   0   0
+definesound SHRINKER_FIRE       shrinker.voc      -512  0     4   0   0
+definesound ACTOR_SHRINKING     shrink.voc        0     0     2   0   0
+definesound PIPEBOMB_BOUNCE     pbombbnc.voc      0     0     2   0 6144
+definesound PIPEBOMB_EXPLODE    bombexpl.voc  -512      0     128 0   0
+definesound LASERTRIP_ONWALL    lsrbmbpt.voc      0     0     3   0   0
+definesound LASERTRIP_ARMING    lsrbmbwn.voc      0     0     3   0   0
+definesound LASERTRIP_EXPLODE   bombexpl.voc  -512      0     4   0   0
+definesound NITEVISION_ONOFF    goggle12.voc      0     0     0   0   0
+definesound SELECT_WEAPON       WPNSEL21.VOC      128   128   3   0   0
+
+// Affect Environment Sounds                                                            
+definesound VENT_BUST           ventbust.voc      -32   32 2  0  0
+definesound GLASS_BREAKING      glass.voc         -412  0  3  0  8192
+definesound GLASS_HEAVYBREAK    glashevy.voc      -412  0  3  0  8192
+definesound SHORT_CIRCUIT       shorted.voc       0 0 0 0 6500
+definesound ITEM_SPLASH         splash.voc        0 0 2 0 0
+definesound BONUSMUSIC          bonus.voc         0 0 255 1 0
+
+// Duke's Body Sounds                                                                   
+definesound DUKE_BREATHING      hlminhal.voc       0   0   255 4   0
+definesound DUKE_EXHALING       hlmexhal.voc       0   0   255 4   0
+definesound DUKE_GASP           gasp.voc           0   0   255 4   0
+definesound DUKE_URINATE        pissing.voc        0   0   4   0   0
+definesound DUKE_CRACK2         COMEON02.voc       0   0   255 4   0
+definesound DUKE_CRACK          WAITIN03.voc       0   0   255 4   0
+definesound DUKE_TALKTOBOSSFALL DIESOB03.voc       0   0   255 12  0
+definesound DUKE_CRACK_FIRST    knuckle.voc        0   0   3   0   0
+definesound DUKE_GET            getitm19.voc     -64  64   255 0   0
+definesound DUKE_GETWEAPON1     cool01.voc         0   0   255 4   0
+definesound DUKE_GETWEAPON2     getsom1a.voc       0   0   255 4   0
+definesound DUKE_GETWEAPON3     groovy02.voc       0   0   255 4   0
+definesound DUKE_GETWEAPON4     wansom4a.voc       0   0   255 4   0
+definesound JIBBED_ACTOR13      LETGOD01.VOC       0   0   255 4   0
+definesound DUKE_GETWEAPON6     HAIL01.VOC         0   0   255 4   0
+definesound DUKE_GOTHEALTHATLOW needed03.voc       0   0   255 4   0
+
+definesound DUKE_SEARCH         pain87.VOC       0   0   2   4     0
+definesound DUKE_SEARCH2        whrsit05.voc       0   0   255 4   0
+definesound DUKE_LONGTERM_PAIN  gasps07.voc     -192   0   255 4   0
+definesound DUKE_LONGTERM_PAIN2 dscrem15.voc      0   0   255 4   0
+definesound DUKE_LONGTERM_PAIN3 dscrem16.voc      0   0   255 4   0
+definesound DUKE_LONGTERM_PAIN4 dscrem17.voc      0   0   255 4   0
+definesound DUKE_LONGTERM_PAIN5 pain54.voc        0   0   255 4   0
+definesound DUKE_LONGTERM_PAIN6 pain75.voc        0   0   255 4   0
+definesound DUKE_LONGTERM_PAIN7 pain93.voc        0   0   255 4   0
+definesound DUKE_LONGTERM_PAIN8 pain68.voc        0   0   255 4   0
+
+definesound DUKE_PISSRELIEF     ahmuch03.voc       0   0   255 4   0
+
+// Duke Health Sounds
+definesound SOMETHINGHITFORCE   teleport.voc       0   0    2   0   8192
+definesound DUKE_DRINKING       drink18.voc     -128 128   2   4   0
+definesound DUKE_KILLED1        damn03.voc         0   0   255 12  0
+definesound DUKE_KILLED2        damnit04.voc       0   0   255 12  0
+definesound DUKE_KILLED3        thsuk13a.voc       0   0   255 12  0
+definesound DUKE_KILLED4        dscrem18.voc       0   0   255 4   0
+definesound DUKE_KILLED5        pisses01.voc       0   0   255 12  0
+definesound DUKE_GRUNT          exert.voc          0   0   2   4   0
+definesound DUKE_DEAD           DMDEATH.VOC      -64  64   255 4  0
+definesound DUKE_HARTBEAT       hartbeat.voc       0   0   0   0   0
+definesound DUKE_STEPONFECES    happen01.voc       0   0   0   12  0
+
+// Duke Movement Sounds                                                                 
+definesound DUKE_ONWATER        wetfeet.voc        0   0    4   0   0
+definesound DUKE_LAND           land02.voc         0   0    2   0   0
+definesound DUKE_LAND_HURT      pain39.voc         0   0    255 4   0
+definesound DUKE_WALKINDUCTS    ductwlk.voc      -64   128  2   0   0
+definesound DUKE_LOOKINTOMIRROR   lookin01.voc       0   0    255 12  0
+
+definesound DUKE_TIP1           dance01.voc        0   0   255  4   0
+definesound DUKE_TIP2           shake2a.voc        0   0   255  4   0
+definesound DUKE_BOOBY          BOOBY04.voc        0   0   255  4   0
+definesound DUKE_HIT_STRIPPER1  damnit04.voc       0   0   255  12  0
+definesound DUKE_HIT_STRIPPER2  damn03.voc         0   0   255  12  0
+definesound ALIEN_TALK1         MUSTDIE.voc        0   0   255  12  0
+definesound ALIEN_TALK2         DEFEATED.VOC       0   0   255  12  0
+definesound BONUS_SPEECH1       letsrk03.voc       0   0   255  4   0
+definesound BONUS_SPEECH2       ready2a.voc        0   0   255  4   0
+definesound BONUS_SPEECH3       ripem08.voc        0   0   255  4   0
+definesound BONUS_SPEECH4       rockin02.voc       0   0   255  4   0
+definesound DUKE_YES            yes.voc            0   0   255  4   0
+definesound DUKE_USEMEDKIT      ahh04.voc          0   0   255  4   0
+definesound DUKE_TAKEPILLS      gulp01.voc         0   0   255  4   0
+definesound DUKETALKTOBOSS      duknuk14.voc       0   0   255  12  0
+definesound BOSSTALKTODUKE      !boss.voc          0   0   255  0   0
+definesound SHRINKER_HIT        thud.voc           0   0   3    0   0
+definesound SOMETHINGFROZE      freeze.voc         0   0   3    0   0
+
+// Duke Equipment Sounds
+definesound DUKE_UNDERWATER     scuba.voc          0   0   2   0   0
+definesound DUKE_JETPACK_ON     jetpakon.voc       0   0   4   0   0
+definesound DUKE_JETPACK_IDLE   jetpaki.voc        0   0   1   0   0
+definesound DUKE_JETPACK_OFF    jetpakof.voc       0   0   2   0   0
+
+// Common Death Sounds
+definesound FLESH_BURNING       fire09.voc      -256   0   0   0   6100
+definesound THUD                thud.voc           0   0   0   0   0
+definesound SQUISHED            squish.voc         0   0   3   0   0
+
+// Equipment Sounds                                                                     
+definesound TELEPORTER          teleport.voc       0   0   0   0   0
+definesound ELEVATOR_ON         gbelev01.voc       0   0   0   0   0
+definesound ELEVATOR_OFF        gbelev02.voc       0   0   0   0   0
+definesound ALIEN_ELEVATOR1     hydro43.voc        0   0   0   0   0
+definesound SUBWAY              subway.voc         0   0   0   0   0
+definesound SWITCH_ON           switch.voc         0   0   0   0   0
+
+definesound FAN                 fan.voc            0   0   0   0   0
+definesound FLUSH_TOILET        flush.voc          0   0   3   2   0
+definesound HOVER_CRAFT         hover.voc          0   0   0   0   0
+definesound EARTHQUAKE          quake.voc          0   0   0   0   0
+                                                                                        
+// Warning Sounds                                                                       
+definesound INTRUDER_ALERT      alert.voc          0   0   0   0   0
+definesound END_OF_LEVEL_WARN   monitor.voc        0   0   0   0   0
+definesound POOLBALLHIT         poolbal1.voc       0   0   0   0   0
+
+// Ambience Sounds
+
+definesound ENGINE_OPERATING    onboard.voc        0   0   0   2   0
+definesound REACTOR_ON          reactor.voc        0   0   0   2   0
+definesound COMPUTER_AMBIENCE   compamb.voc        0   0   0   2   0
+definesound GEARS_GRINDING      geargrnd.voc       0   0   0   2   0
+definesound BUBBLE_AMBIENCE     bubblamb.voc    -256   0   0   2   0
+definesound MACHINE_AMBIENCE    machamb.voc        0   0   0   2   0
+definesound SEWER_AMBIENCE      drip3.voc          0   0   0   0   0
+definesound WIND_AMBIENCE       wind54.voc         0   0   0   2   0
+definesound WIND_REPEAT         wind54.voc         0   0   0   3   0
+
+definesound SOMETHING_DRIPPING  drip3.voc       0   0   0   0    9000
+definesound STEAM_HISSING       steamhis.voc       0   0   0   1   8192
+definesound BAR_MUSIC           barmusic.voc       0   0 254   3   0
+definesound DUKE_SCREAM         DSCREM04.voc       0   0 255   0   0
+definesound KILLME              killme.voc      -128   0   0   0   0
+
+// Miscellaneous Sounds
+
+definesound GETATOMICHEALTH     teleport.voc   2048 2048   255 0   0
+definesound DOOR_OPERATE1       slidoor.voc     -256   0   0   0   0
+definesound DOOR_OPERATE2       opendoor.voc    -256   0   0   0   0
+definesound DOOR_OPERATE3       edoor10.voc     -256   0   0   0   0
+definesound DOOR_OPERATE4       edoor11.voc     -256   0   0   0   0
+definesound BORNTOBEWILDSND     2bwild.voc         0   0 254   2   0
+definesound KTIT                ktitx.voc         0   0 254   2   0
+definesound LADY_SCREAM         FSCRM10.voc     -256   0 254   8   0
+definesound MONITOR_ACTIVE      monitor.voc        0   0   0   0   0
+definesound WATER_GURGLE        h2ogrgl2.voc       0   0   1   2   9000
+definesound EXITMENUSOUND       item15.voc         0   0   0   0   0
+definesound RATTY               mice3.voc          0   0   0   0   0
+definesound INTO_MENU           bulithit.voc    1024 1024  0   0   0
+
+// Six misc ambience city sounds
+
+definesound GENERIC_AMBIENCE1      grind.voc       0   0   0   1   0
+definesound GENERIC_AMBIENCE2      enghum.voc      0   0   0   2   0
+definesound GENERIC_AMBIENCE3      lava06.voc      0   0   0   2   0
+definesound GENERIC_AMBIENCE4      bubblamb.voc -256   0   0   2   0
+definesound GENERIC_AMBIENCE5      phonbusy.voc    0   0   0   0   0
+definesound GENERIC_AMBIENCE6      roam22.voc      0   0   0   2   0
+definesound SECRETLEVELSND         secret.voc      0   0   255 0   0
+definesound GENERIC_AMBIENCE8      amb81b.voc      0   0   0   2   0
+definesound GENERIC_AMBIENCE9      roam98b.voc     0   0   0   2   0
+definesound GENERIC_AMBIENCE10     h2orush2.voc    0   0   0   3   0
+definesound GENERIC_AMBIENCE11     projrun.voc     0   0   0   3   0
+definesound GENERIC_AMBIENCE12     blank.voc       0   0   0   0   0
+definesound GENERIC_AMBIENCE13     pay02.voc       0   0   255 12  0
+definesound GENERIC_AMBIENCE14     onlyon03.voc    0   0   255 4   0
+definesound GENERIC_AMBIENCE15     rides09.voc     0   0   255 4   0
+definesound GENERIC_AMBIENCE16     doomed16.voc    0   0   255 4   0
+definesound GENERIC_AMBIENCE17     myself3a.voc    0   0   255 4   0
+definesound GENERIC_AMBIENCE18     monolith.voc    0   0   0   2   0
+definesound GENERIC_AMBIENCE19     hydro50.voc     0   0   0   2   0
+definesound GENERIC_AMBIENCE20     con03.voc       0   0   0   4   0
+definesound GENERIC_AMBIENCE21     !prison.voc     0   0   255 4   0
+definesound GENERIC_AMBIENCE22     vpiss2.voc      0   0   255 4   0
+definesound GENERIC_AMBIENCE23     2ride06.voc     0   0   255 4   0
+
+definesound FIRE_CRACKLE           fire09.voc       0   0   254 2   0
+definesound DUMPSTER_MOVE          grind.voc       0   0   0   0   0
+
+definesound JIBBED_ACTOR1       AMESS06.voc       0   0   255 4   0
+definesound JIBBED_ACTOR2       BITCHN04.voc      0   0   255 12  0
+definesound JIBBED_ACTOR3       HOLYCW01.voc      0   0   255 4   0
+definesound JIBBED_ACTOR4       HOLYSH02.voc      0   0   255 12  0
+definesound JIBBED_ACTOR5       IMGOOD12.voc      0   0   255 12  0
+definesound JIBBED_ACTOR6       PIECE02.voc       0   0   255 4   0
+definesound JIBBED_ACTOR7       GOTHRT01.voc      0   0   255 4   0
+definesound JIBBED_ACTOR8       BLOWIT01.VOC      0   0   255 12  0
+definesound JIBBED_ACTOR9       EATSHT01.VOC      0   0   255 12  0
+definesound JIBBED_ACTOR10      FACE01.VOC        0   0   255 12  0
+definesound JIBBED_ACTOR11      INHELL01.VOC      0   0   255 12  0
+definesound WHIPYOURASS         WHIPYU01.VOC      0   0   255 4   0
+definesound JIBBED_ACTOR12      SUKIT01.VOC       0   0   255 4   0
+
+definesound WAR_AMBIENCE1    WARAMB13.VOC -512  0   255  16  0
+definesound WAR_AMBIENCE2    WARAMB21.VOC -512  0   254  16  0
+definesound WAR_AMBIENCE3    WARAMB23.VOC -512  0   254  16  0
+definesound WAR_AMBIENCE4    WARAMB29.VOC -512  0   254  16  0
+definesound WAR_AMBIENCE5    FORCE01.VOC    0   0   0    4   0
+definesound WAR_AMBIENCE6    QUAKE06.VOC    0   0   0    4   0
+definesound WAR_AMBIENCE7    TERMIN01.VOC   0   0   0    4   0
+definesound WAR_AMBIENCE8    BORN01.VOC     0   0   254  20  0
+definesound WAR_AMBIENCE9    NOBODY01.VOC   0   0   0    4   0
+definesound WAR_AMBIENCE10   CHEW05.VOC     0   0   0    12  0
+
+definesound SPACE_DOOR1      hydro22.voc      0   0   0    0   8192
+definesound SPACE_DOOR2      hydro24.voc      0   0   0    0   0
+definesound SPACE_DOOR3      hydro27.voc      0   0   0    0   8192
+definesound SPACE_DOOR4      hydro34.voc      0   0   0    0   0
+definesound SPACE_DOOR5      hydro40.voc      0   0   0    0   0
+
+ definesound SPACE_AMBIENCE1   monolith.voc      0   0   0  16  0
+ definesound SPACE_AMBIENCE2   hydro50.voc       0   0   0  16  0
+ definesound VAULT_DOOR        vault04.voc      0   0   0   0   0
+
+definesound ALIEN_ELEVATOR1   hydro43.voc       0   0   0  0   0
+definesound ALIEN_DOOR1       adoor1.voc        0   0   0  0   0
+definesound ALIEN_DOOR2       adoor2.voc        0   0   0  0   0
+
+definesound ALIEN_SWITCH1     aswtch23.voc      0   0   0  0   0
+definesound COMPANB2          CTRLRM25.VOC  0  0  0  2   0
+definesound HELICOP_IDLE      hlidle03.voc  0  0  255  3   0
+definesound FOUNDJONES        jones04.voc   0  0  0  4  0
+definesound STEPNIT           LIZSHIT3.VOC  0  0  254  12  0
+definesound RIPHEADNECK       rip01.voc     0  0  254  12 0
+
+definesound ENDSEQVOL2SND1    gunhit2.voc     0   0   249 0   0
+definesound ENDSEQVOL2SND2    headrip3.VOC    0   0   250 0   0
+definesound ENDSEQVOL2SND3    buckle.VOC      0   0   251 0   0
+definesound ENDSEQVOL2SND4    jetp2.VOC       0   0   252 0   0
+definesound ENDSEQVOL2SND5    zipper2.voc     0   0   253 0   0
+definesound ENDSEQVOL2SND6    news.voc        0   0   254 0   0
+definesound ENDSEQVOL2SND7    whistle.voc     0   0   255 0   0
+
+definesound ENDSEQVOL3SND1    KICKHEAD.VOC    0   0   254 0   0
+definesound ENDSEQVOL3SND2    GMEOVR05.VOC    0   0   254 0    0
+definesound ENDSEQVOL3SND3    CHEER.VOC       0   0   254 0   0
+definesound ENDSEQVOL3SND4    GRABBAG.VOC     0   0   254 1   0
+definesound ENDSEQVOL3SND5    name01.voc      0   0   250 0   0
+definesound ENDSEQVOL3SND6    r&r01.voc       0   0   251 0   0
+definesound ENDSEQVOL3SND7    lani05.voc      0   0   252 0   0
+definesound ENDSEQVOL3SND8    lani08.voc      0   0   253 0   0
+definesound ENDSEQVOL3SND9    laniduk2.voc    0   0   254 0   0
+

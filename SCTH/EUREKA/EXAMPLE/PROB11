@@ -1,0 +1,26 @@
+
+; This problem is to find the minimum
+; distance from a plane to an ellipsoid
+
+$ settings
+ accuracy = .00000000001
+ digits = 9
+$ end
+
+$ min (F)
+ X^2 + 2 * Y^2 + 3 * Z^2 = 20               ; ellipsoid
+ 3 * U + 4 * V + 3 * W = 54                 ; plane
+ F = (X - U)^2 + (Y - V)^2 + (Z - W)^2      ; square of distance
+
+; exact solution is:  X = 3 , Y = 2 , Z = 1
+;                     U = 6 , V = 6 , W = 4
+;                     F = 34
+
+{ starting values }
+ X := 0
+ Y := 0
+ Z := 0
+ U := 8
+ V := 8
+ W := 8
+ 

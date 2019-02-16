@@ -1,0 +1,9 @@
+
+; This demonstrates solving
+; all roots of a polynomial.
+
+ p(x) := poly(x,1,0,0,0,0,1)
+
+{ p(x) same as x^5 + 1.}
+
+

@@ -1,0 +1,14 @@
+[FrequencywurX]
+Color_1=65535
+Color_2=4259584
+Color_3=16711935
+Color_4=16711680
+Mono=0
+Columns=1
+Peaks=1
+Blur=1
+FadeRate=64
+BarWidth=3
+BarHeight=1
+MinFreq=9
+MaxFreq=290

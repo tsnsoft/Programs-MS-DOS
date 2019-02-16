@@ -1,0 +1,25 @@
+; Chemical Equilibrium Calculations - Second Example
+; this is an example of solving a fourth-degree
+; polynomial, in order to find the equilibrium
+; concentrations of N2, H2, and NH3 in the reversible
+; chemical reaction
+; 	N2 + 3H2 <==> 2NH3
+; at 25 degrees C, where log(base 10) of K(f) (the
+; equilibrium constant for the forward reaction) is
+; 2.914.
+
+K = 10^(2.914)
+
+cN2 = 0.1 - x
+cH2 = 0.3 - 3*x
+cNH3 = 2*x
+
+; equation for equilibrium concentrations:
+; K = (cNH3)^2 / (cN2 * (cH2)^3)
+
+4*(x^2) = K * (0.1 - x) * (0.3 - 3*x)^3
+
+; constraints to Eureka finds appropriate roots
+
+0 < x < 0.1
+

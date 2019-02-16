@@ -1,0 +1,21 @@
+
+; These examples show how Eureka quickly
+; solves some classic problems
+
+L(x) := ln(x)
+L(A) = 1.00000
+; plot L(x) for 0.1 < x < 5
+
+S(x) := sin(x/2.0)
+S(B) = 1.00000
+
+T(x) := tan(x/4.0)
+T(C) = 1.00000
+
+; After solving this equation file, plot
+; the function F(x) for -10 < x < 10
+
+F(x) := sin(x)/x
+F(j1) = 0.50000 : j1 < 0
+F(j2) = 0.50000 : j2 > 0
+

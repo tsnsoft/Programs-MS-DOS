@@ -1,0 +1,12 @@
+; This problem demonstrates how to use Eureka's built-in
+; INTEG function to perform definite integrals.  The
+; example comes from the study of income distributions.
+
+; Income distribution function (Lorentz curve - non-ideal)
+y(x) := (20/21)*x^2 + (1/21)*x
+
+Num = integ((20/21)*x^2 + (1/21)*x, x, 0, 1)
+Denom = integ(x,x,0,1)
+
+; coefficient of inequality:
+CoeffInEq = Num/Denom

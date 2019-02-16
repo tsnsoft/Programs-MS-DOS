@@ -1,0 +1,16 @@
+
+; This problem finds how long it takes
+; to pay off a $150000 mortgage if the
+; down payment is $20000 and the rate is 13%
+
+$ finansmooth = yes
+        DNPAY = 20000
+        LOAN = 150000
+        EQUITY = LOAN + FVAL(MRATE,MONTHS,LOAN-DNPAY,-2000)
+        MRATE = YRATE / 12
+        YEARS = MONTHS / 12
+        YRATE = 0.13
+        EQUITY = 100000
+        YEARS := 10
+        MONTHS := 90
+

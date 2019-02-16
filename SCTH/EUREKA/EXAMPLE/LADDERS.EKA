@@ -1,0 +1,29 @@
+; This example demonstrates how Eureka can solve
+; a system of nonlinear equations iteratively, after
+; you initialize the iteration.
+
+; System of non-linear equations:
+
+x^2 + a^2 = 45^2
+x^2 + b^2 = 35^2
+y/10 = x/b
+(x-y)/10 = x/a
+
+;Initializations:
+
+x:= 10
+y := 10
+a :=20
+b:=20
+
+; Constraints
+
+a>0
+b>0
+x>0
+x>y
+y>0
+
+; Exact solutions are:  x = 31.817459, y = 21.819934
+; and a = 31.822151, b = 14.582500
+

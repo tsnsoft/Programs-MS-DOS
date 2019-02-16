@@ -1,0 +1,96 @@
+HA 0.99á Copyright (c) 1993 Harri Hirvola
+
+ Permission is granted to any individual or institution to use, copy, 
+ or redistribute this executable as long as it is not modified and is
+ not sold for profit.
+
+ HA COMES WITH NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED.
+ IN NO EVENT WILL THE AUTHOR OF THIS SOFTWARE BE LIABLE OF ANY DAMAGE 
+ RESULTING FROM THE USE OF THIS SOFTWARE.
+
+
+ About HA
+
+     HA is a small file archiver utility. It's main goal is to offer 
+     maximum compression without fancy addons. 
+
+ Commands of *nix version
+
+     General form of command line for HA is :
+
+       ha <commandstring> [archive [search pattern list]]
+
+     Commandstring starts with command character and includes optional
+     switch characters.
+
+     Available commands are:
+
+     a[aemr012]  Add files matching search pattern to archive.
+
+     e[aty]      Extract files matching search pattern from archive.
+
+     x[aty]      Extract files matching search pattern from archive
+                 using path information stored in archive.
+
+     l[f]        List files currently in archive.
+     
+     d           Delete files matching search pattern from archive. 
+                 If archive does not contain any files after deletion 
+                 it is removed.
+
+
+     f[aemr012]  Freshen files in archive. All files matching search 
+                 pattern and newer than version already in archive 
+                 are updated to archive.
+
+     u[aemr012]  Update files to archive. All files matching search 
+                 pattern that are newer than version already in 
+                 archive or are not yet in archive are updated to archive.
+
+     t           Test files in archive.
+
+     +[12]       Compress standard input to standard output.
+
+     -[12]       Uncompress standard input to standard output.
+
+     Available switches are:
+
+     0,1,2       Try compression method #. More than one can be specified.
+                 Methods are:
+                   0-CPY  Simple copying of files.    
+                   1-ASC  Default method using sliding window dictionary 
+                          followed by arithmetic coder. Offers quite good
+                          compression on wide variety of filetypes.
+                   2-HSC  Compression method based on finite context model 
+                          and arithmetic coder. Quite slow for binary data,
+                          but offers very good compression especially for 
+                          longer text files.
+
+     y           Assume answer yes on all questions.
+
+     t           Touch files when extracting. Sets file times to current 
+                 machine time.
+
+     r           Recurse through subdirectories while searching for files
+                 matching search pattern.
+
+     f           Full listing of stored file information.
+
+     m           Move files when archiving. Files are removed from disk
+                 after they are succesfully writen to archive.
+
+     a           Set system specific file attributes when extracting files.
+                 Find special files when archiving.
+
+     e           Do not store pathname information.
+
+
+
+ How to contact author
+
+     Most (or only) reliable way to contact author is by email. 
+     Email addresses currently functioning:
+
+        Internet: hh@elsofter.sterna.pulp.nullnet.fi
+
+        Fidonet:  2:220/851

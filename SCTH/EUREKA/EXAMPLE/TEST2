@@ -1,0 +1,5 @@
+complex=yes
+x^2=-1
+f(z):=exp(x*theta)
+
+

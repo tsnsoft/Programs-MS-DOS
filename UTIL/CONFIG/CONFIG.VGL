@@ -1,0 +1,26 @@
+#
+# Lines starting with # are comments.
+#
+# In this list you can add your own benchmarkresults.
+# To display this list in CONFIG, set the SHOWVGL switch to ON.
+#
+# You can enter a maximum of 34 lines!
+#
+#                                     Bus Video BIOS  Kapa Festpl Durch T->T
+#Computer      CPU Speed  MHz Wait CRT    Durch Durch   MB Durchs Zugrf Zugrf
+#============================================================================
+Laser 486      486 3965% 33.3  -   VGA 08  762K  6936  144   662K  17ms  5ms
+MCS IQUE 486   486 2964% 25.0  -   VGA 16  666K 38484  312   738K  20ms  7ms
+Pete's 386     386 2470% 33.5  -   VGA 16  656K 29825   80   643K  24ms 12ms
+Tom's  386     386 2450% 33.3  -   VGA 16  600K  5548   42   750K  28ms  5ms
+Feet Oker 386  386 2244% 30.3  -   VGA 16 1087K 33139   65   751K  22ms  7ms
+PS/2 Model 70  386 1876% 25.7  -   VGA 08  273K 18937  115   951K  19ms 10ms
+Compaq 386/25  386 1814% 25.0  -   VGA 08  372K 11362  148   678K  17ms  7ms
+Compaq 386/20e 386 1472% 20.4  -   VGA 16  991K 12691  111   651K  20ms  5ms
+Pertron 386    386 1401% 25.0  -   VGA 16  491K 20930  109   280K  39ms  5ms
+LEO 386-20 AT  386 1222% 20.0  -   VGA 16  380K 23392   41   483K  28ms  8ms
+PS/2 Model 80  386 1167% 20.0  -   VGA 08  220K 28400  315   948K  23ms  7ms
+Canon 386      386 1018% 16.0  -   VGA 08  188K   988   44   251K  28ms  4ms
+ATECS NEAT     286  996% 16.0  0   Herc    253K 14373   65   726K  28ms  7ms
+Comquest 386SX 386  933% 16.0  -   Herc    257K  9175   41   496K  28ms  7ms
+Orchid AT      286  860% 12.5  0   VGA 16  349K  3990   32   754K  65ms 20ms

@@ -1,0 +1,41 @@
+Ans: AnsiView.bat !\!.!
+Arc: ARCView.exe
+Arj: ARCView.exe
+A0?: ARCView.exe
+A1?: ARCView.exe
+Zip: ARCView.exe
+Pak: ARCView.exe
+Lzh: ARCView.exe
+Ice: ARCView.exe
+Zoo: ARCView.exe
+Lim: ARCView.exe
+Ha: ARCView.exe
+Rar: ARCView.exe
+Avt: AnsiView.bat !\!.!
+Cel: CelView.exe
+Col: PalView.exe
+Com: Hiew.exe !\!.!
+Dbf: DbView.exe
+Dmp: Hiew.exe !\!.!
+Exe: Hiew.exe !\!.!
+Gif: Vpic.exe !\!.!
+Gl:  Grasprt.exe !\!.!
+Ico: IconView.exe
+Lbm: Vpic.exe !\!.!
+Lmd: c:\tools\music\dmp.exe @!.!
+Mdi: MidiPlay.exe !\!.!
+Mid: MidiPlay.exe !\!.!
+Mod: dmp.bat !\!.!
+Msg: MsgView.exe !\!.!
+Ng:  NGView.com !\!.!
+Pal: PalView.exe
+Pcx: Vpic.exe !\!.!
+Pkt: PktView.exe !\!.!
+Scr: ScrView.exe !\!.!
+Stm: c:\tools\dmp.bat !\!.!
+Ubt: Ubl_View.exe -55 !.!
+Voc: Sput.com !\!.! /D2 /F48 /IR7 /P220-S /R164
+8sn: Sput.com !\!.! /IR7 /P220-S /R170
+Fli: QuickFli.exe !\!.!
+???: wpview.exe !.! > nul
+

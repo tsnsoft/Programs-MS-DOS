@@ -1,0 +1,30 @@
+; This problem illustrates maximizing a non-linear
+; function while satisfying several constraints on the
+; function and on the variables.  Notice that we maximize
+; a variable, A, which is related to the other variables
+; x, y, z a and b according to the first equation.
+
+$ max (A)
+
+; maximize area within limits of city code
+A = (x*y + a*b + x*z) = B + x*z
+B = (x*y + a*b)
+B < 3000
+
+; aesthetic constraints
+x > b/3
+x < b/2
+
+; leave room for the patio/pool
+y*(b-x) > 1500
+
+; set-backs and more aesthetics
+b< 68  : b > 40
+y+a < 100  : y+a > 56
+z = a + y/2
+a > y/2
+
+; initial values
+b:=68
+y:=56
+

@@ -1,0 +1,41 @@
+file_format	900716
+use_color	1
+use_graphics	0
+activity_log	4
+
+# Saved Batch Settings:
+	b_serial	0 0 0 0
+	b_comloop	0 0 0 0
+	b_parallel	0 0 0
+	b_lptloop	0 0 0
+	b_floppy	0 0 0 0
+	b_flopwrite	0 0 0 0
+	b_fixed	0 0
+	b_sysboard	0
+	b_rtclock	0
+	b_base	0 0x 0x
+	b_ext	0 0x 0x
+	b_ems	0 0x 0x
+	b_memquick	0
+	b_vidmem	0
+	b_vidtext	0
+	b_vidgraph	0
+	b_printer	0  
+	b_keyboard	0 
+	b_mouse	0
+	b_joystick	0
+	b_logtype	
+	b_passes	1
+	b_mem_passes	1
+	b_pause	0
+
+# Benchmarks:
+	bm_dstones	      0.00 0 Saved
+	bm_wstones	      0.00 0 Saved
+	bm_bvideo	      0.00 0 Saved
+	bm_dvideo	      0.00 0 Saved
+	bm_transfer	      0.00 0 Saved
+	bm_aveseek	      0.00 0 Saved
+	bm_trkseek	      0.00 0 Saved
+
+

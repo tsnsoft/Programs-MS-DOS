@@ -1,0 +1,75 @@
+Vis_Mux v1.12 (C)1998 Jason Crawford (Heucuva@usa.net) All rights reserved.
+WinAMP is Trademark and (C) Justin Frankel and Nullsoft, Inc.
+AMP is (C) Tomislav Uzelak.
+All other references are (C) by their respective owners.
+
+Instructions:
+------------------
+
+Plug-ins-
+     This plug-in was meant to use only windowed plug-ins and plug-ins that
+     dock to (or in) the WinAMP window.
+     OpenGL, 3dFX, and full-screen plug-ins are not recommended for use
+     with this plug-in.
+     Currently, only four (4) plug-ins may be used with this plug-in.
+     If you find this number to be too small there is a way to change it,
+     but you're gonna have to find out where yourself.
+
+Visualization Plugins list box-
+     This is a list of the currently selected DLLs and the plug-in within it.
+     To open up the pop-up menu:
+          Right-click the list box or press ALT-ENTER while in the list
+          box.
+     To select a DLL to use in the mux:
+          Click the "Add DLL" button below the list box, select "Add DLL"
+          from the pop-up menu, or press INS while in the list box.
+     To remove a DLL:
+          Select the DLL to remove in the list box and click the
+          "Remove DLL" button below the list box, select "Remove DLL" from
+          the pop-up menu, or press DEL while in the list box.
+     To select a plug-in from the selected DLL:
+          Click the arrow buttons below the the list box, select
+          "Select Next" from the pop-up menu, or press either "+" or "-"
+          while in the list box.
+     To configure the selected plug-in:
+          Double-click the plug-in, select "Configure" from the pop-up
+          menu, or press ENTER while in the list box.
+
+Compatibility mode-
+     This function allows plug-ins that require more processing power to
+     run more reliably. This has been known to cause undesirable effects
+     on slower systems while using certain plug-ins.
+
+Thanks:
+-------------
+
+My thanks go out to the beta-testers: (in no particular order)
+     Peter Guzis,
+     Ray Sanders,
+     Bryan Hollingsworth,
+     Bruce Si-Tou,
+     and Kris Backmeyer.
+
+You've all done a great job (or at least a good job) telling me what I've
+done to bring your computers to their knees; Thanks!
+
+Thanks go out to: (in no particular order... again)
+Ray Waldin (GREAT WinAMP Speakers, SpectralLake, etc.),
+Aldasir Page (I was waiting to hear from at least 1 person about it....),
+and to all the people that complained about the CFG window being too
+small when the fonts were changed in Windows.
+
+To learn more about how to write WinAMP plug-ins:
+     Go to either:
+          http://www.winamp.com/plugins.html
+     or
+          http://www.mp3.com/plugins.html
+     and download an sdk of your choice
+
+     or
+
+     Contact Jason Crawford (Heucuva@usa.net) and specify which
+     programming language you wish to use for making a plug-in
+     and an e-mail with the included package will be shipped to you
+     within that week.
+

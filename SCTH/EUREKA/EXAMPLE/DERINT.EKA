@@ -1,0 +1,27 @@
+ ; These problems demonstrate how to use
+ ; Eureka's INTEG and DERIV functions, and
+ ; include examples of plotting the
+ ; functions.
+
+A(x) := (cos(x))^2
+B(x) := sin(x)
+C(x) := cos(x/2)
+
+D(x) := A(x) + B(x) + C(x)
+D(dd1) = 0 : 0 < dd1 < 10
+D(dd2) = 0 : dd2 := -1
+
+Ap(x) := deriv((cos(x))^2, x)
+Bp(x) := deriv(sin(x), x)
+Cp(x) := deriv(cos(x/2), x)
+Dp(x) := deriv((cos(x))^2+sin(x)+cos(x/2),x)
+
+Ap(ap) = 0
+Bp(bp) = 0
+Cp(cp) = 0
+Dp(dp) = 0
+
+Dint1 = integ(D(x),x,0,5)
+Aint1 = integ(A(x),x,0,5)
+
+

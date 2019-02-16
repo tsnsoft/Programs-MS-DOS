@@ -1,0 +1,404 @@
+What's new in Winamp 2.08?
+  * Stupid VC++ 6 screwed up my PropertySheets. Crashed on some systems.
+    Fixed (as far as I can tell, let me know =).
+  * Fixed a stupid CPU consuming bug in Nitrane
+  
+What's new in Winamp 2.06 (the final release of 1998!)?
+  * Built with VC++ 6 and VC++ 4.2. Faster and smaller (well, we hope)
+  * Installer now prompts to use old config/fresh config
+  * Uninstaller only will remove Plugins\ and Skins\ if they are in the
+    Winamp directory (i.e. if you have a giant skin directory in another
+    location it won't remove it)
+  * Added bar analyzer mode to built-in vis (woo!)
+  * Made .pls playlists streamable
+  * Info-reading on demand mode, supplements info-on-load
+  * Made http:// default in open location box
+  * Better directory and drive adding support (you can now do 'G:\' in 
+    the open location box to play an audio CD, for instance)
+  * Fixed a slight alignment bug in playlist editor
+  * Nullsoft Visualization Library!  (wVis 4.1+NS Fullscreen Vis)
+  * Included experimental gapless output driver (rocks the casbah)
+  * Improved DirectSound output driver
+  * Made some mods to the waveOut plug-in, should be more stable and more
+    compatible (might have sacrificed a teeny bit of vis accuracy tho)
+  * CDDB support now remembers if it hasn't worked recently to avoid
+    from keeping popping up.
+  * Fixed a dsp plug-in bug in Nitrane
+  * Added SHOUTcast title reading to Nitrane, improved Nitrane's HTTP
+    streaming (non-blocking connect, baby)
+  * Added better MPEG 2.5 support to Nitrane (still don't have the right
+    reordering tables, though, but an improvement nonetheless)
+ 
+What's new in Winamp 2.05?
+  * Fixed some vis->plug-in interface bugs
+  * Fixed apply button in setup tab of prefs
+  * Rewrote some memory chunk allocation code.
+  * Added a buttload of IPC stuff (lots, baby!)
+  * wVis 4.0: New effects, higher quality rendering, and DirectDraw fullscreen
+    modes.
+  * Fixed a skin bug
+  * Fixed a few error-detection related bugs in Nitrane.
+  * Preliminary CDDB Support (CDDBP only, no HTTP)
+  * Much improved HTTP streaming. You can now psuedo-stream MOD,WAV,and MIDI
+    files.
+  * Improved MOD decoder (Thanks Jake!)
+  * Updated icons. Fixed a lot of little cosmetic bugs.
+
+What's new in Winamp 2.04?
+  * Bugfixes. I had these logged but I lost the log file :(
+  * Better installer integration (/install and /uninstall switch)
+  * New, nicer, self checking installer. Uninstall too!
+  * Fixed vis starting before first track bug
+  * Added /CLASS="Winamp v1.y" switch
+  * Added .ZIP support for skins. Simply drop a zipped skin in your Winamp\Skins
+    directory!
+  * Nitrane 1.24 with better sound quality and corrupt MP3 handling,
+    two different EQ modes, and an experimental Aural Stimulation Mode.
+  * Better "browse for directory" boxes.
+  * More IPC stuff (EQ, Skins, etc -- see frontend.txt)
+  
+
+What's new in Winamp 2.03?
+  * Improved shift selection in playlist editor
+  * Better litestep support (litestep options in preferences/options, too)
+  * Fixed a number of midi/cdda related bugs
+  * Added WM_GETMINMAXINFO handler, to improve maximize handling and windowshade
+  * Fixed some stupid (but very annoying) window region related bugs. 
+  * Nitrane 1.22, for better sounding MP3 playback
+  * New 'No Playlist Advance' option for DJs and people who like to jump
+    around in playlists.
+  * Snapping is now adjustable.
+  
+What's new in Winamp 2.02?
+  * massive improvements to audio output system. No more skips!
+    (be sure you set your audio output prefs to the recommended
+     settings :)
+  * Some dsp plug-in related enhancements.
+  * fixed eq preset reloading bug
+  * Optimized Nitrane's 3DNow! mode some more. About 10% faster.
+    (went from 11.5% to 10.2% or so)
+  * Ported some code to C in in_mod, for the upcoming 2.02 AXP build :)
+ 
+What's new in Winamp 2.01?
+  * made playlist editor use windows font.. resizable and skinnable
+  * fixed a silly little hide-mainwindow-while-minimized-bug
+  * added up/down arrow (and mousewheel scroll) to plwindowshade
+  * fixed silly position bar moving bug
+  * made EQ's 0-lock more accurate
+  * made title-scroll option 
+  * added width&height chex for pl
+  * fixed error with sorting in skin selection box
+  * fixed evil playlist editor 256 color bugs and alignment stuff
+  * Nitrane 1.20. Faster, fully functional layer 2 support. Optimizations. 
+    Better sounding half and quarter rate modes. fixed decoder mode setting
+  * more... ! :)
+
+What's new in Winamp 2.0?
+  * I wouldn't know where to start =) sorry, just play with it..
+
+----------- Old 1.x What's New ---------------------------------------------
+What's new in Winamp 1.92 SP?
+  * New Nitrane 1.0 MPEG audio decoder (mostly bugfixes)
+  * New MOD/XM/IT player (see readme.txt)
+  * New CDDA plug-in.
+  * Fixed WAV plug-in
+  * A few new plug-ins.
+
+What's new in Winamp 1.92?
+  * Mousewheel support (controls volume, or seeks when pressed)
+  * Saves prefs even if you shut down while winamp is running
+  * Skins can now change the color of most of Winamp's dialogs
+    (see dialogs.txt in Skins\DColor)
+  * Shift-minimize minimizes to tray
+  * Plug-in name caching
+  * Modeless prefs box, skin selector, about box
+  * Better filetype registration. With unregistration, and individual 
+    extension selection
+  * Win98/IE4 taskbar support
+  * added /config=file.ini (path optional) switch.
+  * fixed some region related bugs
+  * Apply works as expected in prefs now! :)
+  * Nitrane MP3: totally new decoding engine with support for MMX, 3DNow!
+    and more.
+  * Removed MIDI/CDDA plug-ins temporarily (coming back soon when we get 
+    them working better)
+
+What's new in Winamp 1.91 sp1?
+  * midi plugin: Fixed MIDI playback for files with spaces in their names
+  * midi plugin: Trying to reinitialize synth on playback
+  * wave plugin: fixed ACM problems on some systems with normal PCM files
+    (bypass ACM)
+
+What's new in Winamp 1.91?
+  * better short-fn to lfn conversion
+  * added new remove options to playlist editor
+  * added /new switch, opens up a new winamp, always
+  * none option for taskbar/tray display setting
+  * Optimized prefs/plugins -- dsp plugins now must be named dsp_*.dll.
+  * Made playlist editor keep track of playlist file (again)
+  * Added SkinDir= and PluginDir= options for winamp.ini (add them manually 
+    in [Winamp] in Winamp.ini to change)
+  * Fixed up some delete playlist-then-hit-stop bugs
+  * Fixed input-change bug in vis plugins
+  * added skin enhancement: region.txt region specifier
+  * added skin enhancement: balance.bmp is like volume.bmp but for 
+    balance/panning bar
+  * added skin enhancement: nums_ex.bmp allows for - sign definition :)
+  * added 'playlist types' to open dialog
+  * made snap to viewport snap on move in stead of on drop
+  * added plug-in config hotkey/menu item
+  * made vis_fs.dll default visualization
+  * changed file type to 'winamp media file' from 'mpeg file'..
+  * added demo.mp3, and auto-play on first run
+  * fixed 2 digit bitrate/mixrate bug
+  * fixed IPC_JUMPTOTIME bug (works now)
+  * improved http m3u reading (error detection, yay)
+  * made doublesize mode not so screwupy in win95
+  * optimized title/length reading code
+  * auto-idle when not playing
+  * revised plug-in spec
+  * added 'default extension' option
+  * mp3 decoder: new time calculation code (all integer)
+  * mp3 decoder: added options for different extensions 
+    (and additional extensions)
+  * mp3 decoder: added MMS streaming option
+  * mp3 decoder: optimized size-changing checking code (for indirect streaming)
+  * mp3 decoder: mixed-bitrate mp3s now display average bitrate
+  * mp3 decoder: more genres
+  * mp3 decoder: high genre bug fixed
+  * mp3 decoder: improved http and mms streaming (with error detection n stuff)
+  * mp3 decoder: fixed priority setting bug
+  * mp3 decoder: added error messages for id3 editor box
+  * mp3 decoder: new output system (optimized)
+  * mod decoder: fixed priority setting bug
+  * mod decoder: added better 8 bit support
+  * mod decoder: new 'if title is empty' logic.. 
+  * mod decoder: added support  for windowshade vu
+  * mod decoder: added .669 support
+  * mod decoder: new output system (optimized)
+  * mod decoder: added waveform dsp plugin support
+  * wav decoder: .VOC support. Only mono, 8 bit files are supported.
+  * wav decoder: .VOC support supports silence blocks and changing samplerates
+                 (all upsampled to 44.1kHz)
+  * wav decoder: .WAV support. Uses ACM so you can play any .WAV file.
+  * linein/cdda decoder: support for linein:// and .CDA cd tracks.
+
+
+What's new in Winamp 1.90?
+  * Major release - Winamp is now a general purpose audio player 
+    (.MODs are back baby!)
+  * Plug-in input sources. Included MP2/MP3 plug-in, MOD/XM/S3M/IT plug-in. 
+    Coming soon: WAV/VOC/AU/AIFF, AAC, CD Audio, etc
+  * Lots of bugfixes
+  * New bugs (since we changed a *lot*)
+  * Included new beta nifty fullscreen visualization library (with a dot
+    fountain! :)
+
+What's new in Winamp 1.82?
+  * Even more ID3 genres
+  * Decoder bug fixed (for corrupted mp3s)
+  * Better shell integration (both play and queue options)
+
+What's new in Winamp 1.81?
+  * More ID3 genres
+  * Fixed dsp plug-in non-working thingy
+  * New 'alternate volume setting code' that works on all systems
+  * You can now set the buffering time to 0 seconds for low-latency
+  * No more integer mode (sucky)
+  * New quarter-sample-rate mode
+  * New 'agressive buffering' option
+  * Cosmetic improvements
+  * Winamp now remembers position in last playlist when starting
+  * Random skin option box (see skin selector)
+
+What's new in Winamp 1.80?
+  * Skin support 
+  * Plug-Ins now go in Plugins\ (move your old ones there)
+  * Experimental integer mode for 486s
+  * 64 bit mode for extra good sound
+  * Removed Extra-HQ switch (always HQ now) 
+  * Removed bufferless playback mode (slower according to vtune, just set 
+    buffer-size to around 0.3 seconds for faster EQ, etc) 
+  * Playlist editor bugfixes and enhancements
+  * Many small bugfixes 
+  * Optimized audio output code
+  * Hold down shift while seeking for some fun 
+
+What's new in Winamp 1.73?
+  * .WAV writing bug fixed (sorry! :)
+
+What's new in Winamp 1.72?
+  * Winamp style dialogs are now an option
+  * Improved streaming, supports nearly all web servers (we hope), and HTTP
+    proxies.
+  * Fixed many little bugs, little improvements
+
+What's new in Winamp 1.70?
+  * Redesigned playlist editor. Much more intuitive.
+  * Fixed a TON of 256 color issues (vis looks better, dialogs look better)
+
+What's new in Winamp 1.69?
+  * Restyled playlist editor, graphical equalizer jump box, etc
+    - they look MUCH nicer
+  * 10 band graphical equalizer
+    (Makes your 1.666 and earlier presets incompatible.. sorry)
+  * Clutterbar now shows you the function of each button in the title
+    field (when the mouse is over them)
+  * Playlist editor's time calculation is better (uses ?'s if uncertain, and
+    shows hours/minutes/seconds if applicable)
+  * Playlist editor displays time for each track (if available)
+  * More optimization, mostly in lower quality mode.
+  * Plug-in related stability improvements (tries to tame badly behaved
+    plug-ins)
+  * Minor bugs fixed, including DSP selection, reverse stereo analyzer plug-in
+  * Fixed focus-main-winamp-window-on-open-of-eq-or-pe bug. (phew)
+  * Reverted the previous button back to the old way, of previous song, always
+    (I like it better this way too)
+  * New prebuffer after seek option
+  * HQ button is now single-click
+  * Sorry, this version changes the configuration format. You will need
+    to reconfigure Winamp to your liking if you are upgrading.
+  * A few new IPC calls
+
+What's new in Winamp 1.666?
+  * The Clutterbar.
+  * Windowshade button 
+  * Seek-in-windowshade mode 
+  * Added desktop icon adding to preferences
+  * Added a nifty hq control on main interface. 
+  * New ID3 tags 
+  * General purpose plug-in architecture (woohoo)
+  * Fixed mixed-mode layer 2 bug (yay) 
+  * Fixed "blip" bug in low quality imdct 
+  * Optimized huffman decoding and requantinization
+  * New high quality mode. Slower (but still quick), and sounds GREAT
+  * Vastly improved shell integration. Try selecting lots of files in explorer,
+    and hit "open" (doesn't work perfectly unless Winamp is already running)
+  * Improved graphical equalizer (new ranges, more accurate, etc) 
+  * Added live web links. 
+  * Changed format of seeking display status 
+  * Added nifty "add to playlist from explorer" (more or less) option to 
+    prefs/initial setup 
+  * Better VU meter with peak detection in windowshade 
+  * More stable threading
+  * Improved command line handling (supports relative pathnames better) 
+  * Alternate volume setting mode (for some soundcards)
+  * More ID3 format strings 
+  * New buffer-all logic 
+  * More IPC functions for programmers
+  * %6 ID3 bug fixed (invalid genres) 
+
+What's new in Winamp 1.64?
+  * MAJOR "bug" fix: fixed buffer size logistics (enables 48/24/12khz output
+    on many soundcards that wouldn't work before).
+
+What's new in Winamp 1.62?
+  * Numerous bugs fixed
+  * Tooltip on titlebar
+  * More menu items
+
+What's new in Winamp 1.61?
+  * Improved ID3 tag reading logic
+  * Resizable playlist editor
+  * Bugs fixed in .WAV writer (now replaces /\|,. etc with _)
+  * Plug-in configuration hwndParent bug fixed 
+  * Configurable icon in system tray
+  * Yes, we like refinements
+
+
+What's new in Winamp 1.60?
+  * Improved sound quality (added HQ option)
+  * Improved batch .WAV writer
+  * Cleaned up playlist editor
+  * New ID3->Title translation
+  * New multiple instances logic
+  * Lots of cosmetic improvements and refinements
+  * Countless other improvements and bugfixes
+
+
+What's new in Winamp 1.6 BETA?
+  * Plugin Architecture
+    * Visualization Plugins 
+      * Simple test plugins (Analyser, Oscilliscope, VU meter) 
+      * Fullscreen plugins (Analyser, Oscilliscope, Voiceprint, etc) 
+        - requires DirectX3+ or NT4SP3 
+      * Zygron's plugin library (some nifty effects)
+      * Trippy Visualization plugin (rotozooms/motionblurrs an image with the 
+        music) - requires DirectX3+ or NT4SP3 
+      * 3D Spectrum Analyser plugin (Jeff's) - requires DirectX5. 
+    * DSP Plugins 
+      * Simple Reverb/Echo 
+      * Simple Voice Removal (not extremely advanced) 
+      * Note: these plugins might not be that great, but it's open for other 
+        people to write plugins (and us when we get more time), so it will 
+        be pretty useful. 
+  * Right-click context menus in main interface 
+  * Improved ID3 tag editor w/ MPEG info display 
+  * VU meter and eject button in windowshade mode 
+  * Increased visualization accuracy 
+  * Faster seeking 
+  * More reliable HTTP streaming 
+  * Limited support for Microsoft NetShow audio streams (mms://) 
+  * Bugfixes, new options (of course)
+
+
+What's new in Winamp since 1.45?
+  * MPEG 2.5 support (preliminary - occasional blips)
+  * HTTP streaming support
+  * New "Eject" button
+  * Fixed clipping problem
+  * New mini features
+  * TONS of bugfixes
+
+What's new in Winamp since 1.40?
+  * Keyboard shortcuts for playlist editor (as requested)
+    * Ctrl+A: selects all
+	* Ctrl+N: selects none
+	* Ctrl+I: inverts selection
+	* Ctrl+L: loads playlist
+	* Ctrl+S: saves playlist
+	* Ctrl+O: sorts by title
+	* Shift+O: sorts by filename
+	* Ctrl+Shift+O: sorts by full filename (with path)
+	* Ctrl+R: randomize
+	* Ctrl+Shift+R: reverse
+	* Delete: deletes selected mp3s.
+	* Enter: plays (first) selecteed mp3
+    * Insert: inserts mp3s
+	* Shift+Insert: inserts directory
+	* Control+Insert: inserts playlists
+  * Super low latency low overhead buffering for some computers 
+    * This lets my P5-133 use around 2% with ALL options on in Windows NT 
+	  (but only with my GUS pnp, it doesn't help my AWE32. huh)
+	* It isn't as skip-proof as normal buffering, so you will probably have
+	  to give it some big priority boost in the preferences. But the performance
+	  on some systems is amazing, the fastest I have EVER seen. 
+  * Winamp is now 100% uncrippled nag-free Shareware that never expires. 
+    * Registration for personal use is only $10.
+
+What's new in Winamp since 1.20?
+Here's a few:
+  * Restyled playlist editor (with improved functionality)
+    * Total time display in playlist editor
+  * Rewritten playlisting engine (less buggy, more efficient)
+  * Improved ID3 tag editor (alphabetical genres)
+  * Revised main user interface
+        * Display of positioning/volume/balance in songname field
+	* Panning control
+	* EQ & Playlist buttons
+	* Enlarged songname field.
+	* Manual songname scrolling returned
+  * Doublesize mode
+  * Optimized Visualization (less slowdown in win95)
+  * Fire Analyzer Mode
+  * Snap-to-viewport in always on top mode
+  * Returned mixed-bitrate MPEG 2 stream support
+  * Logarithmic EQ
+	* Now has full -12db to +12db adjustment
+	* Presets and auto-loading of settings (per mp3)
+  * Higher priority by default
+  * Changes to taskbar/system tray preferences take place immediately
+  * .WAV ouput support (look in Preferences/Output/Device)
+  * Added support for mixed bitrate streams
+  * More file icons
+  * Lots of bugfixes and refinements

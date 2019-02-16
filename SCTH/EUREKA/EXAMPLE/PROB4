@@ -1,0 +1,9 @@
+
+; This demonstrates solving
+; a system of nonlinear equations.
+
+  y = 48 - x^2
+  x^5 = y^2
+
+{ Exact solution is x = 4, y = 32.}
+

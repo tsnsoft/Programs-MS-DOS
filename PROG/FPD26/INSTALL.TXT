@@ -1,0 +1,203 @@
+INSTALLING FOXPRO FOR MS-DOS
+
+Three installation options are available with FoxPro for MS-DOS:
+
+ *  Normal Installation copies the FoxPro program files, help files
+    and examples from disk or from a network to your hard drive.
+    Normal Installation installs FoxPro for MS-DOS on a single
+    machine.
+
+ *  Administrative Installation ( /A) copies all FoxPro files along
+    with installation files to a network drive so that users can
+    either run the shared network copy after doing a Workstation
+    Installation or install FoxPro for MS-DOS to their local machines
+    with a Normal Installation.
+
+ *  Workstation Installation ( /N) copies FoxPro initialization files
+    to a local machine so that a shared network version of FoxPro for
+    MS-DOS can be run.  Workstation Installation requires less space
+    on individual machines and allows greater administrative control
+    of the use of FoxPro.  Workstation Installation requires a
+    previous Administrative Installation.
+    
+ *  Normal Installation After an Administrative Installation works the
+    same way Normal Installation from floppy disks works.  The way you
+    initiate Normal Installation after an Administrative Installation
+    is by typing X:\<path>\INSTALL at the MS-DOS prompt and pressing
+    Enter.  X represents the network drive and <path> represents the
+    directory in which FoxPro was installed with the Administrative
+    Installation option.
+    
+
+	**************************************************************
+	* Note:  Every Microsoft FoxPro user must have a Microsoft   *
+	* FoxPro license.  A license is obtained by buying a retail  *
+	* package or a Microsoft License Pack.  For more information * 
+	* about network use restrictions, see your Microsoft FoxPro  *
+	* license agreement.                                         *
+	**************************************************************
+
+	For information about Normal Installation, see the FoxPro for
+	MS-DOS Installation and Configuration manual.
+	
+	FoxPro asks you several questions during the installation process. 
+	The default response is listed in brackets, for example:
+	
+	Is this information correct? [Y] :
+
+	To choose the default response, press Enter.
+
+	These instructions assume that you are installing from drive A. 
+	If you are installing from another drive, please adjust the
+	instructions accordingly.
+	
+
+ADMINISTRATIVE INSTALLATION ( /A)
+ 
+	Before you start the Administrative Installation, the network must
+	be operational and you must have read and write access to the
+	network	directory in which you want to install FoxPro.  For more
+	information, see your network software documentation.
+	
+	To install FoxPro for MS-DOS for administrative use:
+	
+	1.  Insert FoxPro Disk 1 into drive A.
+
+	2.  Type A:\INSTALL /A at the MS-DOS prompt and press Enter.
+
+	3.  Enter your name and company in the spaces provided.  You will
+	be asked to confirm this information.  If you re-install FoxPro,
+	this information will automatically be included.  When you start
+	FoxPro for MS-DOS, this information will appear on the
+	initialization screen.
+
+	4.  The installation program suggests a directory in which to
+	install FoxPro for MS-DOS.  To confirm that you want to install
+	FoxPro in this directory, press Enter.  If you do not want to
+	install FoxPro in the default directory, type N and press Enter. 
+	You will be prompted for an installation directory.
+	
+	5.  If the directory in which FoxPro will be installed is not in
+	your path, the installation program asks you whether or not you
+	want your path changed in your AUTOEXEC.BAT file.  Press Enter to
+	allow the modification, or type N and press Enter if you do not
+	want your path modified.
+
+	6.  The required FoxPro for MS-DOS files and all files necessary
+	for subsequent installations are copied to the server.  When the
+	basic installation is completed, you are prompted to press Escape
+	to quit or any other key to continue with optional component
+	installation.
+
+Optional Component Installation
+
+	The optional components you choose to install in the
+	Administrative Installation are available for workstation use;
+	those components you do not install are not available.  All FoxPro
+	components remain available to those who perform Normal
+	Installations after the Administrative Installation, regardless of
+	which optional components you include.
+		
+	Before installing optional components, the installation program
+	prompts you to choose the type of monitor used with your system.
+
+	Use the arrow keys to highlight the appropriate monitor type and
+	press Enter.
+
+	During installation, you are given the option of installing the
+	FoxPro supplemental programs and files.  This step is identical to
+	the corresponding step in Normal Installation.  For more
+	information, refer to the FoxPro for MS-DOS Installation and
+	Configuration manual.
+
+Stopping the Installation
+
+	If you want to stop the installation process, you can press Escape
+	at any prompt or press Ctrl+C at any time.  Note that if you press
+	Ctrl+C, installation does not stop immediately.  When it does, the
+	MS-DOS prompt appears.
+
+Installing Additional Files
+
+	After you have installed FoxPro, you can install any optional
+	components that you did not specify during installation.  To do
+	so, restart FoxPro by typing FOX at the MS-DOS prompt and pressing
+	Enter.  Insert any one of the product disks into the floppy drive
+	and enter the following command in FoxPro's Command window:
+
+	DO INSTALL
+
+	You will be prompted to insert the disk or disks that contain the
+	additional files that you want to install.
+
+	Note: If you are installing from a drive other than A:, you will
+	be instructed to select another source drive after the "Abort,
+	Retry, Fail?" message.  
+
+
+WORKSTATION INSTALLATION ( /N)
+
+	1.  Type X:\<path>\INSTALL /N at the MS-DOS prompt. X represents
+	the network drive and <path> represents the directory in which
+	FoxPro was installed with the Administrative Installation option.    
+
+	2.  The installation program suggests a directory in which to
+	install FoxPro.  To confirm that you want to install FoxPro in
+	this directory, press Enter.  If you do not want to install FoxPro
+	in the default directory, type N and press Enter.  You will be
+	prompted for an installation directory.
+
+	3.  If the directory in which FoxPro will be installed is not in
+	your path, the installation program asks you whether or not you
+	want your path changed in your AUTOEXEC.BAT file.  Press Enter to
+	allow the modification, or type N and press Enter if you do not
+	want your path modified.
+
+	4.  FOX.EXE is copied to your FoxPro directory.  You can end the
+	installation by pressing Escape at this point or press any other
+	key to configure your FoxPro workstation.
+
+	5.  An information screen explains FoxPro configuration and allows
+	you to specify the directory for your configuration files to be
+	created in.  The default is your FoxPro directory.  Press Enter to
+	accept this default or type your preferred directory in the text
+	box and press Enter.
+
+	6.  Choose <<Continue with configuration>> to proceed or <Abort
+	configuration procedure> to cancel the configuration procedure.
+
+	7.  A dialog opens so that you can set the directories for:
+	
+	  * CONFIG.FP - Your FoxPro configuration file.
+	  * FOXUSER - A FoxPro database that keeps track of window sizes
+	  and so on.
+	  * Overlay files - Since the FoxPro executable file is too large
+	  to fit in conventional memory at one time, parts of	             
+	  it are kept in overlay files and loaded into memory	             
+	  as needed.
+	  * Editor work files - Temporary files created during editing
+	  sessions.
+	  * Sort work files - Temporary files used during database sorting
+	  and indexing.
+	  * Program work file - Temporary program file.
+  
+	Descriptions of these options are included in the dialog.  By
+	default, FoxPro uses all available expanded memory. In this
+	dialog, you are given the option to Limit EMS Available to FoxPro. 
+	There are three push buttons at the bottom of the dialog:
+		<<OK>> - Accept the directories and EMS settings.
+		<filer> - Open the FoxPro Filer accessory to view your
+		directories before deciding on configuration directory
+		defaults.
+		<Cancel> - Cancel the configuration procedure.
+
+	8. You are given the option to have FoxPro update your
+	AUTOEXEC.BAT file so that FoxPro looks for configuration
+	information in the directories that you have specified.
+	
+	9. You are given the option to have configuration changes written
+	to your CONFIG.FP file.
+
+	10.  Installation is complete.  Press any key to start FoxPro. 
+	Remember to reboot your machine so that changes made to your
+	AUTOEXEC.BAT can take effect.  

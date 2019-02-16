@@ -1,0 +1,34 @@
+; a really nasty looking example on how to change the colors of 
+; the dialog boxes in Winamp 1.92+
+
+[Dialog Colors]
+
+; background of the dialog box
+dialog_color_bg=#F0F0F0
+
+; text of stuff in the dialog box
+dialog_color_fg=#000000
+
+; text of list/edit boxes
+dialog_color_textcolor=#ffffff
+
+; background of list/edit boxes
+dialog_color_lbback=#004000
+
+; text color in buttons
+dialog_color_buttontext=#ff0000
+
+; text color in buttons when active
+dialog_color_buttontext_sel=#ffff00
+
+; button color defs
+dialog_color_button_up_0=#c0c0c0
+dialog_color_button_up_1=#FFFFFF
+dialog_color_button_up_2=#505050
+dialog_color_button_up_3=#a0a0a0
+dialog_color_button_up_4=#101010
+
+
+; pushed in defs
+dialog_color_button_down_0=#909090
+dialog_color_button_down_1=#000000

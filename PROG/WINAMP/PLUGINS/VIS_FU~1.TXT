@@ -1,0 +1,161 @@
+                   Funky FX Plugin for WinAmp
+                             v1.00
+                   --------------------------
+
+                          22 Sep 1998
+
+Inroduction
+-----------
+
+This archive contains the FunkyFX Plug-In for WinAmp. Version 1.00
+improves quite considerably on the previous versions (0,99, 0.9b, 0.01),
+adding support for a wide variety of fullscreen modes, and most importantly,
+skins. v1.00 also debuts the FrequencywurX module.
+
+The FyrewurX module displays some nice fireworks in time to whatever music 
+WinAmp is currently playing. Since version 0.9b you've been able to configure
+the way the fireworks look and feel.
+
+The FrequencywurX module displays a nice spectrum analyzer that can be
+configured to you tastes.
+
+The first release of the plugin was based on source code I obtained from
+the NolrS Speakers (vis_spk.dll) by Alex Black. 
+You can try looking at http://www.eng.uwaterloo.ca/students/speakers/ for 
+more information.
+
+Since version 0.99 almost all of the code has been rewritten, so any bugs
+in this plugin are without doubt due to me however.
+
+Disclaimer
+----------
+
+This software comes with no warranty - use it at your own risk (or as Sun
+Microsystems would say):
+
+"THIS SOFTWARE IS NOT DESIGNED OR INTENDED FOR USE OR RESALE AS ON-LINE
+CONTROL EQUIPMENT IN HAZARDOUS ENVIRONMENTS REQUIRING FAIL-SAFE
+PERFORMANCE, SUCH AS IN THE OPERATION OF NUCLEAR FACILITIES, AIRCRAFT
+NAVIGATION OR COMMUNICATION SYSTEMS, AIR TRAFFIC CONTROL, DIRECT LIFE
+SUPPORT MACHINES, OR WEAPONS SYSTEMS, IN WHICH THE FAILURE OF THE SOFTWARE 
+COULD LEAD DIRECTLY TO DEATH, PERSONAL INJURY, OR SEVERE PHYSICAL OR 
+ENVIRONMENTAL DAMAGE ("HIGH RISK ACTIVITIES")."
+
+So don't try and use it to control atomic toasters or anything.
+
+Requirements
+------------
+
+This plugin should work with most hardware / software. Obviously it won't 
+look particularly exciting on a 486, but a mid to high end Pentium should 
+be fine. I've tested the plugin on PII machines (an Intel P-II 266, and a
+AMD K6-2 300), an Intel P-90 and and AMD K6-200.
+
+Oh, and as of version 0.99 you'll need DirectX installed (any version will
+do - see http://www.microsoft.com/directx/)
+
+
+Installation
+------------
+
+Extract the archive into your WinAmp plugins directory (usually C:\Program 
+Files\WinAmp\Plugins\). If all goes to plan, the following files should be
+installed (if you're using WinZip, make sure that "Use Folder Names" is
+turned on and this will be done automatically):
+
+vis_funkyfx.dll (in C:\Program Files\WinAmp\Plugins\)
+
+vis_funkyfx.txt (this file) (in C:\Program Files\WinAmp\Plugins\)
+
+Numerous .ffx settings files (in C:\Program Files\WinAmp\Plugins\FrequencywurX\
+and C:\Program Files\WinAmp\Plugins\FyrewurX\)
+
+The default WinAmp.ffs skin file (and bitmap WinAmp.bmp)
+(in C:\Program Files\WinAmp\Plugins\FFXSkins\)
+
+When you install other skins for FunkyFX, you should install them in
+FFXSkins/. You should try to keep preset (.ffx) files in the correct directory
+(e.g. FrequencywurX/ or FyrewurX/)
+
+Configuration
+-------------
+
+There are various options that you can fiddle with to get the plugin 
+working more to your taste or just to speed it up by right clicking on
+its display  - take a look at the website for more detailed information:
+
+http://www.javigate.com/FunkyFX/
+
+Skins
+-----
+
+The biggest feature of FunkyFX v1.00 is the option to use skins.
+At the moment, this plugin only comes with the default WinAmp skin.
+If you want to download more skins (or find out how to create your
+own), please visit:
+
+http://www.javigate.com/FunkyFX/skins.html
+
+Known Bugs
+----------
+
+I've tested this plugin with both WinAmp 2 and WinAmp 1.92. Under Version
+2 of WinAmp, it sometimes crashes when you come out of fullscreen mode.
+As this has also happened with other plugins under WinAmp 2, I'm not sure
+if it's this plugin's fault or not.
+
+In Windows 98, the plugin sometimes seems to leave "dead" windows on the
+taskbar when you change from fullscreen to windowed modes. You can click
+on these windows to remove them, so there's no real harm done.
+
+NOTE: Further investigation suggests that this is a problem with Win98
+rather than with the plugin.
+
+Please report any obvious bugs to paulh@javigate.com
+
+Source Code
+-----------
+
+I'll be releasing the source code for the window handling (and Skinning)
+code sometime soon. If you're interested, please take a look at
+http://www.javigate.com/FunkyFX/source.html
+
+Version History
+---------------
+
+26 Jul 1998   - v0.01 - Initial Release
+Late Aug 1998 - v0.9b - GFX Enhanched Release. More options. Faster.
+2 Sep 1998    - v0.99 - Different window modes added.
+22 Sep 1998   - v1.00 - Skins, better fullscreen support. Assembly
+                        optimizations of blurring/fading routines.
+                        FrequencywurX added.
+
+Credits Etc
+-----------
+
+Originally based on source code by Alex Black - adblack@novice.uwaterloo.ca
+
+Everything else written and Copyright by Paul Holden (paulh@javigate.com).
+
+Thanks to Chris and Steve for letting me develop this on their PCs. 
+
+WinAmp (http://www.winamp.com/) is produced by Nullsoft 
+(http://www.nullsoft.com/). It's probably copyrighted, trademarked and so 
+on by them too.
+
+Hellos to Stevey-Boy, Chris and Fiwl.
+
+Contact
+-------
+
+The homepage for this plugin is at http://www.javigate.com/FunkyFX/
+There's some other fun stuff at Javigate.com too - try out 
+http://www.javigate.com/TVAP/
+
+I can be contacted at paulh@javigate.com, or if that fails,
+ph117@cs.york.ac.uk. My rather mediocre home page is at
+http://www.javigate.com/paulh/
+
+Paul Holden
+York, UK
+22 September 1998

@@ -1,0 +1,21 @@
+  Qview    exe   Quick View Utility
+  Qview    doc   Документация на QView / Documentation on QView
+  File_id  diz   Основные возможности QView
+  History  txt   Летопись версий QView / QView history
+  Future   txt   Планы на следующую версию / Future plans
+  Qview    ehl   Файл настройки опций и highlights на расширение /
+                 Extention depended options setup
+  Qview    hlp   Файл помощи по hotkey / Help files for the QView
+  Hiew_pal ini   Qview.ini с палитрой под Hiew / Hiew palette
+  Mono_pal ini   Qview.ini с моно-палитрой / mono palette
+  Nc_pal   ini   Qview.ini с палитрой под NC / NC palette
+  Vax_pal  ini   Qview.ini с палитрой под VAX / VAX palette
+  NIVa_pal ini   Palette by Igor Naryshkin (c)1997
+  QView    chr   Пример файла с кодировками Windows 1251 /
+                 Windows 1251 character tables
+  QView    def   Пример текстового файла с кодовыми таблицами пользователя /
+                 Characters redefinition tables (run Q-Setup to compile it)
+  Q-setup  exe   Утилита настройки опций / Options setup utility
+  Q-setup  doc   Дока по Q-Setup / Documentation on Q-Setup
+  Q-setup  hlp   Файл помощи Q-Setup / Help file for Q-Setup
+  Q-setup  upd   История версий Q-Setup / History of Q-Setup

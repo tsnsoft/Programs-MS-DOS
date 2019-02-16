@@ -1,0 +1,190 @@
+Differential equations
+       Equations
+      Integration
+  Graphs of functions
+         Exit
+***********************************************************
+*  ANALYTIC MESSAGES FILE. MESSAGES CAN BE FREELY CHANGED *
+***********************************************************
+That''s not a graph file.
+Save name:
+File name:
+Current results will be removed. Continue?(Y/N)
+Saving...
+No results.
+Loading...
+Do you really want to remove?(Y/N)
+No graphs.
+No graphics on screen. Use Restore window(s).
+Can''t run: no expression(s) compiled.
+No function(s).
+No graph for that window.
+Current graph(s) will be removed. Continue?(Y/N)
+Equation(s):
+Function(s):
+Parameter(s):
+Numbers:
+Other variables values./
+Main menu
+Current equations aren''t saved. Save?(Y/N)
+Current functions aren''t saved. Save?(Y/N)
+Do you really want to exit?(Y/N)
+No equations.
+No parameters.
+Wrong menu on disk. Press any Key...
+No grapf for that window.
+No variables.
+Files:/ 
+Input
+Browsing
+Initial
+Parameters
+Method
+Run time
+Values
+Functions'
+Function's
+Method's
+Graphs'
+Graph's
+Integral
+Function
+Fixed
+Edition 
+Loading 
+Compiling
+Graphics
+Calculator
+Euler
+Runge-Kutta 2-nd order
+Runge-Kutta 4-th order
+Runge-Kutta-Fehlberg
+Results
+Process
+Graph
+Window
+Equations'
+Infor-
+   mation
+   Help
+Running
+Saving
+Euler method installed.
+Runge-Kutta 2-nd order method installed.
+Runge-Kutta 4-th order method installed.
+Runge-Kutta-Fehlberg method installed.
+No memory to store results. Results removed.
+Flashing marker is set on.
+ Set it off?(Y/N)
+Flashing marker is set off.
+ Set it on?(Y/N)
+Equations
+Numbers
+Newton method installed
+Simple iteration method installed
+Solving equations with 
+ Newton's method.
+ simple iterations method.
+Variables values:
+Plot graph
+Functions values:
+Error=
+Functions
+Function(s):
+Functions parameters ( -1e11:1e11 ). 
+No memory.
+No memory to load file. Truncate?(Y/N)
+The text will be removed. Continue?(Y/N)
+ Line:      Col:
+window
+ Number of windows ( 1..4 ):
+Choose!
+Choose Dimension.
+Wrong variable name.
+Wrong value.
+That's not a three-dimensional window.
+That's not a two-dimensional window.
+Window is too little to cut a subarea.
+Last axis name must be function name.
+There can be only one function axis.
+No rotation around second axes.
+No rotation around first axes.
+Axes names can''t be changed.
+Set names and
+Min/Max values
+Name: 
+Rectangles method installed
+Trapezes method installed
+Sympson method installed
+Method: 
+Function:
+ Rectangles.
+ Trapezoid.
+ Simpson.
+Graphics
+Function
+Function parameters ( -1e11:1e11 ). 
+Wrong left part.
+Wrong position of the expression.
+Wrong variable name.
+Wrong constant.
+Unknown identificator.
+Unknown symbol.
+Wrong expression.
+Parenthes is missing.
+No open parenthes after function name.
+Too many parameters.
+Too many equations.
+Too many expressions.
+Too many functions.
+No respective function before comma.
+Function is not completed.
+Expression:
+Result=
+Press: F10 - exit Calculator,
+       Esc - more calculations.
+Error 
+That's not a number.
+Value out of bounds.
+Initial values of phase variables ( -1e11:1e11 ). 
+Parameters values (-1e11:1e11). 
+There is memory only for 
+ windows. Continue?(Y/N)
+Messages
+  Regim
+No tables file or wrong data in the file.
+Code=
+Error
+Equation
+File not found.
+Wrong path to file.
+No access to file.
+File read/write error.
+Disk read/write error.
+Wrong data in file.
+Can't write disk is write protected.
+No disk on drive.
+Too many matching files.
+No matching files.
+Division by zero.
+Overflow.
+Underflow.
+Wrong argument of Sqrt or Ln.
+Too little step number.
+Processes already stopped.
+Can't run: number of out points changed.
+Too many graphics out points.
+Can''t run Tstart=Tend in all processes.
+No memory to run.
+Too many computations.
+Too little step.
+Wrong variable name.
+Window parameters changed.
+No memory to operate.
+Trying to operate with unexisting data.
+Fatal error exit please.
+Looking
+File
+already exist. Rewrite?(Y/N)
+
+

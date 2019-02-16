@@ -1,0 +1,639 @@
+
+
+
+    *******************************************************************
+    *  PC-CONFIG by M.Holin, PO-Box 1146, 38678 Clausthal, Germany    *
+    *******************************************************************
+    *                                                                 *
+    *   THE ultimate System-Info und Benchmark-Program for MS-DOS!    *
+    *                                                                 *
+    *******************************************************************
+    * Telephone: +49(0)5323/3350                Fax:3380              *
+    * E-MAIL:                                                         *
+    *           UUCP:     holin@am.heim1.tu-clausthal.de              *
+    *           Fido:     2:2437/126.8                                *
+    *******************************************************************
+    *  Scroll this text with the Cursor Keys or PAGE-UP / PAGE-DOWN   *
+    *******************************************************************
+
+
+
+    What can CONFIG do, that other programs cannot?
+    =================================================
+
+    1)  Shows ISA, EISA, MCA, VLB and PCI Mainboards
+    2)  Build in CD-ROM benchmark
+    3)  Identify C&T, G2, OPTI, ELITE, SIS, ETEQ, UMC, Forex Chip Sets
+    4)  Identify 386 & 486 processor caches and their size (8-256 KB)
+    5)  Tell a DX from a SX CPU, identify RapidCAD, Cyrix486, Pentium
+    6)  Identify VGA- card manufacturer, chip-set and BIOS version.
+*   7)  Identify over 600 expansion cards in Microchannel (MCA) systems
+    8)  Identify a variety of harddisk cache software
+    9)  Show HI-DOS memory under DOS 5, 386MAX, QEMM386 and MOVE'EM
+    10) Find areas of memory of different speeds in the first megabyte
+        and in extended memory
+    11) Test for hardware shadow-RAM for main and VGA BIOS.
+    12) Show the physical parameters of ESDI harddisks
+*   13) Identify SCSI HD-controllers and their manufacturers
+    14) Establish the rotational speed of the harddisk
+*   15) Display the name, cache size and contoller version IDE harddisks
+*   16) Identify the frame speed for VGA cards
+
+
+*   Registered Version only!
+
+
+  Copyright und License Agreement:
+  =================================
+  CONFIG is (c)  copyright Michael Holin
+                 PO BOX 1146
+                 38678 Clausthal
+                 Germany
+
+  The user of this software recognizes and accepts that this program
+  and all rights thereto are protected by copyright and other rights of 
+  possession. The user gains none of these rights for himself through 
+  purchase or use of the program, but only the right to useage of the
+  program not exclusive to himself.
+
+  The program, parts of the program or the documentation thereof may
+  not be copied, except for the purpose of a back up copy for 
+  safekeeping. The purchaser may use a single purchased copy only for 
+  his own purposes, and only on one computer at one time. It may be
+  neither passed freely nor sold to third persons.
+
+  Neither the program nor its documentation may be altered in any way,
+  extended, changed for use on other systems, or translated into other 
+  languages without express written permission from the author.
+
+  By using this program, the user accepts these conditions of license
+  and use.
+
+  Without the presence of the file CONFIG.REG in the same directory as 
+  CONFIG.EXE, the capabilities of the program are limited. Keep this
+  file CONFIG.REG in a safe place, it will also be needed for future
+  versions of CONFIG.
+
+
+  Prices:
+  =======
+  Private Version:               Commercial Version:
+  --------------------------------------------------
+  55 DM  or  29 US$              165 DM  or  100 US$
+
+  School students, students, schools, youth centres, charitable 
+  organisations and the like will be charged reduced price on production of
+  appropriate proof. If you pay by check, please enter the equivalent
+  amount of YOUR currency.
+
+  You can also pay by credit card. See REGISTER.FRM for details!
+
+
+  Updates:
+  ========
+  You can obtain updates by FIDO-filerequest at:
+  2:2437/125 (Zyxel 16.8) or 2:2437/126 (V32.terbo). Request these
+  files:  conf720.zip   actual fullversion (german), needs .REG file
+          conf720b.zip  actual fullversion (english), needs .REG file
+          conf720s.zip  actual shareware-version (german)
+          conf720e.zip  actual shareware-version (english)
+  The versionnumbers will change from time to time. You can also find the
+  programs on the FTP-server ftp.tu-clausthal.de in the directory
+  /pub/msdos/utils.
+  If you don't have a modem or no access to ftp, send US$ 10 (paper only)
+  and you get the update via snailmail.
+
+
+  System Requirements:
+  ====================
+  IBM PC,XT,AT or compatible with minimum 280 KB free RAM
+  MS-DOS ver. 2.0, better ver 3.0 or higher
+  CGA, MDA, EGA, VGA compatible graphics adapter
+
+
+  Guarantee agreement:
+  ====================
+  The program and instructions are handed over as seen, the author
+  takes no responsibility for the suitability of the program for any
+  particular purpose. In particular, the author takes no responsibility 
+  for damage or consequences directly or indirectly intentionally or 
+  unintentionally which may arise from use of the program or its
+  documentation.
+
+  The program, the documentation and the prices are subject to change
+  at any time.
+
+
+  Files in this package:
+  ======================
+  CONFIG.EXE      - The program
+  CONFIG.TXT      - This text
+  CONFIG.INI      - The configuration file with switches. Changes can be
+                    made here with a text editor.
+  CONFIG.FAQ      - Frequently Asked Questions and their answers
+  CONFIG.REG      - Contains your name and your code! Please save this 
+                    carefully and in your own interest do not let it be
+                    known.
+  CONFIG.OVL      - Contains benchmark routine.
+  CONFIG.MCA      - Contains information about Microchannel Cards.
+  CONFIG.VGL      - File with its own comparison list. Can be edited 
+                    with an ASCII editor
+  CONFIG.XXX      - A hard copy of the monitor screen (made with F10).
+
+
+
+  Brief Description:
+  ==================
+  PC-CONFIG is principally a program which can list the componenets of
+  your computer without you having to touch a single screw to look 
+  inside
+
+  While there are several of this kind of program (let's call them 
+  computer test or diagnostic programs) available on the international 
+  commercial market, you will certainly want to put PC-CONFIG on the 
+  short list.
+
+  The main users of PC-CONFIG are professionionals and interested 
+  amateurs, who like to be informed over the hardware configuration
+  of their computers, be it because they wish to make sure a computer 
+  really has what it claims to have before buying it, or because they 
+  change the hardware of their computers often and wish to confirm that 
+  everything runs properly together.
+
+
+  The Window HARDWARE:
+  ====================
+  Machine:
+   At this point the computer BIOS is searched for possible clues as to
+   the computer manufacturer (e.g. Commodore, Unitron....) and the
+   computer is gererally classified (XT,AT,AT386). At the same time,
+   particular chip-sets are tested for:- Chips & Technologies, G2-, OPTI,
+   SIS, UMC, FOREX, ETEQ, ELITE, CONTAC, SHASTA (see also below: problems)
+
+  BIOS:
+   The copyright string found in the BIOS is displayed here. It may be
+   that the BIOS copyright does not belong to the computer manufacturer.
+   This is because many manufacturers use licensed versions of a BIOS.
+   In this way, a Unitron computer for example has a Phoenix BIOS.
+
+  BIOS-Date:
+   This  shows how  old the  BIOS-version is,  und thus the age  of the
+   computer. Also checked is whether the BIOS (in computers built since
+   1987)  is copied into shadow RAM.  If BIOS calls run as quickly as
+   normal RAM calls, it can be assumed that the BIOS has been copied 
+   into RAM.
+
+   In the case of a 386er, shadow RAM is assumed if the call is 32 bits
+   wide.
+
+  BIOS-Extension:
+   The address of any BIOS extension such as VGA-ROM or SCSI controller ROM
+   is displayed
+
+  Bus System:
+   Displays whether the computer has a standard ISA (= Industry Standard
+   Architecture) bus, an EISA (=extended ISA) bus, IBM's Microchannel
+   Architecture (MCA), the popular VESA-Local-Bus, or Intels PCI Bus.
+
+  Processor:
+   The CPU is identified (88,86,188,186,286,386DX/SX,486DX/SX,Pentium, 
+   Cyrix486, RapidCAD,V20,V30). 80386 or 80486 processors are tested 
+   whether they are running in REAL or VIRTUAL mode (many memory 
+   managers such as 386MAX run the processor in virtual mode). The 
+   processor clock speed is displayed, together with the number of wait 
+   states on a memory access (8 and 16 bit CPUs only).
+
+  RAM-Access:
+   Tested here is whether the computer accesses memory:-
+   a) in normal mode
+   b) in Page-Mode, that is within a small page fast and outside a page 
+      slower (with waitstates). This makes possible the use of slower, 
+      cheaper RAMs at high clock frequencies.
+   c) through a processor cache (80386 & 80486 only)
+   Tries to destinguish between frist and second level cache of the cpu.
+
+  Main Memory:
+   Total amount of memory and amount of free memory.
+
+  Extended Mem:
+   Memory above 1 MB (only on ATs). The amount of extended memory
+   still free is obtained from a XMS driver if used, otherwise through 
+   Int 15h.
+
+  Expanded Mem:
+   Expanded memory to LIM specification (in XTs oder ATs). This sort of
+   memory extension can be used by many programs, and for this reason
+   most memory managers for 386 computers change extended memory through
+   software into expanded memory.
+
+   In this case the amount of expanded memory is contained within the
+   amount of extended memory.
+
+  Graphics card 1:
+   CGA, MGA, Hercules, EGA, and VGA video adapters are recognised.
+   The BIOS of EGA and VGA cards are searched as above for a possible 
+   manufacturer's identity. VGA cards are tested, whether they allow 8 
+   or 16 bit access. This is normally immediately reflected in the speed
+   of the card. Thus even in the fastest IBM PS/2 models, the maximum 
+   video throughput is only 500kB/s, because of the 8 bit bus. A 16 bit 
+   bus card with a Tseng ET4000 chip reaches a throughput of over 
+   2000kB/s.
+
+  VGA Chip-set:
+   CONFIG attempts to identify the chip-set of any Super VGA card
+   which may be present. The following chip-sets can be recognised:-
+   ATI, NCR, Trident, Video 7, Genoa, Paradise, Chips & Technologies, Above,
+   OAK Technology, Tseng, ZyMOS, Cirrus, Ahead, Yamaha, S3.
+
+  EGA/VGA-BIOS:
+   Any further available information about the BIOS of the installed
+   graphics card will be displayed here (only for ATI, TRIDENT, AHEAD,
+   TSENG, GEMINI und some OAK cards).
+
+  Graphics card 2:
+   If an additional monochrome graphics card should be present, this will
+   be displayed here
+
+  NPU:
+   Intel 8087, 80287, 80387, IIT 80287, 80387 and software coprocessor
+   emulators can be identified.
+
+  Game card:
+   CONFIG will attempt to identify any Joystick port which is present.
+   Unfortunately the identification for game cards is not standardised
+   and other computer test programs may come to different conclusions.
+   Generally it can be assumed, if CONFIG says a game port is present,
+   then one is definitely present. If CONFIG says no game port is
+   present, then "probably" none is present.
+
+  Floppy drives:
+   The number and the type of floppy drives present.
+
+  IO Ports:
+   The number of parallel and serial ports installed.
+
+
+  The Window HARDWARE 2:           (registered version only)
+  ======================
+  Here is checked whether the main BIOS can support an extended keyboard
+  (i.e. with the extra F11 and F12 function keys), and whether such a
+  keyboard is connected
+
+  UART-Chips:
+   Here is shown which type of chip is installed on the serial interface
+   (8250, 16450, 16550, 16550A, 16552), and the current port settings.
+
+  SCSI-Controller:
+   The manufacturer of any installed SCSI adapter is shown, together with
+   the start address for the controller ROM
+
+  Modem connected:
+   Whether a Hayes-compatible Modem is connected, and if so on which 
+   port. Some modems can only be recognised immediately after 
+   initialisation. If required, the switch INITMODEM in the CONFIG.INI 
+   should be set to ON
+
+  Sound Cards:
+   Soundblaster, Adlib and Roland cards are searched for. Should this
+   test collide with other hardware (Network adaptors for example), it 
+   can be disabled in the CONFIG.INI. Soundboards with AZTECH chipset
+   are recognized.
+
+  CD-ROM:
+   Whether a CD-ROM drive is connected, and which version of the driver 
+   is in use.
+
+  IDE Harddisks:
+   If present, the name, cache size and controller version of an IDE
+   harddisk will be displayed.
+   This test can however lead to problems with other types (non-IDE)
+   of controller. In this case the switch ATBUSINFO should be set to OFF
+
+
+  The Window SOFTWARE:
+  ====================
+  DOS-Version:
+   The current DOS version is displayed. Novell DOS should be recognised.
+   In most cases the language version should also be displayed (english,
+   german or french). For DOS 5 will be noted whether it is currently
+   loaded into the HMA (high memory area). If DOS has been started from
+   an OS/2 DOS-Box, this will also be recognised.
+
+  Networks:
+   Is an MS-NetBIOS compatible network installed? In this case the
+   network name for the computer will be displayed. Novell networks
+   will be recognised.
+
+  Mouse present:
+   Microsoft, Genius, Logitech, Agiler, Reis-Ware, Unitron, und Truedox
+   Mouse drivers can be recognised.
+   Many mouse suppliers these days try to achieve a very high
+   compatibility to the Microsoft original, so their drivers may be
+   recognised as Microsoft.
+   Note: If a program which changes the mouse interrupt has been loaded
+   after the mouse driver (e.g. a screen saver), the mouse driver cannot
+   be recognised.
+
+  Mouse Type:
+   If the mouse driver supports the function 36, the type (serial, bus,
+   inport, HP-mouse) of mouse and the driver version number can be
+   displayed
+
+  EMS Driver:
+   The type of EMS supported by the driver, and if possible the supplier
+   name (e.g. Compaq, Toshiba...) and the pageframe address.
+
+  XMS Driver:
+   The XMS version supported by the driver, and the internal version
+   number of the driver.
+
+  DPMI Server:
+   The versionnumber of the 'DOS Protected Mode Interface', an additional
+   extended memory standard.
+
+  DPMS Server:
+   The versionnumber of Novell's 'DOS Protected Mode Services', yet
+   another extended memory standard.
+
+  Sofware Disk-Cache:
+   The following can be recognised:
+   Norton-Cache (V5 & V6), Smartdrive, IBMCACHE, Compaq-Cache, QCACHE,
+   HyperCache, PC-Cache, NWCache.
+   If problems should occur, the test for these programs can be disabled
+   with the switch SkipHDCacheTest in the .INI file.
+
+  Fossil-Driver:
+   This is a software extension of the BIOS for the serial port.
+   A driver of this kind can be essential for the use of a high speed
+   modem and the software which is used with it.
+
+  4DOS:
+   4DOS, the shareware replacement for COMMAND.COM, and its version
+   number will be identified if loaded, as will those for NDOS, a version
+   from Peter Norton.
+
+  RAM-Disk:
+   The following RAM disk types can be recognised:
+   VDISK (PC-DOS und DR-DOS), RAMDRIVE (MS-DOS), 386DISK (386MAX),
+   XPANDISK, NJRAM-Disk, SRDisk, xDISK, TurboDisk
+
+  Memory-Manager:
+   The following can be recognised:
+   Windows, DesqView, 386MAX, QEMM386, Move'em, EMM386
+
+
+  The Window BENCHMARK:
+  =====================
+  Speed relative to IBM-PC:
+   The CPU speed relative to the IBM-PC is measured with a loop made up
+   of frequent machine instructions such as AND, MOV, NOT, SHR, and
+   accessing different memory segments. This value depends directly on in
+   the CPU type, clock speed and waitstates, and is useful as a measure
+   of pure processing speed. The loop is small, and will fit completely
+   in a CPU-cache, if present. The real meaning of such a value is
+   therefore debatable.
+
+  Dhrystones & Whetstones:
+   These are well known benchmark test from the Unix world, and the 
+   versions here are implemented in Pascal. The results from the pascal 
+   and C versions are compiler-dependent and not necessarily directly 
+   comparable. The larger the resulting value the better. The test 
+   routines fit completely into an 8 kB CPU-cache. Dhrystones gives a 
+   measure of the integer processing power of the CPU, Whetstones 
+   measures the performance of the Math Co-Processor. Both test were 
+   changed frequently in the 70's and 80's and there are versions in
+   many programming languages. The pascal versions used here are the 
+   same ones used by Norman Juffa in his test program CTEST257. The 
+   results are not however comparable with CTEST257, because Juffa used 
+   his own run-time library for his program.
+
+  VideoRAM-Throughput, Scroll, VideoWaits:
+   The Video RAM throughput describes roughly how many characters can be
+   written directly to the screen. This value, and the time taken to
+   scroll the screen 1 line up, depends mostly on the speed of the video
+   adapter, but partly also on the processor speed. The number of
+   Video-Waits is also dependent on the CPU speed, but serves mostly as a
+   basis for comparison with other video cards. It is not to be taken as
+   an absolute value. With a VGA card for example, very different values
+   will be measured depending on the selected video mode. As a general 
+   rule though, the fewer waits, the faster the card!
+
+  EMS-Speed:
+   The time measured here is that to blend in 1 (!) EMS page in the page
+   frame. The measured value is compared with the time that this task
+   would take on a 16MHz NEAT computer (100%). Other types of hardware
+   EMS reach values around 90-110%, 386 software EMS (e.g. 386MAX) come
+   in at around 70%, and 286 EMS emulators about 2%-5%.
+
+  RAM Disk Speed:
+   A file is opened, written to the RAM Disk for 1 second, closed,
+   reread, deleted and so on repeatedly.
+   From this the throughput capability of the RAM disk is calculated.
+   Run your RAM Disk first in Extended Memory then in Expanded Memory, 
+   and see the difference!
+
+   The drive letter for the RAM Disk will be automatically recognised if
+   possible, but can be specified in the .INI file if necessary.
+
+  DOS-Disk-Speed:
+   Here, a file is opened, written for 4 seconds to the disk, closed,
+   reread, deleted and so on repeatedly.
+   From this the throughput capability of this DOS Disk is calculated.
+   The effect of caches can clearly be seen here.
+   The drive to be tested can be specified in the .INI file! If no drive is
+   specified here, the current drive will be tested.
+
+  Harddisk Tests:
+   The harddisk throughput is established by means of time taken to carry
+   out absolute write-accesses through the BIOS routines. This test must
+   be done without any cache active, because the measured speed and the
+   interleave factor calculation from it will be heavily distorted by an
+   active cache. CONFIG will therefore not do this test, if it finds that
+   a cache is indeed active. The test can be forced in spite of this with
+   the entry FORCEHDTEST=YES in the .INI file.
+
+   In the same way, the rotational speed of the harddisk can only be
+   established, so long as no cache software is active, AND the harddisk
+   has no hardware cache bigger than 32KB of its own.
+
+   The average access time is decided from 100 random head positionings
+   over the whole disk surface, and can vary from test to test by up to 5ms.
+   The test can be skipped by pressing the SHIFT or CAPS-LOCK key.
+
+
+  The Window Mem-Timing:
+  ======================
+   Displayed here is the access speed for the different areas of memory.
+   The speed of access to the main memory (first 640k) is defined as 1.0.
+   It can now be compared, for example, how quick the access is to, say, the
+   VGA BIOS at C000h, perhaps with factor 2.3. That means that accesses
+   here need 2.3 times as long as main memory access.
+   In addition, the throughput speed of the CPU cache memory (if present)
+   and of the main memory will be measured. The value is given in
+   kByte/sec. The quality of the CPU cache can ssen here, as can the
+   effect of wait states on main memory access.
+   For comparison, values for a 386/40 Forex-Chipsatz:
+   Cache: 38000 KB, Mem: 22000 KB
+
+  The Window VGA-Timing:          (registered version only!)
+  ======================
+   The most significant text and graphic modi are activated, and the
+   picture frame rate measured. At each mode switch, the PC loudspeaker
+   should click. The test lasts 30 seconds. Standard VGA cards run in
+   text mode at 70Hz and in graphics mode at 60Hz. At 60Hz with a light
+   picture background a slight flickering of the screen is probably
+   noticeable. Modern graphics cards can manage 70Hz even in graphics
+   mode, or are even freely configurable for each mode.
+   It can happen that the computer crashes here because there very many
+   different graphics adaptors and a mode on one does not always match
+   exactly a mode on another. For this reason the number of modes tested
+   can be limited by an entry in the .INI file.
+
+
+  Demo-Mode and Auto-Log / Commercial Version:
+  ============================================
+   Of interest to dealers is the DEMO-MODE, by which CONFIG can be set to
+   run for a predetermined time repeatedly through the displays HARDWARE,
+   HARDWARE2, SOFTWARE, BENCHMARK, COMPARE and INFO.
+   Optionally a list of your own values can be displayed for comparative
+   testing.
+
+   This is ideal for a showcase or shop window demonstration.
+
+   The DEMO mode can be activated either with an entry in the .INI file
+   or from a running CONFIG by pressing the "D" key. The length of time
+   the demo should run can also be entered in the .INI file
+
+   When testing computers it is often desirable to produce a hard copy of
+   all important screen displays. If the switch AUTOLOG in the .INI file
+   is set to YES, then all displays defined in the switch
+   LOG(PROTOKOLL) will be copied automatically into the file CONFIG.XXX
+   The following screens may be logged:
+   Hardware 1&2, Software, Benchmark, Chips, Mem-Timing, VGA-Timing,
+   Drivers, IRQs, Notes.
+
+   Logging can also be started independently from the .INI file with a
+   command line parameter. Simply start CONFIG with the parameter p,
+   followed by the the desired windows (see example), and the appropriate
+   data will be logged in the file CONFIG.XXX.
+
+   For example CONFIG phsm: p is for Protokoll (log) and the hsm for
+   windows (h)ardware, (s)oftware, and (m)em-timing.
+
+   If the log should be put somewhere other than the file CONFIG.XXX,
+   this can be given as a second parameter, for example:
+
+    CONFIG phsm prn
+
+    and the log will be output immediately to the printer.
+
+   Demo mode and Autolog are only available in the commercial version,
+   and run only when a further key is entered into the .REG file.
+
+   This feature can be ordered for DM 100,- at any time.
+
+
+  Limitations:
+  ============
+  -under Windows in 386 mode and other multitasking environments,
+   it is not possible to make short term time measurements, which makes
+   benchmark tests and the like impossible.
+  -under DR-DOS 6.0 EMM386, the speed measurement test for extended 
+   memory causes privilege errors. The switch TESTEXTMEM must therefore 
+   be set to NO(NEIN)
+  -PC-Cache V5.x is recognised as Multisoft QCache
+  -There are problems with more than ONE continuous area HI-DOS
+  -Some computers slow down their clock frequency when a floppy drive is 
+   running. CONFIG can usually recognise when it has been started from a 
+   floppy and waits for the drive to come to rest. However with some 
+   Compaq computers this recognition does not work, and for this reason 
+   the displayed value for the clock speed is wrong. In this case press
+   "R" for Restart!
+  -If ALL resident software is loaded in HI-DOS, this causes problems.
+  -CONFIG cannot find RAMdisks loaded high under QEMM.
+  -The amount of memory on a VGA card can sometimes only be properly
+   identified if the monitor connected can also display the higher
+   definitions.
+  -No waitstates are measured with 386 processsors, because the procedure
+   used here only gives correct values with 8 and 16 bit computers.
+   (The discussion about wait states is a moot point anyway, because it 
+    is the real computing speed reached which is actually of interest.)
+  -On some computers (e.g. IBM XT/286) there are problems with
+   establishing the harddisk access times.
+
+
+  What to do in case of problems:
+  ===============================
+  CONFIG is programmed at low level, close to hardware. For this reason, 
+  crashes must be reckoned with. Recognition of the Chip-Set on the main 
+  board is sometimes problematical. This test can be skipped by pressing 
+  the SCROLL-LOCK key, or by setting the switch TESTBOARD in the 
+  CONFIG.INI file. Should CONFIG still crash before the windows appear 
+  on the screen, start CONFIG with the command line parameter "log". In 
+  this case a file CONFIG.LOG will be opened on the current drive, in 
+  which all the tests will be logged. The last test logged is then the 
+  one causing the crash. It may be possible to skip this problem area 
+  with an appropriate entry in the .INI file.
+
+  If you should discover bugs in the program, or other problems, please
+  store the current screen contents in a file by pressing F10, and send me
+  this file together with your comments AND your version number of CONFIG
+  AND the date of your CONFIG.EXE file. I will then try to fix the
+  problem.
+
+
+  Errors in 80386-Processors:
+  ===========================
+  To my knowledge, INTEL overlooked at least four errors (bugs) in the
+  production of the 80386 processor:
+
+  1) Early versions could not switch back to the protected mode from the
+     real mode
+  2) Early versions did not carry out 32 bit multiplication properly.
+  3) Early versions incremented the EDI Register after a STOSB instruction
+     incorrectly from 0000FFFFh to 00000000h, instead of to 00010000h!
+  4) The POPAD instruction did not restore the EAX register correctly
+     under certain conditions.
+
+  Whereas the bugs 1-3 were very soon corrected (they only apply to
+  16 MHz versions anyway), bug 4 was only discovered around the middle
+  of 1990, and nearly all versions of the 386DX and 386SX from Intel and 
+  AMD to date (Jan 91) still have the error. The very newest versions, 
+  at least from Intel, have been corrected. The bug is however now well 
+  known to programmers and the instruction used with appropriate 
+  caution.
+
+  CONFIG tests for the bugs 2-4.
+
+
+  Literature:
+  ===========
+  CONFIG is based on various sources, among others:
+
+   1 - PC Intern Systemprogrammierung, Michael Tischer, Data Becker Verlag
+   2 - PC-Referenz fÅr Programmierer, Thom Hogan, Systhema Verlag
+   3 - Assorted issues of the german magazine c't, Heise Verlag
+   4 - NEAT-P9 System Board Technical Reference Manual
+   5 - Programmers Technical Referenz for MS-DOS and the IBM PC, Dave Williams
+   6 - The Interrupt List, Ralf Brown ua
+   7 - INFOPLUS.PAS, Andrew Rossman & Steve Grant
+   8 - The HIMEM-Specifications from Microsoft
+   9 - the sourcecode from FRACTINT
+  10 - The IBM PS2 Technical Reference Manual
+
+  The publications 5-9 are in the public domain and available in the
+  SIMTEL20 PD-collection.
+
+
+Acknowledgments:
+================
+My thanks go to the following people who have helped me to develop and 
+improve CONFIG.
+
+Thomas Kreiling, Mario Leinker, Peter Kruse, Guido Falkemeier, Thomas Haukap,
+Ibrahim Tertemiz, Mathias Helm, JÅrgen Schlegelmilch, Kai Kluwe, Olaf Rathje,
+Michael Schulz, Karsten Wiborg, Frank SÑmer, Ulrich Schlechte, Michael Kohl,
+Dirk Schmidt, Marc Zimmermann, JÅrgen Fitschen, Hans Ullrich Siehl,
+Arnd Burghardt, Ingo Schoenewolf
+
+Special thanks to Jim Blackler for the english version of this text!

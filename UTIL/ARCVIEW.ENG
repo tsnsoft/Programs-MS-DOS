@@ -1,0 +1,363 @@
+ARCView User's Guide
+
+Copyright (C) 1990-94, Sergey Nazarenko, Author
+
+
+
+
+ARCView  is a program for those who work with archive systems  to
+economize  disk space.  You may work from the command line.   The
+syntax  is simply
+                    ARCView <file name>
+
+or you may use ARCView under Norton Commander (TM) versions  2.0,
+3.0 and 4.0 by pressing the <F3> key on a file name.
+
+
+
+Contents
+
+1.    The Main Features of ARCView
+
+2.    ARCView Installation
+
+3.    ARCView Control Keys
+
+      3.1   Cursor Control Keys
+      3.2   Selection and Cancel
+      3.3   Editing Keys
+
+4.    Setting Up the File ARCVIEW.EXT
+
+5.    Acknowledgments
+
+
+
+
+
+1.    The Main Features of ARCView
+
+ARCView:
+
+- allows you to view a content (list of files) of archived files
+with the extensions  .ARC,  .PAK,  .ZIP, .LZH, .ICE, .CHZ, .ARJ,
+.LIM,  .HA  and  .EXE.,  doing  this  without  having to use the 
+original archive program,  and faster than the original archiver
+could view it.
+
+- allows  you  to  view  a  list  of  files  which   form   .SFX
+(selfextracting)  archives;  this is an unattainable feature for
+the archiver itself.  ARCView  recognizes over 40 different .SFX
+formats.
+
+- allows you to unpack,  view contents,  test,  and delete files
+from archives.
+
+- allows you to work with embedded  directories (subdirectories)
+in archives.
+
+- automatically  determines  the  type  of  archive.  If ARCView
+determines it is not an archived  file,  it  will  activate  the
+viewer  for  that  type  of file according to the file extension
+name.  The  viewer  for  these  files  is  found  in  the   file
+ARCVIEW.EXT.
+
+- automatically  identifies  files in an archive which have been
+packed using a password and marks them with the symbol "*", then
+requests to enter the password.
+
+- allows you to view commentaries in archives.
+
+- supports EGA command lines (using <Alt-F9> under NC) and other
+non-standard modes (e.g. 60 lines on the screen).
+
+- recognizes multi-volume .ARJ - archives.
+
+- offers additional convenient features.
+
+
+
+The table below lists the names of the executable archive  files,
+which ARCView uses for unpacking, viewing contents, file  testing
+and  deletion in an archive.  The search for the archive  systems
+occurs in the current directory and then follows the PATH setting
+given in the AUTOEXEC.BAT file.
+
+             ÉÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍ»
+             º EXT ³    Unpack/View      ³  Deletion º
+             ÇÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍ¹
+             º ARC ³     PKXARC.COM      ³ PKARC.COM º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º PAK ³      PAK.EXE        ³  PAK.EXE  º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º ZIP ³    PKUNZIP.EXE      ³ PKZIP.EXE º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º ICE ³      LHA.EXE        ³  LHA.EXE  º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º LZH ³      LHA.EXE        ³  LHA.EXE  º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º ARJ ³      ARJ.EXE        ³  ARJ.EXE  º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º CHZ ³     CHARC.EXE       ³ CHARC.EXE º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º ZOO ³      ZOO.EXE        ³  ZOO.EXE  º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º LIM ³     LIMIT.EXE       ³ LIMIT.EXE º
+             ÇÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+             º HA  ³       HA.EXE        ³   HA.EXE  º
+             ÈÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍ¼
+
+
+
+2. ARCView Installation
+
+Installing ARCView is very simple.  Run the program  ARCINST.EXE.
+Answer the questions the program asks you.  ARCView will  automa-
+tically  find the Norton Commander and make a backup copy  of  it
+under  the  name NCMAIN.OLD.  That way the old  configuration  is
+saved if you wish to return to it by renaming the file again.
+
+Warning:
+
+You should not try to pack NC with programs of the  type  LZEXE,
+DIET,  PKLITE, EXEPack and similar programs. For example, NC 4.0
+is distributed packed by the program DIET 1.2.  (* This  is  the
+way  NC  is  delivered in Russia,  it may not be packed when you
+purchase it in Western countries).  Before installing  you  must
+first unpack it with the command
+
+DIET -RA NCMAIN.EXE
+
+After  the correct version, size, and other internal  characteri-
+stics of the Norton Commander have been verified by ARCView,  you
+will be asked to select one of two methods to install ARCView.
+
+The first method: ARCView replaces the viewer for Lotus1-2-3 (TM)
+in  the  program NCMAIN.EXE with ARCView.  After  that  when  you
+press  <F3> while the cursor is placed on one of the  files  with
+one of the above listed extensions, you will be able to view  the
+contents  of  the archived file.  Keep in mind that  ARCView  can
+only  write six extensions under NC and ARCView cannot call  .CHZ
+and .EXE files, which is connected with the peculiarities of NC.
+
+The  second  method: ARCView is used as a dispatcher  of  various
+viewers  contained in the module ARCVIEW.EXT analogous to the  NC
+file  NC.EXT. When ARCView is loaded it automatically  loads  the
+ARCVIEW.EXT  file into memory. When ARCView is asked to  view  an
+archived  file  by pressing <F3> with the cursor on  the  desired
+file  to be viewed, it looks for the necessary file extension  to
+load  the correct viewer.  This second method has  one  drawback.
+It  takes more memory.  If you pressed <F3> while the cursor  was
+on  the the archived file TEST.CHI, the memory map  when  running
+ARCView might look something like this:
+
+NC.EXE         ( main kernel of NC           )
+NCMAIN.EXE     ( NC not released from memory )
+ARCVIEW.EXE    ( the program ARCView itself  )
+CHIVIEW.EXE    ( the viewer for CHI-files    )
+
+However, usually even only using a PC-AT (TM) with 80286 processor
+with  1 MB of RAM under MS-DOS 5.0 (TM) taking advantage of  High
+Memory,  all the viewers will be well placed and leave memory  in
+reserve.  The amount of free memory is displayed in the right top
+corner of the screen, for example:  "ÍÍÍ356KÍÍÍ".  If the capaci-
+ty is less than 120-100 KB, you should release memory,  otherwise
+you will not be able to run other programs from ARCView.
+
+
+
+
+3.    ARCView Control Keys
+
+3.1   <Left>
+      <Right> Horizontal scrolling of the full file name
+      <Up>    Cursor movement one line up
+      <Down>  Cursor movement one line down
+      <Home>  Cursor movement to the beginning of the file list
+      <End>   Cursor movement to the end of the file list
+      <PgUp>  Cursor movement one full screen up
+      <PgDn>  Cursor movement one full screen down
+      <Ctrl-PgUp> Cursor movement to the beginning of the file list
+      <Ctrl-PgDn> Cursor movement to the end of the file list
+
+3.2   Selection and Cancel
+
+      <Ins>         Select/Cancel selection of the current file
+      <Gray-Plus>   Selection of files by template
+      <Gray-Minus>  Cancel selection of files by template
+
+3.3   Editing keys
+
+      <Left arrow>,
+      <Right arrow> Cursor movement one position left or right
+      <Ctrl-Left>,
+      <Ctrl-Right>  Cursor movement a word left or right
+      <Home>        Cursor movement to beginning of line
+      <End>         Cursor movement to end of line
+      <Ctrl-Home>   Delete part of line from cursor position to
+                    the beginning of line
+      <Ctrl-End>    Delete part of line from cursor position to the
+                    end of the line
+
+      <Esc>,
+      <F10>,
+      <Enter>       End the session
+      <Ctrl-Y>      Delete a line
+      <Ctrl-R>      Recover (Undelete) a line
+      <Ctrl-P>      Toggle password mode (make password visible)
+      <BackSpace>   Delete one character before the cursor
+      <Del>         Delete one character under the cursor
+      <Ins>         Toggle insert/replace (overwrite) mode
+
+3.4   Function keys
+
+      <F1>          Help
+      <Sh-F1>       Information on the archive and the computer.
+      <F2>          Selection of file list sorting by name, exten-
+                    sion, date, time of creation, and size.
+      <Sh-F2>       List of commentaries to the archives (if one
+                    exists).
+      <F3>          View of file contents.  ARCView unpacks the file
+                    in the   current  directory  and  calls  the
+                    correct viewer as  determined  by  the  file
+                    ARCVIEW.EXE.  Pressing <Esc> will delete the
+                    unpacked file on disk.  You  may  choose  to
+                    unpack  the  file on a RAM disk by using the
+                    command SET  ARCVIEW  =  F:\  (if  you  have
+                    defined  F:\  as  your RAM disk).  While the
+                    file is being unpacked ARCView checks to see
+                    if  a  file  with  the  same name is present
+                    elsewhere.
+      <Alt-F3>      The view of the file using an alternative viewer.
+      <F4>          Unpacks a file in the archive.
+      <Sh-F4>       Unpacks the file to the directory specified in
+                    the pop-up window. If the view of the full file
+                    name is switched off, (Function key <F6>), the
+                    unpacking of the file will be executed without
+                    creating a directory.
+      <F5>          Edit a file in the archive.
+      <F6>          Hide/Display (Unhide) the full PATH to the file.
+      <F7>          File search according to attributes including
+                    search by file name, extension, size etc.
+      <Sh-F7>       Repeat the last search.
+      <Alt-F7>      Hide/Show archivers output.
+      <F8>          Delete the current file or group of selected
+                    files from the archive.
+                    Warning: Be careful about deleting files. Unde-
+                    leting deleted files is absolutely impossible.
+      <F9>          Test of the current (or tagged) file(s). If you
+                    see the message "CRC OK", it means the test was
+                    successful.
+      <Sh-F9>       Record of the current configuration is written
+                    into the file ARCVIEW.INI.
+      <Alt-F9>      Sets the ARJ Security Envelope to ARJ-archive.
+                    It is a non-documented feature of ARJ that the
+                    modification of archive files including additi-
+                    ons, deletions, and the editing of commenta-
+                    ries is not allowed. It is only possible to
+                    extract files from the archive.
+      <F10>         Exit from program.
+      <Sh-F10>      ARCView configuration. The following window
+                    appears on the screen:
+
+          ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ Setup ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+          º         Packer : PKZIP.EXE                      º
+          º       Unpacker : PKUNZIP.EXE                    º
+          º   View comline : -O                             º
+          º Unpack comline : -D -O                          º
+          º Delete comline : -D                             º
+          º   Test comline : -T                             º
+          º    Add comline : -mex                           º
+          º     Alt Viewer : wpview.exe                     º
+          º      Temp path : E:\                            º
+          º                       Ok                        º
+          ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+           Packer - a program to delete files from an archive
+         Unpacker - a program to unpack files
+       Alt viewer - the alternate viewer loaded by pressing <Alt-F3>
+        Temp path - the PATH which the unpacking files will follow
+                    when <F3> and <Alt-F3> are pressed.
+                    If you forget to set the environment variable,
+                    then ARCView will search for the variable TEMP,
+                    but if it does not find it, then it uses the
+                    value from the initialization file ARCVIEW.INI.
+     View comline - defines which parameters to use for extracting
+                    one file from an archive without path by pressing <F3>
+   Unpack comline - defines which parameters to use for extracting a
+                    file or files from an archive, this is used for
+                    the extract function by pressing <F4> or <Shift-f4>.
+   Delete comline - defines which parameters to use for deleting a
+                    file or files from an archive, this is used for
+                    the delete function by pressing <F8>;
+     Test comline - defines which parameters to use for testing a file
+                    or files from an archive, this is used for the test
+                    function by pressing <F9>.
+      Add comline - defines which parameters to use for adding a file to
+                    an archive, this is used for the Edit function <F5>.
+
+
+4.   The Setup file ARCVIEW.EXT
+
+     While viewing the contents of a file in an archive <F3>, ARC-
+     View uses the extension file ARCVIEW.EXT.  This file may con-
+     tain up to 40 lines: and its structure is completely analogous
+     to the file structure of NC.EXT.
+
+     The format of the ARCVIEW.EXT file:
+                                 !.!  File name with extension
+   txt: edit !\!.!               !:   Disk drive letter followed by a colon
+   ^^^  ÀÄÄÄÂÄÄÄÄÙ               !\   Path name
+    ³       ÀÄÄ DOS command      !!   !
+    ÀÄÄ File extension           !    File name without extension
+
+The main difference between the file ARCVIEW.EXT and NC.EXT consists
+in the fact that the latter must have either ! or !.! after DOS
+commands and ARCView doesn't need this.  If ARCView does not see the
+line !.! or a similar line, it generates a command line completely
+compatible to the one which NCMAIN passes on to its viewers. Besides
+the file name the command line consists of about 15 parameters.
+
+Here is an example of the way ARCVIEW.EXT might look:
+
+arj: arcview.exe
+au?: arcview.exe
+al?: arcview.exe
+lzh: arcview.exe
+ice: arcview.exe
+zip: arcview.exe
+arc: arcview.exe
+msg: msgview.exe !\!.!
+chz: arcview.exe
+exe: hiew.exe !\!.!
+com: hiew.exe !\!.!
+ovl: hiew.exe !\!.!
+chi: chiview.exe !\!.!
+pcx: pcxview.exe
+fli: aaplay.exe !\!.!
+db:  paraview.exe
+123: 123view.exe
+dbf: dbview.exe
+gif: command.com /c av.bat
+???: wpview.exe
+
+
+5.  Acknowledgments
+
+   The author expresses special thanks to his colleagues:
+- Vladimir Serkov (VVS Computers)
+- Yuri Kuznetsov (OutRager)
+- Nikolai Baranov (SysOp ICC Data Bank BBS)
+- Jevgenij Krivosheev (SysOp S Half-Private BBS)
+- Nikolai Shamarin (textual concept)
+   Specially thanks :
+  [\/]an|-|anter (Mentally damaged member from UGI) for medical
+     support & information about "#1 ¨¬¥­¨ .ˆ.Š";
+  ~T~he )\(ight ]3reaker for some bug info and testing under OS/2 2.0
+  Steel R/´t for new warez and HA testing.
+
+Copyrights
+Norton Commander is a trademark of Symantek Inc.
+Lotus1-2-3 is a trademark of Lotus Development Corp.
+IBM PC-AT is a trademark of International Business Machines, Corp.
+MS-DOS is a trademark of Microsoft Corp.

@@ -1,0 +1,363 @@
+			Volkov Commander 4.01 variables
+			-------------------------------
+
+HEX	DEC	Explanation
+offset	offset
+in	in
+VC.INI	memory
+
+---------------------------
+
+000-002		Identifier 'VVV'
+
+003	L0	Contents of Left panel (0/1/2 for directory/tree/info)
+004	L1	File details if Left panel contains directory (0/1 for
+		brief/full)
+005	L2	Left panel visibility (0/1 for off/on)
+006	L3	Left panel filter hidden files (0/1 for no showing/showing)
+007	L4	Left panel filter executable files (0/1 for showing all files/
+		showing only executable files)
+008	L5	File sorting if Left panel contains directory (0/1/2/3/4 for
+		name/extension/time/size/unsorted)
+009	L6	Contents of Left panel 'behind' Left Info panel when
+		switching with CTRL-L (0/1 for directory/tree)
+00A-016	L7-L19	Left panel custom filter, terminated with [00]
+017	L20	Left panel Drive (ASCII uppercase character)
+018	L21	Left panel Drive colon (':')
+019-05A	L22-L87	Left panel path
+
+05B	R0	Contents of Right panel (0/1/2 for directory/tree/info)
+05C	R1	File details if Right panel contains directory (0/1 for
+		brief/full)
+05D	R2	Right panel visibility (0/1 for off/on)
+05E	R3	Right panel filter hidden files (0/1 for no showing/showing)
+05F	R4	Right panel filter executable files (0/1 for showing all files/
+		showing only executable files)
+060	R5	File sorting if Right panel contains directory (0/1/2/3/4 for
+		name/extension/time/size/unsorted)
+061	R6	Contents of Right panel 'behind' Right Info panel when
+		switching with CTRL-L (0/1 for directory/tree)
+062-06E	R7-R19	Right panel custom filter, terminated with [00]
+06F	R20	Right panel Drive (ASCII uppercase character)
+070	R21	Right panel Drive colon (':')
+071-0B2	R22-R87	Right panel path
+
+0B3	G0	B&W palette Panels color
+0B4	G1	?
+0B5	G2	Color palette Panels color
+		High nibble = background :
+		0 = black, 1 = blue, 2 = green, 3 = cyan, 4 = red, 5 = magenta,
+		6 = brown, 7 = white, 8 = flashing black, 9 = flashing blue,
+		A = flashing green, B = flashing cyan, C = flashing red,
+		D = flashing magenta, E = flashing brown, F = flashing white
+		Low nibble = foreground :
+		0 = black, 1 = blue, 2 = green, 3 = cyan, 4 = red, 5 = magenta,
+		6 = brown, 7 = white, 8 = gray, 9 = bright blue,
+		A = bright green, B = bright cyan, C = bright red, D = pink,
+		E = yellow, F = bright white
+0B6	G3	?
+0B7	G4	Laptop palette Panels color
+0B8	G5	?
+0B9	G6	B&W palette Current pointer color
+0BA	G7	?
+0BB	G8	Color palette Current pointer color
+0BC	G9	?
+0BD	G10	Laptop palette Current pointer color
+0BE	G11	?
+0BF	G12	B&W palette Selected files color
+0C0	G13	?
+0C1	G14	Color palette Selected files color
+0C2	G15	?
+0C3	G16	Laptop palette Selected files color
+0C4	G17	?
+0C5	G18	B&W palette Selected pointer color
+0C6	G19	?
+0C7	G20	Color palette Selected pointer color
+0C8	G21	?
+0C9	G22	Laptop palette Selected pointer color
+0CA	G23	?
+0CB	G24	B&W palette Title in file panel color
+0CC	G25	?
+0CD	G26	Color palette Title in file panel color
+0CE	G27	?
+0CF	G28	Laptop palette Title in file panel color
+0D0	G29	?
+0D1	G30	B&W palette Key bar numbers color
+0D2	G31	?
+0D3	G32	Color palette Key bar numbers color
+0D4	G33	?
+0D5	G34	Laptop palette Key bar numbers color
+0D6	G35	?
+0D7	G36	B&W palette Key bar text color
+0D8	G37	?
+0D9	G38	Color palette Key bar text color
+0DA	G39	?
+0DB	G40	Laptop palette Key bar text color
+0DC	G41	?
+0DD	G42	B&W palette Pull-down menu bar color
+0DE	G43	?
+0DF	G44	Color palette Pull-down menu bar color
+0E0	G45	?
+0E1	G46	Laptop palette Pull-down menu bar color
+0E2	G47	?
+0E3	G48	B&W palette Pull-down menu pointer color
+0E4	G49	?
+0E5	G50	Color palette Pull-down menu pointer color
+0E6	G51	?
+0E7	G52	Laptop palette Pull-down menu pointer color
+0E8	G53	?
+0E9	G54	B&W palette Pull-down menu border color
+0EA	G55	?
+0EB	G56	Color palette Pull-down menu border color
+0EC	G57	?
+0ED	G58	Laptop palette Pull-down menu border color
+0EE	G59	?
+0EF	G60	B&W palette Pull-down menu text color
+0F0	G61	?
+0F1	G62	Color palette Pull-down menu text color
+0F2	G63	?
+0F3	G64	Laptop palette Pull-down menu text color
+0F4	G65	?
+0F5	G66	B&W palette Pull-down menu bright color
+0F6	G67	?
+0F7	G68	Color palette Pull-down menu bright color
+0F8	G69	?
+0F9	G70	Laptop palette Pull-down menu bright color
+0FA	G71	?
+0FB	G72	B&W palette Pull-down menu current bar color
+0FC	G73	?
+0FD	G74	Color palette Pull-down menu current bar color
+0FE	G75	?
+0FF	G76	Laptop palette Pull-down menu current bar color
+100	G77	?
+101	G78	B&W palette Pull-down menu current bright color
+102	G79	?
+103	G80	Color palette Pull-down menu current bright color
+104	G81	?
+105	G82	Laptop palette Pull-down menu current bright color
+106	G83	?
+107	G84	B&W palette Pull-down menu unaccessable lines color
+108	G85	?
+109	G86	Color palette Pull-down menu unaccessable lines color
+10A	G87	?
+10B	G88	Laptop palette Pull-down menu unaccessable lines color
+10C	G89	?
+10D	G90	B&W palette Pull-down menu minus color
+10E	G91	?
+10F	G92	Color palette Pull-down menu minus color
+110	G93	?
+111	G94	Laptop palette Pull-down menu minus color
+112	G95	?
+113	G96	B&W palette Dialog box text color
+114	G97	?
+115	G98	Color palette Dialog box text color
+116	G99	?
+117	G100	Laptop palette Dialog box text color
+118	G101	?
+119	G102	B&W palette Dialog box bright text color
+11A	G103	?
+11B	G104	Color palette Dialog box bright text color
+11C	G105	?
+11D	G106	Laptop palette Dialog box bright text color
+11E	G107	?
+11F	G108	B&W palette Dialog box reverse text color
+120	G109	?
+121	G110	Color palette Dialog box reverse text color
+122	G111	?
+123	G112	Laptop palette Dialog box reverse text color
+124	G113	?
+125	G114	B&W palette Configuration boxes text color
+126	G115	?
+127	G116	Color palette Configuration boxes text color
+128	G117	?
+129	G118	Laptop palette Configuration boxes text color
+12A	G119	?
+12B	G120	B&W palette Configuration boxes reverse text color
+12C	G121	?
+12D	G122	Color palette Configuration boxes reverse text color
+12E	G123	?
+12F	G124	Laptop palette Configuration boxes reverse text color
+130	G125	?
+131	G126	B&W palette Configuration boxes bright text color
+132	G127	?
+133	G128	Color palette Configuration boxes bright text color
+134	G129	?
+135	G130	Laptop palette Configuration boxes bright text color
+136	G131	?
+137	G132	B&W palette Configuration boxes bright reverse text color
+138	G133	?
+139	G134	Color palette Configuration boxes bright reverse text color
+13A	G135	?
+13B	G136	Laptop palette Configuration boxes bright reverse text color
+13C	G137	?
+13D	G138	B&W palette History box text color
+13E	G139	?
+13F	G140	Color palette History box text color
+140	G141	?
+141	G142	Laptop palette History box text color
+142	G143	?
+143	G144	B&W palette History box pointer color
+144	G145	?
+145	G146	Color palette History box pointer color
+146	G147	?
+147	G148	Laptop palette History box pointer color
+148	G149	?
+149	G150	B&W palette Mini help in .EXT file editor border color
+14A	G151	?
+14B	G152	Color palette Mini help in .EXT file editor border color
+14C	G153	?
+14D	G154	Laptop palette Mini help in .EXT file editor border color
+14E	G155	?
+14F	G156	B&W palette Mini help in .EXT file editor text color
+150	G157	?
+151	G158	Color palette Mini help in .EXT file editor text color
+152	G159	?
+153	G160	Laptop palette Mini help in .EXT file editor text color
+154	G161	?
+155	G162	B&W palette Help box text color
+156	G163	?
+157	G164	Color palette Help box text color
+158	G165	?
+159	G166	Laptop palette Help box text color
+15A	G167	?
+15B	G168	B&W palette Help box bright text color
+15C	G169	?
+15D	G170	Color palette Help box bright text color
+15E	G171	?
+15F	G172	Laptop palette Help box bright text color
+160	G173	?
+161	G174	B&W palette Help box reverse text color
+162	G175	?
+163	G176	Color palette Help box reverse text color
+164	G177	?
+165	G178	Laptop palette Help box reverse text color
+166	G179	?
+167	G180	B&W palette Help box underline text color
+168	G181	?
+169	G182	Color palette Help box underline text color
+16A	G183	?
+16B	G184	Laptop palette Help box underline text color
+16C	G185	?
+16D	G186	B&W palette Error box text color
+16E	G187	?
+16F	G188	Color palette Error box text color
+170	G189	?
+171	G190	Laptop palette Error box text color
+172	G191	?
+173	G192	B&W palette Error box reverse text color
+174	G193	?
+175	G194	Color palette Error box reverse text color
+176	G195	?
+177	G196	Laptop palette Error box reverse text color
+178	G197	?
+179	G198	B&W palette Error box bright text color
+17A	G199	?
+17B	G200	Color palette Error box bright text color
+17C	G201	?
+17D	G202	Laptop palette Error box bright text color
+17E	G203	?
+17F	G204	B&W palette Clock color
+180	G205	?
+181	G206	Color palette Clock color
+182	G207	?
+183	G208	Laptop palette Clock color
+184	G209	?
+185	G210	B&W palette Arrows in viewer and editor color
+186	G211	?
+187	G212	Color palette Arrows in viewer and editor color
+188	G213	?
+189	G214	Laptop palette Arrows in viewer and editor color
+18A	G215	?
+18B	G216	B&W palette Stars color
+18C	G217	?
+18D	G218	Color palette Stars color
+18E	G219	?
+18F	G220	Laptop palette Stars color
+190	G221	?
+191	G222	B&W palette Explosing stars color
+192	G223	?
+193	G224	Color palette Explosing stars color
+194	G225	?
+195	G226	Laptop palette Explosing stars color
+196	G227	?
+197	G228	B&W palette Shadow color
+198	G229	?
+199	G230	Color palette Shadow color
+19A	G231	?
+19B	G232	Laptop palette Shadow color
+19C	G233	?
+19D	G234	?
+19E	G235	?
+19F	G236	?
+1A0	G237	?
+1A1	G238	?
+1A2	G239	?
+1A3	G240	Options-Full screen (0/1 for disable/enable)
+1A4	G241	Options-Configuration-Menu bar always visible (0/1 for disable/
+		enable)
+1A5	G242	Options-Configuration-Key bar (0/1 for disable/enable)
+1A6	G243	Options-Path prompt (0/1 for disable/enable)
+1A7	G244	Options-Configuration-Ins moves down (0/1 for disable/enable)
+1A8	G245	Options-Auto menus (0/1 for disable/enable)
+1A9	G246	Options-Mini status (0/1 for disable/enable)
+1AA	G247	Options-Clock (0/1 for disable/enable)
+1AB	G248	Options-Configuration-Auto change directory (0/1 for disable/
+		enable)
+1AC	G249	Options-Configuration-Auto save setup (0/1 for disable/enable)
+1AD	G250	Options-Configuration-Screen colors (0/1/2 for Black & White/
+		Color/Laptop)
+1AE	G251	Options-Configuration-Screen blank delay (0/1/3/5/40 for
+		no blanking/respective times, but all values between 1 and 255
+		can be applied)
+1AF	G252	Options-Memory allocation (0/1 for disable/enable)
+1B0	G253	Vcsetup-Panel options-Unselect during group operation (0/1 for
+		disable/enable)
+1B1	G254	Vcsetup-Configuration-error sound (0/1 for disable/
+		enable)
+1B2	G255	Options-Configuration-Left-handed mouse (0/1 for disable/
+		enable)
+1B3	G256	Options-Configuration-Fast mouse reset (0/1 for disable/enable)
+1B4	G257	Options-Configuration-Zooming boxes (0/1 for disable/enable)
+1B5	G258	Options-Advanced options-Alt alone selects menu (0/1 for
+		disable/enable)
+1B6	G259	Options-Advanced options-Escape toggles panels on/off (0/1 for
+		disable/enable)
+1B7	G260	Options-Advanced options-Quick execute commands (0/1 for
+		disable/enable)
+1B8	G261	Options-Auto directory sizes (0/1 for disable/enable)
+1B9	G262	Vcsetup-Panel options-Show hidden subdirectories (0/1 for
+		disable/enable)
+1BA	G263	Vcsetup-Configuration-Confirmation on quit (0/1 for
+		disable/enable)
+1BB	G264	Vcsetup-Screen and Mouse-Screen output (0/1/2 for
+		synchronized access/asynchronized access/autodetect)
+1BC	G265	Options-Advanced options-Alternate viewer (0/1 for disable/
+		enable)
+1BD	G266	Options-Advanced options-Alternate editor (0/1 for disable/
+		enable)
+1BE	G267	Options-Advanced options-Clear keyboard buffer (0/1 for
+		disable/enable)
+1BF	G268	Active panel (0/1 for Left panel/Right panel)
+1C0	G269	None-active panel visible or not (0/1 for visible/not visible),
+		but byte is always overwritten with old value when switching
+		panel(s) off with ESC or CTRL-O, and is only read when
+		switching panel(s) on with ESC or CTRL-O, thus changing is only
+		usefull if panel(s) is (are) set to off
+1C1	G270	Vcsetup-Configuration-TSR manager (0/1 for disable/
+		enable)
+1C2	G271	Vcsetup-Panel options-Auto rescan tree (0/1 for disable/
+		enable)
+1C3	G272	Vcsetup-Configuration-Show logical drive B: (0/1 for
+		disable/enable)
+1C4	G273	Vcsetup-Panel options-Auto dir change time delay (number
+		of hunderths of seconds)
+1C5	G274	Vcsetup-Panel options-Auto dir change time delay (number
+		of seconds)
+1C6	G275	Vcsetup-Screen and mouse-Normal character for screen saver
+1C7	G276	Vcsetup-Screen and mouse-Explode character 1 for screen saver
+1C8	G277	Vcsetup-Screen and mouse-Explode character 2 for screen saver
+1C9	G278	Vcsetup-Screen and mouse-Explode character 3 for screen saver
+1CA	G279	Vcsetup-Screen and mouse-Explode character 4 for screen saver
+
+1CB		Low-byte of sum of bytes 000-1CA of VC.INI
+1CC		High-byte of sum of bytes 000-1CA of VC.INI

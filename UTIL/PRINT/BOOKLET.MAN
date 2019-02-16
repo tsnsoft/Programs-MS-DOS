@@ -1,0 +1,110 @@
+From: ebergman@isis.cs.du.edu (Eric Bergman-Terrell)
+Newsgroups: comp.windows.ms,comp.windows.ms.programmer,comp.lang.postscript,comp.sources.ibm.pc
+Subject: Print Booklets with Word for Windows without Paste-up (2nd try)
+Date: 20 Oct 91 18:15:25 GMT
+Organization: Nyx, Public Access Unix at U. of Denver Math/CS dept.
+
+
+
+     ***** Print booklets with Word for Windows without Paste-up *****
+
+     To print a booklet, you need to print two pages on each side of 8 1/2" *
+     11" pages in landscape mode, and then fold the pages and staple them down
+     the middle.  For example, if you had a 64 page booklet, you would need
+     originals like the following:
+
+               11"
+
+     +----------+----------+
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx | 8.5"
+     | xxxxxxxx | xxxxxxxx |
+     |   64     |    1     |
+     +----------+----------+
+
+     +----------+----------+
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx |
+     |    2     |   63     |
+     +----------+----------+
+
+     +----------+----------+
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx |
+     | xxxxxxxx | xxxxxxxx |
+     |   62     |    3     |
+     +----------+----------+
+
+     etc.
+
+     If you want to do this, here's what you need:
+
+     1.   Word for Windows 1.1a (can't guarantee that earlier or later
+          versions will work).
+
+     2.   A PostScript printer or emulation software.
+
+     3.   The PostScript driver PSCRIPT.DRV dated 9/20/90 (if you have
+          an earlier version, get the new one from the Supplemental
+          Driver Library sold by Microsoft, part number 17754.  The
+          Supplemental Driver Library is not very expensive.
+
+     4.   The C program at the end of this posting.
+
+     5.   A C compiler.
+
+     Here's how you do it:
+
+     1.   Compile the C Program.
+
+     2.   Go to the control panel and configure your printer so that
+          printouts go to a file rather than to the printer.
+
+     3.   Go to Word for Windows, and in the Format Document dialog
+          box, specify a Width of 11", a Height of 8.5", and a Gutter
+
+
+
+          of 5.5".
+
+     4.   In Word for Windows, go to the File Printer Setup item and
+          specify Landscape orientation.
+
+     5.   Preview the document to make sure that the pages are formatted
+          correctly.  Odd pages should be on the right, even pages on the left.
+
+     6.   Print the document to a file (e.g. BOOKLET.TMP).
+
+     7.   Run the program from MS-DOS.  Argument 1 is the input
+          file, argument 2 is the output file:
+
+          booklet.exe booklet.tmp booklet.prn
+
+     8.   Print the output file (e.g. copy BOOKLET.PRN prn:).
+
+     This may sound like a lot of work, but at least in my case I expect to save
+     about $200.00 on laser typesetting (half the pages need to be printed) and
+     especially paste-up (which isn't necessary anymore).
+
+     The program is written for the Borland C++ 2.0 compiler.  If you're using a
+     non-Borland compiler, you'll want to remove the line starting with "extern
+     unsigned _stklen", which is used to allocate a big enough stack.  If you're
+     using another driver, you'll need to modify (at least) the PAGE_BEGIN
+     macro.
+
+[program code deleted]
+
+     The program finds the start of each page in the document, pads the number
+     of pages up so that it's evenly divisible by 4, outputs the header, then
+     outputs the appropriate pairs of pages, with some of the page-ejects
+     removed so the pairs of pages are "double-exposures".
+
+     If you give this a try, let me know how it works out.
+
+     Eric Bergman-Terrell
+
+

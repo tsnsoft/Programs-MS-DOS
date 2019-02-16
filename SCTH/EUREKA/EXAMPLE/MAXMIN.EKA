@@ -1,0 +1,80 @@
+
+; These examples illustrate how to use
+; Eureka's $max and $min directives to
+; maximize and minimize any variable that
+; is defined to be the result of a given
+; function.  One of these examples also
+; demonstrates how to solve an integral
+; equation with Eureka.
+
+; NOTE: to solve any one of these examples,
+; remove the ";" symbol at the beginning of
+; each equation line for the example.
+; Eureka will only solve for ONE $min or
+; $max in an equation file.  To solve a
+; different example, first reinsert the ";"
+; symbols for the previously-solved
+; example.
+
+; Part 1: A well-known example:
+
+; F(z) := sin(z)/z
+
+; Problem 1-a:
+; $min (K)
+; K = F(z)
+; 0.1 < z < 10
+
+; Problem 1-b:
+; $max(L)
+; L = F(z)
+; -10 < z < -4
+
+; Part 2:  Integral of Sin(x) dx
+
+; Problem 2-a:
+; Solving an integral equation:  at what
+; point x > 0 does the integral of
+; [sin(x) da] reach the value 1?
+; (Let w/2 equal x.)
+
+; 1.000 = integ(sin(a), a, 0, w/2)
+; w/2 = x
+
+; Problem 2-b:
+; Maximization: at what point x . 0 does
+; the integral of [sin(a) da] reach a
+; maximum value?
+
+; $max (I)
+; I = MaxInt(a)
+; MaxInt(a) := integ(sin(a), a, 0, x)
+
+; Part 3:  Max and Min of Sin(x)
+
+; Problem 3-a:
+; Maximization: at what point c on the
+; range -4 to 4 does sin(c) reach a
+; maximum?  (Note: the function S(c) is
+; included for plotting purposes--Eureka
+; does not need it to solve for c or z.
+
+; $max(z)
+; z = S(c)
+; S(c) := sin(c)
+; -4 < c < 4
+; d = 2*c
+
+; Problem 3-b:
+; Minimization:  at what point a on the
+; range -4 to 4 does sin(a) reach a
+; minimum?  (Note:  the function S(a) is
+; included for plotting purposes--Eureka
+; does not need it to solve for a or y.)
+
+; $min(y)
+; y = S(a)
+; S(a) := sin(a)
+; -4 < a < 4
+; b = 2*a
+

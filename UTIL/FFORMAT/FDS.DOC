@@ -1,0 +1,14 @@
+FDS.EXE: easy change floppy drive parameters
+Written by Shamarokov A. 1 feb 1993
+
+Parameters:
+       [drive:format] [drive:format] ...
+        ³     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+        ³                     ³ 360  - 360 Kb ³
+        ³ Ú drive letter      ³ 720  - 720 Kb ³
+        ÀÄ´ which you want    ³ 1.2  - 1.2 Mb ³
+          À to change         ³ 1.44 - 1.44 M ³
+                              ³ 2.88 - 2.88 M ³
+                              ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+Example: FDS.EXE a:720
+         set DOS device A: as 720 Kb drive

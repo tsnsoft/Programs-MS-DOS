@@ -1,0 +1,8 @@
+
+; This demonstrates solving
+; a single equation directly.
+
+ x^3 - 27 = 0
+
+{ Exact solution is x = 3. }
+

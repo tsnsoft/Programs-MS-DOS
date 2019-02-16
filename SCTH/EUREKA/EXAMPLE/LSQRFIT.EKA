@@ -1,0 +1,22 @@
+; This example demonstrates Eureka's ability to find
+; values for constants in a function that make the
+; function best fit empirical data.  Because the equation
+; file includes a $ substlevel = 0 directive, Eureka will
+; perform a Least Squares Fit to find the function (of
+; the required form) that best matches the points
+; x, (f(x) given.
+
+; In this example, the function is
+;	f(x) := EXP(a * x^N + B)
+; where the ideal solution is a = 0.25, b = 0.15 and
+; N = 1.5
+
+f(x) := EXP(A * x^N + B)
+
+f(1) = 1.49
+f(2) = 2.35
+f(3) = 4.26
+f(4) = 8.59
+f(5) = 19.01
+
+$ substlevel = 0

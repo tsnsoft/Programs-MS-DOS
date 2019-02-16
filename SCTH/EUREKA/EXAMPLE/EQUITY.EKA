@@ -1,0 +1,42 @@
+; This problem shows how to use Eureka's built-in
+; financial function PAYMT to calculate monthly
+; payments for a 30-year, $150,000 mortgage, with
+; a $20,000 down payment and a yearly interest rate
+; of 13%.
+
+; This problem also demonstrates using the
+; built-in function FVAL to calculate when the equity
+; reaches $100,000.00, and to calculate the balance
+; of the loan at any time.
+
+; Note:  this problem incorporates zero
+; market appreciation.
+
+$ finansmooth = yes
+
+; variables assigned to the given date
+DownPay = 20000
+Loan = 180000
+Duration = 30 * 12
+
+; determining monthly interest rate from the annual rate
+Yrate = 0.13
+Mrate = Yrate /12
+
+; finding the monthly payment
+Payment = PAYMT(Mrate,Duration,Loan-DownPay,0)
+
+; formula for determining equity at a given time
+FutureValue(GivenMonth):=FVAL(Mrate,_GivenMonth,Loan-DownPay,Payment)
+   Equity(GivenMonth) := Loan + FVAL(Mrate,GivenMonth,Loan-DownPay,Payment)
+   Equity(HowSoon) = 100000
+
+; formula for determining total amount
+; paid at the end of the life of the loan
+
+TotalPaid = Payment * Duration
+
+; Amount still owed on loan at any given month
+
+AmtOwed(GivenMonth) := Loan - Equity(GivenMonth)
+

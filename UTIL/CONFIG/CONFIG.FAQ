@@ -1,0 +1,93 @@
+Frequently Asked Questions and their answers in connection with CONFIG
+
+Q) Config says my computer has a POPAD error. Is it defective, do I
+have to replace it?
+A) Under certain conditions the machine instruction POPAD does not
+restore the EAX register afterwards. The error affects only 386
+processors and was only discovered around the middle of 1990 and
+affects nearly all processors from Intel and AMD. The very newest
+versions from Intel at least have been corrected. The error is known
+to software developers and the instruction is only implemented so
+that the error does not occur. Don't worry about it, my computer has
+it too.
+
+
+Q) Why can't the chip set on my board be identified?
+A) I do not have the required information about every chip set
+available. Unfortunately I have only a limited selection.
+
+
+Q) The short interval timer on my 66MHz board is claimed not to
+work!
+A) The test does not work properly on some boards and gives false
+results. In this event the test should be deactivated with the
+switch SKIPTIMERTEST in the INI file.
+
+
+Q) Why does it only show ??? on the hard disk rotation speed test?
+A) Modern hard disks have on board caches up to 256 KB. In this case
+a whole track is read into cache per rotation, and the disk is not
+read on a repeated request.
+
+
+Q) In the memory windows areas are mentioned with 8 Bit access. I
+have a 386/486, so how come only 8 Bits?
+A) These memory areas are empty, they contain NOTHING; no RAM, no
+ROM, no HI-DOS, nothing. If these EMPTY areas are accessed, the
+access is slow and 8 bit.
+
+
+Q) It says my graphics adapter has an 8 Bit bus. It has in fact a 16
+Bit bus, I know, I have seen it.
+A) These adapters can be used in ATs as 16 Bit or in XTs with 8 Bit.
+The card decides which mode for itself. Many older cards do not
+identify the bus correctly and even when in an AT think they are in
+an XT. When CONFIG says 8 Bit, this will be correct 95% of the time.
+The speed tests will confirm it: 8 bit cards cannot exceed about 700
+KB/sec throughput in text mode.
+
+
+Q) Why are the interrupt allocations shown in the IRQ-Window as the
+standard values and not the ones actually allocated?
+A) For safety and compatibility reasons I leave the interrupt
+controller well alone.
+
+
+Q) Why does CONFIG show a higher speed for data transfer for the
+hard disk than other test programs?
+A) CONFIG tests the speed of data transfer by reading ONE track by
+increasing sector number until a maximum value is reached.  With
+hard disks with hardware caches this represents more the value
+Cache->Bus->Main Memory than Disk surface->Bus->Main Memory. On
+older MFM/RLL type hard disks it shows really the speed
+Disk Surface->Bus->Main Memory.
+The test 'Linear Reading', implemented since the version 6.4
+delivers a realistic value also on newer hard disks for the transfer
+speed from hard disk to main memory.
+
+
+Q) Why are the speed values for BIOS and DOS character transfer so
+much higher when I boot the computer without any extra device
+drivers?
+A) Many device drivers such as the mouse, screen savers or memory
+managers latch into the character output routines to monitor them or
+extend their functions. This leads to a reduction in output speed.
+In addition, the functions sometimes get so big, that they don't fit
+all at once into the CPU cache any more.
+
+
+Q) Can't CONFIG display the physical parameters of IDE hard disks as
+well as the translation parameters?
+A) No.
+
+
+Q) It shows only a strange sign in the upper left corner of the
+screen and crashes.
+A) You have a S3 with 801 or 805 chip. Set VIDEOTEST=NO in .INI file.
+
+
+Q) I'm a registered user, why does the new version not work with my
+.REG file?
+A) You cannot switch a sharewareversion to fullversion with your .REG file.
+Please see the documentation, where to find updates of the fullversion.
+

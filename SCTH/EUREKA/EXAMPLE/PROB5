@@ -1,0 +1,17 @@
+
+; This demonstrates solving
+; a system of nonlinear equations,
+; and initializing the iteration.
+
+{ These are the equations.}
+ x^2 + a^2 = 45^2
+ x^2 + b^2 = 35^2
+ y/10 = x/b
+ (x-y)/10 = x/a
+
+{ These are the initializations.}
+ x := 10
+ y := 10
+ a := 20
+ b := 20
+

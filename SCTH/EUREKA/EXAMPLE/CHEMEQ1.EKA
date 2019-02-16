@@ -1,0 +1,25 @@
+; Chemical Equilibrium Calculations--First Example
+; This problem demonstrates solving a second-order
+; polynomial in order to calculate equilibrium
+; concentrations in a reversible chemical reaction.
+
+; The reaction is:  CO + H2O <===> CO2 + H2
+
+; At 800 degrees C, the Keq for this reaction is 1.2
+
+
+cCO2 = x
+cH2 = x
+cCO = 0.2 - x
+cH2O = 0.2 - x
+
+; Keq = (cCO2 * cH2) / (cCO * cH2O)
+
+1.2 = x^2 / (0.2 - x)^2
+
+;initial value given for x
+
+x:= 0.19
+
+; Correct answers are : cCO2 = cH2 = x = .0954451
+; cCO = cH2O = 0.2 - x = .104555

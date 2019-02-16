@@ -1,0 +1,21 @@
+
+
+New in V7.15
+============
+  * detects more Cirrus, Trident, S3 and TSENG VGA chips
+  * detects more DACs on TSENG VGAs
+  * detects QDPMI 1.02 & 1.03, DoubleSpace harddiskcompressor
+  * shows Stacker versionnumber, more RAM-disks
+
+New in V7.20
+============
+  * CDROM-benchmark now included
+  * detects and distinguishes all available Cyrix CPUs including
+    Cx486Ru, Cx486S, Cx486dx
+  * detects Novell DOS 7 and versionsnumbers of its EMM386 and DPMS servers
+  * detects 'Advanced Power Managment' functions on laptops
+  * detects 'Green BIOS' function on some mainboards
+  * now better detecting of the newer 'GenuineIntel CPUs'
+  * new CONFIG.INI fileformat. Please don't use older .INI files
+
+

@@ -1,0 +1,16 @@
+
+; This demonstrates solving
+; together with unit conversion.
+
+$ units
+ cm -> in : x / 2.54
+ ø F. -> ø C. : (x - 32) * 5 / 9
+$ end
+
+ a^2 + b = 69
+ a + b/5 = 15
+
+ a := 2 [in]
+ b := 5 [øF.]
+
+

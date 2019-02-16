@@ -1,0 +1,20 @@
+$     CONTEXT for Windows - online dictionary, version 2.0 
+$     (C) Informatic, 1992-1994
+$
+$     Format of the User Dictionary entry:
+$ Each dictionary entry occupies one text line no longer than 256 characters.
+$ The line must end with one carriage return (End-Of-Line character).
+$ First part of the line contains English word (or word combination) and its
+$ synonyms, each separated by comma. English part ends with an asterisk <*>.
+$ Next goes the Russian translations, separated by commas.
+$ Then, after another asterisk, you can write the definition, if needed.
+$ Any number of spaces in the line is permitted.
+$ Do not forget to strike <Enter> at the end of the line!
+$
+$ You also can write comments in any place of the dictionary. The comment
+$ is also one text line, which begins with the dollar sign <$>.
+$
+$ Example:
+$
+ user dictionary, user vocabulary * словарь пользователя, пользовательский словарь  * Личный словарь пользователя, создаваемый и используемый частным образом.
+

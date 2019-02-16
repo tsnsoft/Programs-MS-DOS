@@ -1,0 +1,63 @@
+
+
+                      CheckIt 3.0 Certification Report
+                                 error_mem
+
+       Serial Number: 00-082749                      Serge P.
+          8/28/1992 01:24:18                             
+
+                     === CONFIGURATION INFORMATION ===
+     DOS Version: 5.00
+        ROM BIOS: Award                            BIOS Date: 01/15/89
+  Processor Type: 80286 AT Machine          Math Coprocessor: Not Present
+     Base Memory: 640K                             Available: 582K
+ Extended Memory: 384K                             Available: 0K
+ EXPANDed Memory: No EMS driver installed
+   Video Adapter: VGA                         Video RAM Size: 256K/512K
+   Hard Drive(s): Drive 0 (C:-D:) = 42M
+ Floppy Drive(s): A:1.2M(5¬"), B:360K(5¬")
+  Clock/Calendar: CMOS Clock
+Parallel Port(s): LPT1=378h
+  Serial Port(s): COM1=3F8h
+           Mouse: None                           Joystick(s): No Game Port
+
+                            === TEST RESULTS ===
+MEMORY TEST: 
+    Base     (Tested 640K of 640K)..............................Passed
+    Extended     (Tested 384K of 384K)..........................Passed
+    EXPANDed....................................................Not Present
+    High Address Lines..........................................Passed
+
+HARD DISK 0 (C:-D:).............................................Not Tested
+HARD DISK 1.....................................................Not Present
+
+FLOPPY DISK 0 (A:)..............................................Not Tested
+FLOPPY DISK 1 (B:)..............................................Not Tested
+FLOPPY DISK 2...................................................Not Present
+FLOPPY DISK 3...................................................Not Present
+
+SYSTEM BOARD TEST:
+    CPU Tests...................................................Not Tested
+    NPU Tests...................................................Not Present
+    DMA and Interrupt Controllers...............................Not Tested
+
+CLOCK/CALENDAR TEST.............................................Not Tested
+
+COM1 SERIAL PORT TEST...........................................Not Tested
+COM2 SERIAL PORT TEST...........................................Not Present
+COM3 SERIAL PORT TEST...........................................Not Present
+COM4 SERIAL PORT TEST...........................................Not Present
+
+LPT1 PARALLEL PORT TEST.........................................Not Tested
+LPT2 PARALLEL PORT TEST.........................................Not Present
+LPT3 PARALLEL PORT TEST.........................................Not Present
+
+PRINTER TEST....................................................Not Tested
+
+VIDEO SUB-SYSTEM................................................Not Tested
+
+INPUT DEVICES:
+    Keyboard....................................................Not Tested
+    Mouse.......................................................Not Present
+    Joysticks...................................................Not Present
+

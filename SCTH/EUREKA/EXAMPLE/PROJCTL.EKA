@@ -1,0 +1,22 @@
+; This example demonstrates solving a typical ballistics
+; problem, and Eureka's unit-conversion capability.
+
+c = ((k*V + g)/(g*k))  ; intermediate constant to
+                       ; simplify equation for T
+k = 0.1                ; drag coefficient
+V = 35355
+V := 35355 [cm/sec]    ; define units of initial valocity
+g = 980                ; force of gravity
+
+T = c*(1 - exp(-k*T))  ; solve for total flight time
+T := 40 [sec]
+R = (V/k)*(1 - exp(-k*T))  ; solve for projectile's range
+R := 1 [cm]
+
+$ units
+  cm -> feet : x/ (2.54*12)
+  cm/sec -> feet/sec : x / (2.54*12)
+  feet -> miles : x/ 5280
+  feet/sec -> miles/hour : x / (5280/3600)
+$ end
+

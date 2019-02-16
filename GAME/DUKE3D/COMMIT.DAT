@@ -1,0 +1,41 @@
+[Commit]
+;COMMIT data file
+; 
+;This data file defines the configurable options of COMMIT.  Presumably,
+;the user never sees this file, but rather it is setup by another
+;program which launches COMMIT.
+; 
+; 
+;COMMTYPE
+; - SERIAL - 1
+; - MODEM - 2
+; - NETWORK - 3
+; 
+; NUMPLAYERS
+; - 0..MAXPLAYERS
+; 
+; VECTOR
+; - ~ find an empty one
+; - 0x60..0x69 specify one
+; 
+; CONNECTTYPE
+; - DIALMODE - 0
+; - ANSWERMODE - 1
+; - ALREADYCONNECTED - 2
+; 
+COMMTYPE = 2
+NUMPLAYERS = 2
+PAUSE = 0
+VECTOR = ~
+SOCKETNUMBER = 34889
+INITSTRING = "AT Z"
+HANGUPSTRING = "AT Z H0"
+PHONENUMBER = "747178"
+LAUNCHNAME = "DUKE3D.EXE"
+CONNECTTYPE = 1
+USETONE = 0
+COMPORT = 2
+IRQNUMBER = 3
+UARTADDRESS = 0x2f8
+PORTSPEED = 9600
+SHOWSTATS = 0

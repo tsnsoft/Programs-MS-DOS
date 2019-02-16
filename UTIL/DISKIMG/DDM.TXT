@@ -1,0 +1,46 @@
+
+                        DDM.TXT - readme for
+             DDMANAGER for writing *.DDI TO HARD UTILITY 
+
+        What you can find in this documant:
+
+                1. What is DDMAN?
+                2. DDMAN command line parameters
+                4. Requirements
+
+
+        1. What is DDMAN ?
+
+                This program emulates drive A: contains information
+                from DiskDupe image file (*.DDI) by loading disk image
+                to XMS and catching int 13h, then running program you
+                specified.
+
+        2. DDMAN command line parameters
+
+                DDM ddi_file.DDI [ command_to_run [command parameters...] ]
+
+        where:
+
+                ddi_file        is DiskDupe image file
+
+                command_to_run  optional parameter, specifies
+                                program name to execute while
+                                emulating drive A: contains
+                                files from ddi_file disk image.
+                                Used COMMAND.COM if not specified
+
+                parameters      parameters passed to program
+                                mentioned above
+
+        for example:
+
+                DDM ai40#1 PKZIP -apr illus401 a:*.*
+
+                this will PKZIP files stored on Adobe Illustrator ver 4.0
+                disk #1 (1.44mb), previously DiskDupe'd by someone to file
+                AI40#1.DDI, temporary allocating 1.44mb of your XMS memory.
+
+        4. Requirements
+
+                - XMS memory manager ver 2.0+ (such as HIMEM.SYS)

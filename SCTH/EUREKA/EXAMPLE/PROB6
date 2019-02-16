@@ -1,0 +1,13 @@
+
+; This demonstrates minimizing
+; a simple function.
+; AND IS EXTREMELY USEFUL FOR TOPOLOGY
+
+$min (F)
+
+ F = (x*y)^2 - x*y
+
+  (x+0.36)^2+(y+1.37)^2 > 0.2
+  (x-0.7)^2 + (y-0.7)^2 > 0.2
+
+

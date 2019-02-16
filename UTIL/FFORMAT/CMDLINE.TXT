@@ -1,0 +1,21 @@
+FFormat Version 2.99F/286 (C) 1995 by NHsoft
+command line options and swithes:
+
+    /? or /HELP - this help screen
+    /MT         - mark by full tracks
+    /R0         - rebuild only zero track
+    /ROOT:xx    - set root size to xx sectors from 1 to 14
+                  (one sector has 16 root entries)
+    /I          - forced format with interleave
+    /BOOT:file  - use external boot sector code from
+                  file (nonsystem) *.BSC
+    /F          - use a single FAT disk structure
+    /A          - ask a disk with system files before making system disk
+    /L:label    - set volume label
+    /BW         - switch to black&white display
+    /ZO         - disable zooming boxes
+    /DR         - disable programming of symbols
+    /RG         - load all font symbols
+    /KB         - do not clear keyboard buffer
+    /SW         - disable API call (may cause a problem)
+    /RUS        - select russian language for messages
